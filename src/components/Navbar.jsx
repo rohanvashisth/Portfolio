@@ -58,7 +58,7 @@ export default function Navbar() {
             gap: '8px'
           }}
         >
-          <span style={{ color: 'hsl(var(--primary))' }}>R</span>ohan
+          <span style={{ color: 'hsl(var(--primary))' }}>R</span>ohan Vashisth
           <span style={{ color: 'hsl(var(--secondary))', fontSize: '1.75rem', lineHeight: 0 }}>.</span>
         </a>
 
