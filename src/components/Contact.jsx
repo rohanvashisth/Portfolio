@@ -43,7 +43,7 @@ export default function Contact() {
             <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '8px' }}>Contact Details</h3>
             
             <p style={{ fontSize: '1rem', color: 'hsl(var(--text-secondary))', lineHeight: 1.5 }}>
-              I am open to discussions regarding full-time Software Engineering roles, FinTech solutions engineering, supply chain optimization projects, and business analysis consulting.
+              I am open to discussing FinTech innovations, engineering leadership, supply chain analytics, or general networking and collaboration opportunities.
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '12px' }}>

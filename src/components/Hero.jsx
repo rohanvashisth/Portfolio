@@ -54,7 +54,7 @@ export default function Hero() {
           </h1>
 
           <p style={{ fontSize: '1.15rem', color: 'hsl(var(--text-secondary))', maxWidth: '540px' }}>
-            Hi, I'm <strong>Rohan Vashisth</strong>. I bridge the gap between high-throughput system architecture and strategic financial intelligence. Formerly modernizing global FX trading platforms at <strong>JPMorgan Chase</strong>, I am currently reinforcing my technical background with an MBA in Finance & Supply Chain at <strong>Rutgers Business School</strong>.
+            Hi, I'm <strong>Rohan Vashisth</strong>. I bridge the gap between high-throughput system architecture and strategic financial intelligence. Formerly modernizing global FX trading platforms at <strong>JPMorgan Chase</strong>, I recently completed my MBA in Finance & Supply Chain at <strong>Rutgers Business School</strong>.
           </p>
 
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginTop: '8px' }}>
