@@ -14,3 +14,7 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Git Autocommit
+
+This project includes a built-in background watcher that auto-commits file changes. Whenever changes are saved, a 10-second debounce timer will trigger, staging all new modifications and committing them automatically. Run this watcher with `npm run autocommit`.
