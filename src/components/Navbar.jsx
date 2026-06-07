@@ -51,7 +51,7 @@ export default function Navbar() {
           style={{ 
             fontFamily: 'var(--font-display)', 
             fontWeight: 800, 
-            fontSize: '1.5rem', 
+            fontSize: '1.75rem', 
             color: 'hsl(var(--text-primary))',
             display: 'flex',
             alignItems: 'baseline',
@@ -61,7 +61,7 @@ export default function Navbar() {
           <span>
             <span style={{ color: 'hsl(var(--primary))' }}>R</span>ohan Vashisth
           </span>
-          <span style={{ color: 'hsl(var(--secondary))', fontSize: '1.75rem', lineHeight: 0 }}>.</span>
+          <span style={{ color: 'hsl(var(--secondary))', fontSize: '2rem', lineHeight: 0 }}>.</span>
         </a>
 
         {/* Desktop Navigation */}
