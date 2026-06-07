@@ -91,7 +91,7 @@ export default function Navbar() {
 
           <a 
             id="nav-btn-resume"
-            href="/RohanVashisthSDE.pdf" 
+            href={`${import.meta.env.BASE_URL}RohanVashisthSDE.pdf`}
             download="RohanVashisth_Resume.pdf"
             className="btn btn-outline"
             style={{ padding: '8px 16px', fontSize: '0.85rem' }}
@@ -162,7 +162,7 @@ export default function Navbar() {
           </ul>
           <a 
             id="nav-btn-resume-mobile"
-            href="/RohanVashisthSDE.pdf" 
+            href={`${import.meta.env.BASE_URL}RohanVashisthSDE.pdf`}
             download="RohanVashisth_Resume.pdf"
             onClick={() => setIsOpen(false)}
             className="btn btn-primary"

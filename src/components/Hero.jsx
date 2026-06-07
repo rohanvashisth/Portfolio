@@ -144,7 +144,7 @@ export default function Hero() {
           >
             <img 
               id="hero-avatar-img"
-              src="/profile_avatar.png" 
+              src={`${import.meta.env.BASE_URL}profile_avatar.png`}
               alt="Rohan Vashisth Avatar" 
               style={{
                 width: '100%',
