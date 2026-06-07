@@ -54,11 +54,13 @@ export default function Navbar() {
             fontSize: '1.5rem', 
             color: 'hsl(var(--text-primary))',
             display: 'flex',
-            alignItems: 'center',
-            gap: '8px'
+            alignItems: 'baseline',
+            gap: '2px'
           }}
         >
-          <span style={{ color: 'hsl(var(--primary))' }}>R</span>ohan Vashisth
+          <span>
+            <span style={{ color: 'hsl(var(--primary))' }}>R</span>ohan Vashisth
+          </span>
           <span style={{ color: 'hsl(var(--secondary))', fontSize: '1.75rem', lineHeight: 0 }}>.</span>
         </a>
 
