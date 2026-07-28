@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Linkedin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, Linkedin, Send, CheckCircle, AlertCircle, MapPin, Phone } from 'lucide-react';
 
 export default function Contact() {
   const [formState, setFormState] = useState({ name: '', email: '', subject: '', message: '' });
@@ -94,6 +94,48 @@ export default function Contact() {
                 </div>
               </a>
 
+              {/* Phone Link */}
+              <a 
+                id="contact-link-phone"
+                href="tel:+917397430237"
+                className="glass-card contact-info-card"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '16px',
+                  padding: '20px',
+                  border: '1px solid rgba(255,255,255,0.05)'
+                }}
+              >
+                <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(168, 85, 247, 0.1)', display: 'flex', alignItems: 'center', justifySelf: 'center', justifyContent: 'center' }}>
+                  <Phone size={20} style={{ color: 'hsl(var(--accent))' }} />
+                </div>
+                <div>
+                  <div style={{ fontSize: '0.85rem', color: 'hsl(var(--text-muted))' }}>Phone Number</div>
+                  <div style={{ fontSize: '1rem', fontWeight: 600, color: 'hsl(var(--text-primary))' }}>+91 7397430237</div>
+                </div>
+              </a>
+
+              {/* Location Card */}
+              <div 
+                id="contact-card-location"
+                className="glass-card contact-info-card"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '16px',
+                  padding: '20px',
+                  border: '1px solid rgba(255,255,255,0.05)'
+                }}
+              >
+                <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255, 255, 255, 0.03)', display: 'flex', alignItems: 'center', justifySelf: 'center', justifyContent: 'center' }}>
+                  <MapPin size={20} style={{ color: 'hsl(var(--text-secondary))' }} />
+                </div>
+                <div>
+                  <div style={{ fontSize: '0.85rem', color: 'hsl(var(--text-muted))' }}>Location</div>
+                  <div style={{ fontSize: '1rem', fontWeight: 600, color: 'hsl(var(--text-primary))' }}>Gurugram, Haryana, India</div>
+                </div>
+              </div>
             </div>
           </div>
 

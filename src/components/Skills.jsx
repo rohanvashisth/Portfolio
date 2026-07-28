@@ -1,49 +1,49 @@
 import React, { useState } from 'react';
-import { Code2, Landmark, Settings, Check } from 'lucide-react';
+import { Code2, Briefcase, Users, Check } from 'lucide-react';
 
 export default function Skills() {
-  const [activeCategory, setActiveCategory] = useState('engineering');
+  const [activeCategory, setActiveCategory] = useState('product');
 
   const skillCategories = [
     {
-      id: 'engineering',
-      name: 'Software Engineering',
+      id: 'product',
+      name: 'Product Strategy & Execution',
+      icon: <Briefcase size={18} />,
+      skills: [
+        { name: 'Product Strategy', level: 'Advanced', desc: 'Defining product vision, market positioning, and growth vectors.' },
+        { name: 'Product Roadmap', level: 'Advanced', desc: 'Planning and aligning product milestones and feature rollouts.' },
+        { name: 'Product Lifecycle Management', level: 'Advanced', desc: 'Managing products from requirements, design, launch, to deprecation.' },
+        { name: 'Product Requirements', level: 'Advanced', desc: 'Translating business needs into technical spec sheets and requirements.' },
+        { name: 'Product Prioritization', level: 'Advanced', desc: 'Using data-driven frameworks (RICE, MoSCoW) to prioritize initiatives.' },
+        { name: 'Roadmap Planning', level: 'Advanced', desc: 'Aligning timeline executions with engineering, operations, and stakeholders.' },
+        { name: 'A/B Testing & Insights', level: 'Proficient', desc: 'Hypothesis testing, user experiments, and platform optimization.' }
+      ]
+    },
+    {
+      id: 'techdata',
+      name: 'Technical & Data Analytics',
       icon: <Code2 size={18} />,
       skills: [
-        { name: 'Java (Spring Boot)', level: 'Advanced', desc: 'Core development platform for high-throughput transactional microservices.' },
-        { name: 'Python', level: 'Proficient', desc: 'Scripting, automated utilities, data processing, and validation tests.' },
-        { name: 'C++', level: 'Intermediate', desc: 'System-level components and academic base.' },
-        { name: 'JavaScript / React', level: 'Proficient', desc: 'Building modern interfaces and full-stack utilities.' },
-        { name: 'SQL & CockroachDB', level: 'Advanced', desc: 'Relational query design, distributed SQL evaluations, schema tuning.' },
-        { name: 'Microservices & APIs', level: 'Advanced', desc: 'Decoupled system modularity, idempotent API design, REST architectures.' },
-        { name: 'Event-Driven Systems', level: 'Advanced', desc: 'Decoupling workflows using Kafka message streaming.' },
-        { name: 'Distributed Systems', level: 'Advanced', desc: 'Concurrency, fault tolerance, transaction isolation levels.' }
+        { name: 'Platform Products', level: 'Advanced', desc: 'Designing backend capabilities, transaction engines, and core infra.' },
+        { name: 'API Strategy', level: 'Advanced', desc: 'Structuring REST, event-driven, and microservices API schemas.' },
+        { name: 'SQL & Database Design', level: 'Advanced', desc: 'Data aggregation, querying metrics, and auditing database logs.' },
+        { name: 'Python Analytics', level: 'Proficient', desc: 'Scripting, parsing telemetry data, and modeling analytics.' },
+        { name: 'KPI Development', level: 'Advanced', desc: 'Defining and tracking metrics for application health and product value.' },
+        { name: 'Data Visualization', level: 'Advanced', desc: 'Building operational dashboards in Power BI and Excel.' },
+        { name: 'Telemetry & Log Aggregation', level: 'Advanced', desc: 'Aggregating metrics across distributed microservices.' }
       ]
     },
     {
-      id: 'finance',
-      name: 'Business & Finance (MBA)',
-      icon: <Landmark size={18} />,
+      id: 'leadership',
+      name: 'Leadership & Methodology',
+      icon: <Users size={18} />,
       skills: [
-        { name: 'Power BI', level: 'Advanced', desc: 'Building interactive dashboards for data visualization and executive reporting.' },
-        { name: 'Financial Modeling', level: 'Proficient', desc: 'Capital budgeting, risk valuation, forecasting in Excel.' },
-        { name: 'Supply Chain Operations', level: 'Proficient', desc: 'Operations planning, inventory management, process optimization.' },
-        { name: 'Advanced Excel', level: 'Advanced', desc: 'Pivot tables, VBA automation, large-scale financial sheets.' },
-        { name: 'Business Analysis', level: 'Advanced', desc: 'Functional requirements gathering, bridging business & engineering.' },
-        { name: 'Corporate Strategy', level: 'Intermediate', desc: 'Analyzing market expansion, financial feasibility, risk metrics.' }
-      ]
-    },
-    {
-      id: 'devops',
-      name: 'DevOps & Tools',
-      icon: <Settings size={18} />,
-      skills: [
-        { name: 'Git & GitHub', level: 'Advanced', desc: 'Repository management, branching strategies, and team collaboration.' },
-        { name: 'Kubernetes & Docker', level: 'Proficient', desc: 'Containerization, cluster management, deployment pipelines.' },
-        { name: 'FitNesse', level: 'Advanced', desc: 'Automating acceptance and regression test suites in financial systems.' },
-        { name: 'Asynchronous MQ', level: 'Advanced', desc: 'IBM MQ/RabbitMQ integration for legacy and modern platform linkages.' },
-        { name: 'Unix / Shell', level: 'Proficient', desc: 'Log analysis, environment diagnostics, cron job automation.' },
-        { name: 'Monitoring & Logs', level: 'Proficient', desc: 'Splunk, AppDynamics, Grafana service health setups.' }
+        { name: 'Stakeholder Management', level: 'Advanced', desc: 'Bridging engineering, operations, finance, and business teams.' },
+        { name: 'Cross-Functional Leadership', level: 'Advanced', desc: 'Leading collaborative delivery efforts without direct authority.' },
+        { name: 'Agile (Scrum)', level: 'Advanced', desc: 'Sprint planning, backlog grooming, retrospectives, and velocity tracking.' },
+        { name: 'Jira & Confluence', level: 'Advanced', desc: 'Tracking requirements, roadmap epics, and engineering tasks.' },
+        { name: 'Customer Insights', level: 'Proficient', desc: 'Conducting interviews, analyzing user behavior, and mapping feedback.' },
+        { name: 'Product Delivery', level: 'Advanced', desc: 'Ensuring stable releases, validating fixes, and managing deployments.' }
       ]
     }
   ];

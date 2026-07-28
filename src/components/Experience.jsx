@@ -13,13 +13,14 @@ export default function Experience() {
       location: 'Bengaluru, India',
       period: '2023 - 2024',
       type: 'sde',
-      tech: ['Java', 'Spring Boot', 'Kafka', 'Microservices', 'FitNesse', 'Distributed Systems'],
+      tech: ['Product Strategy', 'Platform Products', 'SQL', 'Python', 'KPI Development', 'Kafka', 'Microservices'],
       highlights: [
-        'Re-architected a 40-year legacy FX settlement platform into microservices, scaling system capacity to handle $10–$15B daily transactions with improved fault isolation and service modularity.',
-        'Designed event-driven workflows using Kafka to decouple services, improving system resilience and enabling real-time processing across legacy and modern platforms.',
-        'Optimized FX Options settlement pipeline to achieve 95% STP (Straight-Through Processing), reducing manual intervention and improving end-to-end system throughput.',
-        'Improved system reliability by automating regression testing (FitNesse), reducing deployment risk and increasing release confidence.',
-        'Enhanced production stability by resolving high-priority incidents and improving monitoring, minimizing downtime in a mission-critical trading system.'
+        'Led end-to-end delivery of platform capabilities supporting FX and derivatives systems processing 250K–300K daily transactions, translating business requirements into scalable product solutions that improved operational efficiency and platform reliability.',
+        'Partnered with product managers, engineering, operations, and business stakeholders to define product requirements, prioritize feature enhancements, and align roadmap execution with customer and operational needs.',
+        'Owned product delivery for backend platform services supporting $10B–$15B in daily settlement value, balancing scalability, reliability, security, and performance across distributed financial systems.',
+        'Built a real-time operational intelligence platform aggregating logs, metrics, and telemetry across 20+ microservices, reducing incident resolution time by 40% while improving platform visibility and customer support.',
+        'Leveraged SQL and Python to analyze operational data, identify product improvement opportunities, define success metrics, and support data-driven prioritization of engineering initiatives.',
+        'Developed self-service dashboards and platform KPIs enabling engineering and operations teams to monitor application health, measure product performance, and proactively improve customer experience.'
       ]
     },
     {
@@ -30,14 +31,14 @@ export default function Experience() {
       period: '2021 - 2023',
       type: 'sde',
       award: 'J.P. Morgan Impact Award (2022) for system modernization and engineering excellence',
-      tech: ['Java', 'Kafka', 'MQ', 'REST APIs', 'CockroachDB', 'Distributed SQL', 'API Design'],
+      tech: ['Product Lifecycle', 'Stakeholder Management', 'Kafka', 'IBM MQ', 'REST APIs', 'CockroachDB', 'Agile (Scrum)'],
       highlights: [
-        'Built a low-latency pre-trade validation service ("Can I Trade") processing $200M–$2B daily, reducing decision latency by 97% through efficient service orchestration.',
-        'Designed and exposed scalable REST APIs for Corporate FX operations (amend/net/split/cancel), enabling idempotent operations and consistent trade lifecycle management.',
-        'Implemented asynchronous messaging patterns (Kafka + MQ), reducing service coupling and improving horizontal scalability under peak loads.',
-        'Led integration of Brokerage FX data streams, designing real-time ingestion pipelines for high-volume financial data and improving system observability.',
-        'Conducted load and stress testing (10x traffic scenarios), validating system elasticity and identifying bottlenecks in distributed components.',
-        'Evaluated distributed SQL database (CockroachDB) via POC, analyzing trade-offs in consistency, scalability, and fault tolerance for financial workloads.'
+        'Delivered platform enhancements for enterprise FX settlement products by collaborating with engineering, operations, and business teams throughout the product lifecycle, from requirements gathering through production deployment.',
+        'Designed and launched the Can I Trade pre-payment confirmation capability supporting $200M–$2B in daily transactions, improving workflow automation and reducing operational risk.',
+        'Drove modernization of Brokerage FX workflows by integrating legacy platforms with event-driven microservices, improving scalability, transaction visibility, and platform adoption.',
+        'Improved FX Options settlement automation to 95% straight-through processing, reducing manual intervention while enhancing operational efficiency and customer experience.',
+        'Optimized Kafka and IBM MQ messaging infrastructure through data-driven performance analysis, increasing platform stability, improving throughput, and reducing production support effort.',
+        'Collaborated cross-functionally to define functional requirements, validate technical solutions, manage release execution, and ensure successful delivery of customer-focused platform enhancements.'
       ]
     }
   ];
@@ -56,7 +57,7 @@ export default function Experience() {
         
         <h2 className="section-title">Professional Experience</h2>
         <p className="section-subtitle">
-          Leading engineering initiatives and building high-throughput services for global financial systems.
+          Delivering secure, scalable platform products and driving cross-functional roadmap execution.
         </p>
 
         {/* Timeline Container */}

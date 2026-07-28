@@ -27,11 +27,11 @@ export default function Hero() {
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <span className="badge badge-primary" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
               <Code2 size={12} />
-              Software Engineer II
+              Technical Product Manager
             </span>
             <span className="badge badge-secondary" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
               <LineChart size={12} />
-              Rutgers MBA Finance
+              Rutgers MBA Finance & Supply Chain
             </span>
           </div>
 
@@ -54,7 +54,7 @@ export default function Hero() {
           </h1>
 
           <p style={{ fontSize: '1.15rem', color: 'hsl(var(--text-secondary))', maxWidth: '540px' }}>
-            Hi, I'm <strong>Rohan Vashisth</strong>. I bridge the gap between high-throughput system architecture and strategic financial intelligence. Formerly modernizing global FX trading platforms at <strong>JPMorgan Chase</strong>, I recently completed my MBA in Finance & Supply Chain at <strong>Rutgers Business School</strong>.
+            Hi, I'm <strong>Rohan Vashisth</strong>. I am a <strong>Technical Product Manager</strong> with a strong background in engineering, finance, and supply chain. Having built high-throughput platform products at <strong>JPMorgan Chase</strong> and completed my MBA at <strong>Rutgers Business School</strong>, I specialize in translating complex business needs into secure, scalable, and user-centric platform systems.
           </p>
 
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginTop: '8px' }}>
