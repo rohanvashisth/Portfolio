@@ -137,8 +137,8 @@ export default function Hero() {
               height: '260px',
               borderRadius: '24px',
               overflow: 'hidden',
-              boxShadow: '0 20px 40px rgba(0, 0, 0, 0.4)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+              boxShadow: '0 20px 40px rgba(15, 23, 42, 0.12)',
+              border: '1px solid rgba(15, 23, 42, 0.08)',
               animation: 'pulse-glow 4s ease-in-out infinite',
             }}
           >
@@ -154,12 +154,12 @@ export default function Hero() {
               }}
               className="avatar-img"
             />
-            {/* Dark glass overlay */}
+            {/* Soft glass overlay */}
             <div 
               style={{
                 position: 'absolute',
                 inset: 0,
-                background: 'linear-gradient(to top, rgba(7, 10, 19, 0.8) 0%, transparent 60%)',
+                background: 'linear-gradient(to top, rgba(248, 250, 252, 0.8) 0%, transparent 60%)',
                 pointerEvents: 'none',
               }}
             ></div>

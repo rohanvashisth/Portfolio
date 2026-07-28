@@ -38,9 +38,9 @@ export default function Navbar() {
         zIndex: 100,
         transition: 'var(--transition-normal)',
         padding: scrolled ? '12px 0' : '20px 0',
-        background: scrolled ? 'rgba(7, 10, 19, 0.85)' : 'transparent',
+        background: scrolled ? 'rgba(248, 250, 252, 0.85)' : 'transparent',
         backdropFilter: scrolled ? 'blur(12px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(255, 255, 255, 0.05)' : 'none',
+        borderBottom: scrolled ? '1px solid rgba(15, 23, 42, 0.05)' : 'none',
       }}
     >
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -128,9 +128,9 @@ export default function Navbar() {
             top: '100%',
             left: 0,
             right: 0,
-            background: 'rgba(7, 10, 19, 0.95)',
+            background: 'rgba(248, 250, 252, 0.95)',
             backdropFilter: 'blur(16px)',
-            borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+            borderBottom: '1px solid rgba(15, 23, 42, 0.08)',
             padding: '24px',
             display: 'flex',
             flexDirection: 'column',
