@@ -159,7 +159,7 @@ export default function Hero() {
               style={{
                 position: 'absolute',
                 inset: 0,
-                background: 'linear-gradient(to top, rgba(250, 246, 240, 0.8) 0%, transparent 60%)',
+                background: 'linear-gradient(to top, rgba(248, 250, 252, 0.8) 0%, transparent 60%)',
                 pointerEvents: 'none',
               }}
             ></div>

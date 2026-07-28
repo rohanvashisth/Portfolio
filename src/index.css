@@ -1,22 +1,22 @@
 :root {
-  /* HSL Color System - Warm Mode */
-  --bg-base: 36 28% 97%; /* Warm Ivory/Cream #faf6f0 */
+  /* HSL Color System - Pastel Light Mode */
+  --bg-base: 220 30% 98%; /* Pale Ice/Powder Blue #f8fafc */
   --bg-surface: 0 0% 100%; /* Pure white #ffffff */
-  --bg-surface-elevated: 36 24% 94%; /* Soft sand hover #f4eee6 */
+  --bg-surface-elevated: 220 20% 95%; /* Lighter soft slate #f1f3f9 */
   
-  --primary: 35 75% 42%; /* Warm Amber/Bronze #b45309 */
-  --primary-rgb: 180, 83, 9;
-  --secondary: 158 45% 32%; /* Warm Sage Green #1b5e46 */
-  --secondary-rgb: 27, 94, 70;
-  --accent: 22 75% 48%; /* Warm Terracotta/Rust #d95c24 */
-  --accent-rgb: 217, 92, 36;
+  --primary: 220 70% 62%; /* Soft Pastel Periwinkle #5e7bf6 */
+  --primary-rgb: 94, 123, 246;
+  --secondary: 155 45% 45%; /* Soft Pastel Mint #4fa885 */
+  --secondary-rgb: 79, 168, 133;
+  --accent: 18 80% 65%; /* Soft Pastel Coral/Peach #f68b6a */
+  --accent-rgb: 246, 139, 106;
 
-  --text-primary: 30 18% 13%; /* Dark Warm Espresso #211e1b */
-  --text-secondary: 30 12% 28%; /* Warm Charcoal #4a453f */
-  --text-muted: 30 10% 48%; /* Soft Warm Gray #7c756d */
+  --text-primary: 222 47% 15%; /* Deep Slate Navy #151c2c */
+  --text-secondary: 215 25% 32%; /* Slate Gray #3d4b64 */
+  --text-muted: 215 16% 50%; /* Muted Slate #6b7a95 */
   
-  --border: 36 18% 89%; /* Light warm border #e6dfd7 */
-  --border-focus: 35 75% 35%;
+  --border: 220 20% 92%; /* Clean soft border #e2e7f0 */
+  --border-focus: 220 70% 55%;
 
   /* Font Stacks */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;

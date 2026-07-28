@@ -69,7 +69,7 @@ function App() {
           textAlign: 'center', 
           fontSize: '0.85rem', 
           color: 'hsl(var(--text-muted))',
-          background: 'rgba(250, 246, 240, 0.8)',
+          background: 'rgba(248, 250, 252, 0.8)',
           backdropFilter: 'blur(12px)'
         }}
       >
