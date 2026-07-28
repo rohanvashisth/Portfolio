@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Layers, Activity, GitFork, ArrowUpRight, BarChart3, Database } from 'lucide-react';
+import { Layers, Activity, GitFork, ArrowUpRight, BarChart3, Database, Truck, AlertTriangle, Globe } from 'lucide-react';
 
 export default function Projects() {
   const [projectViews, setProjectViews] = useState({
     monitoring: 'details', // 'details' or 'architecture'
-    messaging: 'details' // 'details' or 'architecture'
+    messaging: 'details', // 'details' or 'architecture'
+    securesync: 'details' // 'details' or 'architecture'
   });
 
   const toggleProjectView = (projId, view) => {
@@ -351,6 +352,170 @@ export default function Projects() {
                 <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '12px' }}>
                   <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'hsl(var(--text-primary))' }}>Reusable Library</div>
                   <div style={{ fontSize: '0.85rem', color: 'hsl(var(--text-secondary))' }}>Deployed across 5 core teams</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Project 3: SecureSync AI Supply Chain Platform */}
+          <div className="glass-card project-card" style={{ padding: '32px', textAlign: 'left', position: 'relative' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '16px', marginBottom: '20px' }}>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+                  <span className="badge badge-accent">AI & Analytics</span>
+                  <span className="badge badge-secondary">Supply Chain</span>
+                </div>
+                <h3 style={{ fontSize: '1.6rem', fontWeight: 800 }}>SecureSync: AI Supply Chain Platform</h3>
+              </div>
+
+              {/* View Toggle Buttons */}
+              <div 
+                style={{ 
+                  display: 'flex', 
+                  backgroundColor: 'rgba(255, 255, 255, 0.04)', 
+                  padding: '4px', 
+                  borderRadius: '8px', 
+                  border: '1px solid rgba(255, 255, 255, 0.08)' 
+                }}
+              >
+                <button
+                  id="btn-proj-securesync-details"
+                  onClick={() => toggleProjectView('securesync', 'details')}
+                  style={{
+                    padding: '6px 12px',
+                    borderRadius: '6px',
+                    fontSize: '0.8rem',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    border: 'none',
+                    backgroundColor: projectViews.securesync === 'details' ? 'hsl(var(--primary))' : 'transparent',
+                    color: projectViews.securesync === 'details' ? '#fff' : 'hsl(var(--text-secondary))',
+                    transition: 'var(--transition-fast)'
+                  }}
+                >
+                  Overview
+                </button>
+                <button
+                  id="btn-proj-securesync-arch"
+                  onClick={() => toggleProjectView('securesync', 'architecture')}
+                  style={{
+                    padding: '6px 12px',
+                    borderRadius: '6px',
+                    fontSize: '0.8rem',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    border: 'none',
+                    backgroundColor: projectViews.securesync === 'architecture' ? 'hsl(var(--primary))' : 'transparent',
+                    color: projectViews.securesync === 'architecture' ? '#fff' : 'hsl(var(--text-secondary))',
+                    transition: 'var(--transition-fast)'
+                  }}
+                >
+                  Control Tower
+                </button>
+              </div>
+            </div>
+
+            <div className="grid-2" style={{ gap: '32px', alignItems: 'center' }}>
+              {/* Left Column: Content */}
+              <div>
+                {projectViews.securesync === 'details' ? (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                    <p style={{ fontSize: '1rem', color: 'hsl(var(--text-secondary))' }}>
+                      Engineered an enterprise-grade AI-driven sourcing and supply chain risk optimization platform. The system simulates global logistics disruptions, aggregates geopolitical & weather factors, and recommends contingency options.
+                    </p>
+                    <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      <li style={{ display: 'flex', gap: '8px', fontSize: '0.95rem' }}>
+                        <span style={{ color: 'hsl(var(--accent))', fontWeight: 'bold' }}>✓</span>
+                        <span>Built delay-impact simulators forecasting bottleneck slippages in critical paths.</span>
+                      </li>
+                      <li style={{ display: 'flex', gap: '8px', fontSize: '0.95rem' }}>
+                        <span style={{ color: 'hsl(var(--accent))', fontWeight: 'bold' }}>✓</span>
+                        <span>Optimized supplier selection using multi-criteria cost, lead time, and tariff scoring.</span>
+                      </li>
+                      <li style={{ display: 'flex', gap: '8px', fontSize: '0.95rem' }}>
+                        <span style={{ color: 'hsl(var(--accent))', fontWeight: 'bold' }}>✓</span>
+                        <span>Designed an interactive shipment tracking control tower for real-time risk mitigation.</span>
+                      </li>
+                    </ul>
+
+                    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginTop: '12px' }}>
+                      {['Python', 'SQL', 'Risk Modeling', 'Interactive Dashboards', 'Operations Research', 'Data Pipelines'].map(t => (
+                        <span key={t} className="badge badge-accent" style={{ textTransform: 'none', fontSize: '0.75rem' }}>{t}</span>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  // Live Control Tower Simulation
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', padding: '16px', background: 'rgba(0,0,0,0.2)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.04)' }}>
+                    <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'hsl(var(--accent))', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <Globe size={14} className="pulse-icon" />
+                      ACTIVE CONTROL TOWER SHIPMENT MONITORING
+                    </div>
+                    
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                      {/* Nodes flow */}
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 8px' }}>
+                        <div className="sim-node active" style={{ borderColor: 'rgba(var(--secondary-rgb), 0.3)' }}>
+                          Sourcing
+                          <span className="ping-dot green"></span>
+                        </div>
+                        
+                        <div style={{ flexGrow: 1, height: '2px', position: 'relative', margin: '0 8px', borderBottom: '2px dashed rgba(255,255,255,0.1)' }}>
+                          <Truck size={12} className="sim-truck-icon" style={{ position: 'absolute', top: '-6px', color: 'hsl(var(--primary))' }} />
+                        </div>
+                        
+                        <div className="sim-node active" style={{ borderColor: '#fb7185' }}>
+                          Port Transit
+                          <span className="ping-dot red-pulse"></span>
+                        </div>
+
+                        <div style={{ flexGrow: 1, height: '2px', position: 'relative', margin: '0 8px', borderBottom: '2px dashed rgba(255,255,255,0.1)' }}>
+                          <span className="sim-data-packet secondary"></span>
+                        </div>
+
+                        <div className="sim-node react-node">
+                          Fulfillment
+                        </div>
+                      </div>
+
+                      {/* Alert Message */}
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.8rem', color: '#fb7185', backgroundColor: 'rgba(251, 113, 133, 0.05)', border: '1px solid rgba(251, 113, 133, 0.15)', padding: '8px', borderRadius: '6px' }}>
+                        <AlertTriangle size={14} style={{ flexShrink: 0 }} />
+                        <span><strong>Delay Risk (High):</strong> Port congestion detected. delay-impact simulator suggests 4.5 day delay. Recommending contingency supplier.</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Right Column: Key Metrics Panel */}
+              <div 
+                style={{ 
+                  background: 'rgba(168, 85, 247, 0.03)', 
+                  border: '1px solid rgba(168, 85, 247, 0.1)',
+                  borderRadius: '12px',
+                  padding: '24px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '16px',
+                  justifyContent: 'center',
+                  height: '100%'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <Layers size={24} style={{ color: 'hsl(var(--accent))' }} />
+                  <div>
+                    <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'hsl(var(--text-primary))' }}>Cost & Risk</div>
+                    <div style={{ fontSize: '0.85rem', color: 'hsl(var(--text-secondary))' }}>Optimized supplier scoring model</div>
+                  </div>
+                </div>
+                <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '12px' }}>
+                  <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'hsl(var(--text-primary))' }}>Delay Simulation</div>
+                  <div style={{ fontSize: '0.85rem', color: 'hsl(var(--text-secondary))' }}>Bottleneck forecasting for launches</div>
+                </div>
+                <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '12px' }}>
+                  <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'hsl(var(--text-primary))' }}>Interactive Control Tower</div>
+                  <div style={{ fontSize: '0.85rem', color: 'hsl(var(--text-secondary))' }}>Real-time shipment anomaly alerts</div>
                 </div>
               </div>
             </div>
