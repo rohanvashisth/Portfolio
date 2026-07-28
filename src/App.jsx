@@ -25,35 +25,35 @@ function App() {
         
         {/* Horizontal Dividers */}
         <div className="container">
-          <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)' }}></div>
+          <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(15, 23, 42, 0.06), transparent)' }}></div>
         </div>
 
         {/* Experience Timeline */}
         <Experience />
 
         <div className="container">
-          <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)' }}></div>
+          <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(15, 23, 42, 0.06), transparent)' }}></div>
         </div>
 
         {/* Skills Hub */}
         <Skills />
 
         <div className="container">
-          <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)' }}></div>
+          <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(15, 23, 42, 0.06), transparent)' }}></div>
         </div>
 
         {/* Projects Dashboard */}
         <Projects />
 
         <div className="container">
-          <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)' }}></div>
+          <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(15, 23, 42, 0.06), transparent)' }}></div>
         </div>
 
         {/* Education Credentials */}
         <Education />
 
         <div className="container">
-          <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)' }}></div>
+          <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(15, 23, 42, 0.06), transparent)' }}></div>
         </div>
 
         {/* Contact form */}
@@ -64,12 +64,12 @@ function App() {
       {/* Footer */}
       <footer 
         style={{ 
-          borderTop: '1px solid rgba(255,255,255,0.05)', 
+          borderTop: '1px solid rgba(15, 23, 42, 0.06)', 
           padding: '40px 0', 
           textAlign: 'center', 
           fontSize: '0.85rem', 
           color: 'hsl(var(--text-muted))',
-          background: 'rgba(7, 10, 19, 0.8)',
+          background: 'rgba(250, 246, 240, 0.8)',
           backdropFilter: 'blur(12px)'
         }}
       >
