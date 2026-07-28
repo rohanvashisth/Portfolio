@@ -615,6 +615,21 @@ export default function Projects() {
           90% { left: 0%; opacity: 0; }
           100% { left: 0%; opacity: 0; }
         }
+        @keyframes move-truck {
+          0% { left: 0%; transform: scaleX(1); }
+          50% { left: 80%; transform: scaleX(1); }
+          51% { transform: scaleX(-1); }
+          99% { left: 0%; transform: scaleX(-1); }
+          100% { left: 0%; transform: scaleX(1); }
+        }
+        .sim-truck-icon {
+          animation: move-truck 7s ease-in-out infinite;
+        }
+        .ping-dot.red-pulse {
+          background-color: #fb7185;
+          box-shadow: 0 0 8px #fb7185;
+          animation: pulse-op 0.8s ease-in-out infinite;
+        }
       `}</style>
     </section>
   );
