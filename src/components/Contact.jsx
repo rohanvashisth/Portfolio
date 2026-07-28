@@ -58,7 +58,7 @@ export default function Contact() {
                   alignItems: 'center',
                   gap: '16px',
                   padding: '20px',
-                  border: '1px solid rgba(255,255,255,0.05)'
+                  border: '1px solid rgba(15, 23, 42, 0.08)'
                 }}
               >
                 <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(59, 130, 246, 0.1)', display: 'flex', alignItems: 'center', justifySelf: 'center', justifyContent: 'center' }}>
@@ -82,7 +82,7 @@ export default function Contact() {
                   alignItems: 'center',
                   gap: '16px',
                   padding: '20px',
-                  border: '1px solid rgba(255,255,255,0.05)'
+                  border: '1px solid rgba(15, 23, 42, 0.08)'
                 }}
               >
                 <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(16, 185, 129, 0.1)', display: 'flex', alignItems: 'center', justifySelf: 'center', justifyContent: 'center' }}>
@@ -104,7 +104,7 @@ export default function Contact() {
                   alignItems: 'center',
                   gap: '16px',
                   padding: '20px',
-                  border: '1px solid rgba(255,255,255,0.05)'
+                  border: '1px solid rgba(15, 23, 42, 0.08)'
                 }}
               >
                 <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(168, 85, 247, 0.1)', display: 'flex', alignItems: 'center', justifySelf: 'center', justifyContent: 'center' }}>
@@ -125,7 +125,7 @@ export default function Contact() {
                   alignItems: 'center',
                   gap: '16px',
                   padding: '20px',
-                  border: '1px solid rgba(255,255,255,0.05)'
+                  border: '1px solid rgba(15, 23, 42, 0.08)'
                 }}
               >
                 <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255, 255, 255, 0.03)', display: 'flex', alignItems: 'center', justifySelf: 'center', justifyContent: 'center' }}>
@@ -265,8 +265,8 @@ const inputStyle = {
   width: '100%',
   padding: '10px 14px',
   borderRadius: '8px',
-  backgroundColor: 'rgba(0, 0, 0, 0.2)',
-  border: '1px solid rgba(255, 255, 255, 0.08)',
+  backgroundColor: 'rgba(15, 23, 42, 0.02)',
+  border: '1px solid rgba(15, 23, 42, 0.1)',
   color: 'hsl(var(--text-primary))',
   fontFamily: 'var(--font-sans)',
   fontSize: '0.95rem',

@@ -38,10 +38,10 @@ export default function Projects() {
               <div 
                 style={{ 
                   display: 'flex', 
-                  backgroundColor: 'rgba(255, 255, 255, 0.04)', 
+                  backgroundColor: 'rgba(15, 23, 42, 0.04)', 
                   padding: '4px', 
                   borderRadius: '8px', 
-                  border: '1px solid rgba(255, 255, 255, 0.08)' 
+                  border: '1px solid rgba(15, 23, 42, 0.08)' 
                 }}
               >
                 <button
@@ -112,7 +112,7 @@ export default function Projects() {
                   </div>
                 ) : (
                   // Live Architecture Simulation (interactive graphic mockup)
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', padding: '16px', background: 'rgba(0,0,0,0.2)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.04)' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', padding: '16px', background: 'rgba(15, 23, 42, 0.03)', borderRadius: '12px', border: '1px solid rgba(15, 23, 42, 0.06)' }}>
                     <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'hsl(var(--primary))', display: 'flex', alignItems: 'center', gap: '6px' }}>
                       <Activity size={14} className="pulse-icon" />
                       SYSTEM OBSERVABILITY TOPOLOGY
@@ -204,10 +204,10 @@ export default function Projects() {
               <div 
                 style={{ 
                   display: 'flex', 
-                  backgroundColor: 'rgba(255, 255, 255, 0.04)', 
+                  backgroundColor: 'rgba(15, 23, 42, 0.04)', 
                   padding: '4px', 
                   borderRadius: '8px', 
-                  border: '1px solid rgba(255, 255, 255, 0.08)' 
+                  border: '1px solid rgba(15, 23, 42, 0.08)' 
                 }}
               >
                 <button
@@ -278,7 +278,7 @@ export default function Projects() {
                   </div>
                 ) : (
                   // Live Queue Simulation
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', padding: '16px', background: 'rgba(0,0,0,0.2)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.04)' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', padding: '16px', background: 'rgba(15, 23, 42, 0.03)', borderRadius: '12px', border: '1px solid rgba(15, 23, 42, 0.06)' }}>
                     <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'hsl(var(--secondary))', display: 'flex', alignItems: 'center', gap: '6px' }}>
                       <GitFork size={14} />
                       GUARANTEED AT-LEAST-ONCE PROCESSING PIPELINE
@@ -295,8 +295,8 @@ export default function Projects() {
                       <div 
                         style={{ 
                           height: '34px', 
-                          background: 'rgba(255,255,255,0.03)', 
-                          border: '1px solid rgba(255,255,255,0.08)', 
+                          background: 'rgba(15, 23, 42, 0.03)', 
+                          border: '1px solid rgba(15, 23, 42, 0.08)', 
                           borderRadius: '6px', 
                           position: 'relative',
                           display: 'flex',
@@ -372,10 +372,10 @@ export default function Projects() {
               <div 
                 style={{ 
                   display: 'flex', 
-                  backgroundColor: 'rgba(255, 255, 255, 0.04)', 
+                  backgroundColor: 'rgba(15, 23, 42, 0.04)', 
                   padding: '4px', 
                   borderRadius: '8px', 
-                  border: '1px solid rgba(255, 255, 255, 0.08)' 
+                  border: '1px solid rgba(15, 23, 42, 0.08)' 
                 }}
               >
                 <button
@@ -446,7 +446,7 @@ export default function Projects() {
                   </div>
                 ) : (
                   // Live Control Tower Simulation
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', padding: '16px', background: 'rgba(0,0,0,0.2)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.04)' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', padding: '16px', background: 'rgba(15, 23, 42, 0.03)', borderRadius: '12px', border: '1px solid rgba(15, 23, 42, 0.06)' }}>
                     <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'hsl(var(--accent))', display: 'flex', alignItems: 'center', gap: '6px' }}>
                       <Globe size={14} className="pulse-icon" />
                       ACTIVE CONTROL TOWER SHIPMENT MONITORING
@@ -460,7 +460,7 @@ export default function Projects() {
                           <span className="ping-dot green"></span>
                         </div>
                         
-                        <div style={{ flexGrow: 1, height: '2px', position: 'relative', margin: '0 8px', borderBottom: '2px dashed rgba(255,255,255,0.1)' }}>
+                        <div style={{ flexGrow: 1, height: '2px', position: 'relative', margin: '0 8px', borderBottom: '2px dashed rgba(15, 23, 42, 0.15)' }}>
                           <Truck size={12} className="sim-truck-icon" style={{ position: 'absolute', top: '-6px', color: 'hsl(var(--primary))' }} />
                         </div>
                         
@@ -469,7 +469,7 @@ export default function Projects() {
                           <span className="ping-dot red-pulse"></span>
                         </div>
 
-                        <div style={{ flexGrow: 1, height: '2px', position: 'relative', margin: '0 8px', borderBottom: '2px dashed rgba(255,255,255,0.1)' }}>
+                        <div style={{ flexGrow: 1, height: '2px', position: 'relative', margin: '0 8px', borderBottom: '2px dashed rgba(15, 23, 42, 0.15)' }}>
                           <span className="sim-data-packet secondary"></span>
                         </div>
 
