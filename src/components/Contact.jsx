@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Linkedin, Send, CheckCircle2, AlertCircle, MapPin, Phone, MessageSquare } from 'lucide-react';
+import { Mail, Linkedin, Send, CheckCircle2, AlertCircle, MapPin, Phone, ArrowUpRight } from 'lucide-react';
 
 export default function Contact() {
   const [formState, setFormState] = useState({ name: '', email: '', subject: '', message: '' });
@@ -21,24 +21,24 @@ export default function Contact() {
     setTimeout(() => {
       setStatus('success');
       setFormState({ name: '', email: '', subject: '', message: '' });
-    }, 1200);
+    }, 1000);
   };
 
   const inputStyle = {
     width: '100%',
     padding: '11px 14px',
-    borderRadius: '8px',
+    borderRadius: '6px',
     backgroundColor: '#ffffff',
-    border: '1px solid var(--border-subtle)',
+    border: '1px solid var(--border-hairline)',
     color: 'var(--text-primary)',
     fontFamily: 'var(--font-sans)',
-    fontSize: '0.94rem',
+    fontSize: '0.92rem',
     outline: 'none',
-    transition: 'border-color 0.15s ease'
+    transition: 'border-color var(--transition-fast)'
   };
 
   return (
-    <section id="contact" className="section" style={{ borderTop: '1px solid var(--border-subtle)', paddingBottom: '90px' }}>
+    <section id="contact" className="section" style={{ paddingBottom: '90px' }}>
       <div className="container">
         
         {/* Section Header */}
@@ -50,112 +50,197 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid-2" style={{ maxWidth: '960px', gap: '36px', alignItems: 'start' }}>
+        {/* 2-Column Integrated Layout */}
+        <div className="grid-2" style={{ gap: '48px', alignItems: 'start' }}>
           
-          {/* Left Column: Direct Links & Info */}
-          <div style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          {/* Left Column: Direct Communication Channels */}
+          <div style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '24px' }}>
             
-            {/* Email link */}
-            <a 
-              id="contact-link-email"
-              href="mailto:rohan9vashisth@gmail.com"
-              className="glass-card"
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '16px',
-                padding: '20px',
-                textDecoration: 'none'
-              }}
-            >
-              <div style={{ width: '42px', height: '42px', borderRadius: '10px', backgroundColor: 'var(--primary-light)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <Mail size={20} style={{ color: 'var(--primary)' }} />
+            <div style={{ paddingBottom: '16px', borderBottom: '1px solid var(--border-hairline)' }}>
+              <div style={{ fontSize: '0.82rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '8px' }}>
+                Availability
               </div>
-              <div>
-                <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 550, textTransform: 'uppercase', letterSpacing: '0.04em' }}>Email</div>
-                <div style={{ fontSize: '0.98rem', fontWeight: 650, color: 'var(--text-primary)' }}>rohan9vashisth@gmail.com</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+                <span className="status-dot"></span>
+                <span style={{ fontSize: '0.94rem', fontWeight: 650, color: 'var(--text-primary)' }}>
+                  Actively interviewing for TPM / PM roles
+                </span>
               </div>
-            </a>
+              <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', lineHeight: 1.55 }}>
+                Graduating with an MBA in May 2026. Open to full-time roles globally (US, India, Remote) in Technical Product Management, Core Platforms, and FinTech.
+              </p>
+            </div>
 
-            {/* LinkedIn Link */}
-            <a 
-              id="contact-link-linkedin"
-              href="https://www.linkedin.com/in/rohanvashisth/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass-card"
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '16px',
-                padding: '20px',
-                textDecoration: 'none'
-              }}
-            >
-              <div style={{ width: '42px', height: '42px', borderRadius: '10px', backgroundColor: 'var(--primary-light)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <Linkedin size={20} style={{ color: 'var(--primary)' }} />
-              </div>
-              <div>
-                <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 550, textTransform: 'uppercase', letterSpacing: '0.04em' }}>LinkedIn</div>
-                <div style={{ fontSize: '0.98rem', fontWeight: 650, color: 'var(--text-primary)' }}>linkedin.com/in/rohanvashisth</div>
-              </div>
-            </a>
+            {/* Direct Channel Rows */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+              
+              {/* Email */}
+              <a 
+                id="contact-link-email"
+                href="mailto:rohan9vashisth@gmail.com"
+                className="contact-channel-row"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  padding: '14px 16px',
+                  borderRadius: '8px',
+                  backgroundColor: 'var(--bg-subtle)',
+                  border: '1px solid var(--border-hairline)',
+                  textDecoration: 'none',
+                  transition: 'border-color var(--transition-fast), background-color var(--transition-fast)'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <div style={{ 
+                    width: '32px', 
+                    height: '32px', 
+                    borderRadius: '6px', 
+                    backgroundColor: '#ffffff', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    border: '1px solid var(--border-hairline)'
+                  }}>
+                    <Mail size={16} style={{ color: 'var(--primary)' }} />
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', textTransform: 'uppercase' }}>Email</div>
+                    <div style={{ fontSize: '0.92rem', fontWeight: 600, color: 'var(--text-primary)' }}>rohan9vashisth@gmail.com</div>
+                  </div>
+                </div>
+                <ArrowUpRight size={16} style={{ color: 'var(--text-muted)' }} />
+              </a>
 
-            {/* Phone Link */}
-            <a 
-              id="contact-link-phone"
-              href="tel:+917397430237"
-              className="glass-card"
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '16px',
-                padding: '20px',
-                textDecoration: 'none'
-              }}
-            >
-              <div style={{ width: '42px', height: '42px', borderRadius: '10px', backgroundColor: 'var(--emerald-light)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <Phone size={20} style={{ color: 'var(--emerald)' }} />
-              </div>
-              <div>
-                <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 550, textTransform: 'uppercase', letterSpacing: '0.04em' }}>Phone</div>
-                <div style={{ fontSize: '0.98rem', fontWeight: 650, color: 'var(--text-primary)' }}>+91 7397430237</div>
-              </div>
-            </a>
+              {/* LinkedIn */}
+              <a 
+                id="contact-link-linkedin"
+                href="https://www.linkedin.com/in/rohanvashisth/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-channel-row"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  padding: '14px 16px',
+                  borderRadius: '8px',
+                  backgroundColor: 'var(--bg-subtle)',
+                  border: '1px solid var(--border-hairline)',
+                  textDecoration: 'none',
+                  transition: 'border-color var(--transition-fast), background-color var(--transition-fast)'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <div style={{ 
+                    width: '32px', 
+                    height: '32px', 
+                    borderRadius: '6px', 
+                    backgroundColor: '#ffffff', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    border: '1px solid var(--border-hairline)'
+                  }}>
+                    <Linkedin size={16} style={{ color: 'var(--primary)' }} />
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', textTransform: 'uppercase' }}>LinkedIn</div>
+                    <div style={{ fontSize: '0.92rem', fontWeight: 600, color: 'var(--text-primary)' }}>linkedin.com/in/rohanvashisth</div>
+                  </div>
+                </div>
+                <ArrowUpRight size={16} style={{ color: 'var(--text-muted)' }} />
+              </a>
 
-            {/* Location Card */}
-            <div 
-              id="contact-card-location"
-              className="glass-card"
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '16px',
-                padding: '20px'
-              }}
-            >
-              <div style={{ width: '42px', height: '42px', borderRadius: '10px', backgroundColor: 'var(--bg-surface-subtle)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <MapPin size={20} style={{ color: 'var(--text-secondary)' }} />
+              {/* Phone */}
+              <a 
+                id="contact-link-phone"
+                href="tel:+917397430237"
+                className="contact-channel-row"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  padding: '14px 16px',
+                  borderRadius: '8px',
+                  backgroundColor: 'var(--bg-subtle)',
+                  border: '1px solid var(--border-hairline)',
+                  textDecoration: 'none',
+                  transition: 'border-color var(--transition-fast), background-color var(--transition-fast)'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <div style={{ 
+                    width: '32px', 
+                    height: '32px', 
+                    borderRadius: '6px', 
+                    backgroundColor: '#ffffff', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    border: '1px solid var(--border-hairline)'
+                  }}>
+                    <Phone size={16} style={{ color: 'var(--emerald)' }} />
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', textTransform: 'uppercase' }}>Phone</div>
+                    <div style={{ fontSize: '0.92rem', fontWeight: 600, color: 'var(--text-primary)' }}>+91 7397430237</div>
+                  </div>
+                </div>
+                <ArrowUpRight size={16} style={{ color: 'var(--text-muted)' }} />
+              </a>
+
+              {/* Location */}
+              <div 
+                id="contact-row-location"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '12px',
+                  padding: '14px 16px',
+                  borderRadius: '8px',
+                  backgroundColor: 'var(--bg-subtle)',
+                  border: '1px solid var(--border-hairline)'
+                }}
+              >
+                <div style={{ 
+                  width: '32px', 
+                  height: '32px', 
+                  borderRadius: '6px', 
+                  backgroundColor: '#ffffff', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center',
+                  border: '1px solid var(--border-hairline)'
+                }}>
+                  <MapPin size={16} style={{ color: 'var(--text-muted)' }} />
+                </div>
+                <div>
+                  <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', textTransform: 'uppercase' }}>Location</div>
+                  <div style={{ fontSize: '0.92rem', fontWeight: 600, color: 'var(--text-primary)' }}>Gurugram, India • Open to Global Relocation</div>
+                </div>
               </div>
-              <div>
-                <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 550, textTransform: 'uppercase', letterSpacing: '0.04em' }}>Location</div>
-                <div style={{ fontSize: '0.98rem', fontWeight: 650, color: 'var(--text-primary)' }}>Gurugram, India • Open to Global Relocation</div>
-              </div>
+
             </div>
 
           </div>
 
-          {/* Right Column: Message Form */}
-          <div className="glass-card" style={{ padding: '32px' }}>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: 750, marginBottom: '20px', textAlign: 'left', color: 'var(--text-primary)' }}>
-              Send a Direct Message
-            </h3>
+          {/* Right Column: Integrated Inquiry Form */}
+          <div style={{ textAlign: 'left' }}>
+            <div style={{ marginBottom: '20px' }}>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 750, color: 'var(--text-primary)', marginBottom: '6px' }}>
+                Send a Direct Message
+              </h3>
+              <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)' }}>
+                Have an inquiry or discussion topic? Send a note directly below.
+              </p>
+            </div>
             
             <form onSubmit={handleFormSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               
               {/* Name */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', textAlign: 'left' }}>
-                <label htmlFor="contact-input-name" style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <label htmlFor="contact-input-name" style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-primary)' }}>
                   Your Name *
                 </label>
                 <input
@@ -171,8 +256,8 @@ export default function Contact() {
               </div>
 
               {/* Email */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', textAlign: 'left' }}>
-                <label htmlFor="contact-input-email" style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <label htmlFor="contact-input-email" style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-primary)' }}>
                   Email Address *
                 </label>
                 <input
@@ -188,8 +273,8 @@ export default function Contact() {
               </div>
 
               {/* Subject */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', textAlign: 'left' }}>
-                <label htmlFor="contact-input-subject" style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <label htmlFor="contact-input-subject" style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-primary)' }}>
                   Subject
                 </label>
                 <input
@@ -199,13 +284,13 @@ export default function Contact() {
                   value={formState.subject}
                   onChange={handleInputChange}
                   style={inputStyle}
-                  placeholder="TPM Opportunity / Collaboration"
+                  placeholder="TPM Opportunity / FinTech Chat"
                 />
               </div>
 
               {/* Message */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', textAlign: 'left' }}>
-                <label htmlFor="contact-input-message" style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <label htmlFor="contact-input-message" style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-primary)' }}>
                   Message *
                 </label>
                 <textarea
@@ -216,21 +301,21 @@ export default function Contact() {
                   value={formState.message}
                   onChange={handleInputChange}
                   style={{ ...inputStyle, resize: 'vertical' }}
-                  placeholder="Hi Rohan, I'd like to chat about..."
+                  placeholder="Hi Rohan, I'd like to connect regarding..."
                 />
               </div>
 
               {/* Status alerts */}
               {status === 'error' && (
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#b91c1c', fontSize: '0.88rem', backgroundColor: '#fef2f2', padding: '10px', borderRadius: '6px' }}>
-                  <AlertCircle size={16} />
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#b91c1c', fontSize: '0.86rem', backgroundColor: '#fef2f2', padding: '10px 12px', borderRadius: '6px', border: '1px solid #fecaca' }}>
+                  <AlertCircle size={15} />
                   <span>Please fill out all required fields.</span>
                 </div>
               )}
 
               {status === 'success' && (
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#15803d', fontSize: '0.88rem', backgroundColor: '#f0fdf4', padding: '10px', borderRadius: '6px' }}>
-                  <CheckCircle2 size={16} />
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#15803d', fontSize: '0.86rem', backgroundColor: '#f0fdf4', padding: '10px 12px', borderRadius: '6px', border: '1px solid #bbf7d0' }}>
+                  <CheckCircle2 size={15} />
                   <span>Thank you! Your message has been received. I'll get back to you shortly.</span>
                 </div>
               )}
@@ -246,7 +331,7 @@ export default function Contact() {
                   <span>Sending message...</span>
                 ) : (
                   <>
-                    <Send size={16} />
+                    <Send size={15} />
                     <span>Send Message</span>
                   </>
                 )}
@@ -258,6 +343,13 @@ export default function Contact() {
         </div>
 
       </div>
+
+      <style>{`
+        .contact-channel-row:hover {
+          border-color: var(--border-strong) !important;
+          background-color: #ffffff !important;
+        }
+      `}</style>
     </section>
   );
 }
