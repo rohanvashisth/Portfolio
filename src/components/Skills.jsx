@@ -111,12 +111,15 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="section">
+    <section id="skills" className="section section-alt">
       <div className="container">
         
         {/* Section Header */}
         <div className="section-header" style={{ textAlign: 'left' }}>
-          <span className="section-label">Core Capabilities</span>
+          <div className="section-tag">
+            <span className="section-tag-num">03</span>
+            <span>Core Capabilities</span>
+          </div>
           <h2 className="section-title">Domain Expertise & Technical Depth</h2>
           <p className="section-subtitle">
             An intersection of distributed platform engineering, product management disciplines, and quantitative business strategy.
@@ -129,8 +132,10 @@ export default function Skills() {
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
-            borderTop: '1px solid var(--border-hairline)',
-            borderBottom: '1px solid var(--border-hairline)'
+            backgroundColor: '#ffffff',
+            borderRadius: '12px',
+            border: '1px solid var(--border-hairline)',
+            boxShadow: '0 1px 3px rgba(0,0,0,0.02)'
           }}
         >
           {pillars.map((pillar, colIdx) => (
@@ -138,7 +143,7 @@ export default function Skills() {
               key={pillar.id}
               className="skills-pillar-col"
               style={{
-                padding: '36px 28px',
+                padding: '40px 32px',
                 borderRight: colIdx < 2 ? '1px solid var(--border-hairline)' : 'none',
                 display: 'flex',
                 flexDirection: 'column',
