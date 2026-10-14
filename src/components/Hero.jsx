@@ -48,7 +48,7 @@ export default function Hero() {
               Technical Product Manager with an engineering foundation.
             </h1>
 
-            <p style={{ fontSize: '1.08rem', color: 'var(--text-secondary)', lineHeight: 1.65, maxWidth: '560px' }}>
+            <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.7, maxWidth: '820px' }}>
               Hi, I'm <strong style={{ color: 'var(--text-primary)' }}>Rohan Vashisth</strong>. I bridge complex distributed systems architecture with product strategy and roadmap execution. Previously spent 3+ years at <strong style={{ color: 'var(--text-primary)' }}>JPMorgan Chase</strong> modernizing mission-critical FX settlement and low-latency trading engines processing $10B–$15B in daily transactions. MBA in Finance & Supply Chain from <strong style={{ color: 'var(--text-primary)' }}>Rutgers Business School</strong>.
             </p>
 
