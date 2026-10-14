@@ -409,18 +409,18 @@ export default function Projects() {
                   }}
                   className="projects-two-col"
                 >
-                  <div style={{ backgroundColor: '#ffffff', border: '1px solid #fecdd3', borderTop: '3px solid #f43f5e', padding: '20px 22px', borderRadius: '10px', boxShadow: '0 2px 6px rgba(0,0,0,0.02)' }}>
-                    <div style={{ fontSize: '0.8rem', fontWeight: 750, textTransform: 'uppercase', letterSpacing: '0.04em', color: '#be123c', marginBottom: '8px' }}>
-                      The Problem Space (Customer & Operational Pain Point)
+                  <div style={{ backgroundColor: '#ffffff', border: '1px solid var(--border-hairline)', padding: '20px 22px', borderRadius: '10px', boxShadow: '0 2px 6px rgba(0,0,0,0.02)' }}>
+                    <div style={{ fontSize: '0.78rem', fontFamily: 'var(--font-mono)', fontWeight: 750, textTransform: 'uppercase', letterSpacing: '0.04em', color: 'var(--text-primary)', marginBottom: '8px' }}>
+                      The Problem Space
                     </div>
                     <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
                       {proj.theIssue}
                     </p>
                   </div>
 
-                  <div style={{ backgroundColor: '#ffffff', border: '1px solid #a7f3d0', borderTop: '3px solid #10b981', padding: '20px 22px', borderRadius: '10px', boxShadow: '0 2px 6px rgba(0,0,0,0.02)' }}>
-                    <div style={{ fontSize: '0.8rem', fontWeight: 750, textTransform: 'uppercase', letterSpacing: '0.04em', color: '#047857', marginBottom: '8px' }}>
-                      Why We Solved It (Business Impact & Strategy)
+                  <div style={{ backgroundColor: '#ffffff', border: '1px solid var(--border-hairline)', padding: '20px 22px', borderRadius: '10px', boxShadow: '0 2px 6px rgba(0,0,0,0.02)' }}>
+                    <div style={{ fontSize: '0.78rem', fontFamily: 'var(--font-mono)', fontWeight: 750, textTransform: 'uppercase', letterSpacing: '0.04em', color: 'var(--text-primary)', marginBottom: '8px' }}>
+                      Why We Solved It
                     </div>
                     <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
                       {proj.whySolve}
