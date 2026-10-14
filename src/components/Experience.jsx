@@ -10,64 +10,80 @@ export default function Experience() {
       role: 'Software Engineer II (Platform Product & Engineering)',
       company: 'JPMorgan Chase & Co.',
       location: 'Bengaluru, India',
-      period: '2023 – 2024',
+      period: '2023 – July 2024',
       badge: 'Promoted',
-      pmSummary: 'Owned end-to-end delivery of platform capabilities supporting institutional FX settlement processing $10B–$15B in daily value, partnering with trading desks, operations, and engineering to modernize core architecture.',
+      pmSummary: 'Technical product engineering across high-volume financial platforms processing 250K–300K daily transactions worth $10B–$15B. Led discovery through delivery across Product, Engineering, Finance, Risk, Operations, and QA.',
       points: [
         {
-          title: 'Legacy Settlement Architecture Modernization',
+          title: '40-Year Platform Modernization & Microservices Transition',
           issue: 'A 40-year monolithic FX settlement architecture created severe operational bottlenecks, high manual trade reconciliation, and settlement failure risks as daily trade volume surged.',
           why: 'Crucial to expand JPMC’s market share in institutional FX trading, ensure regulatory compliance, and eliminate millions in operational risk from manual trade settlement exceptions.',
-          how: 'Spearheaded product requirements and cross-functional technical delivery to decouple monolithic workflows into modular microservices using Apache Kafka event streams; built standardized idempotent APIs for Corporate FX trade lifecycle (amend, net, split, cancel).',
-          metrics: 'Scaled platform capacity to process $10B–$15B in daily settlement value across 250K–300K transactions; elevated Straight-Through Processing (STP) to 95%, reducing manual trade exceptions by 30%+.',
-          conciseBullet: 'Led platform requirements and delivery to decompose a 40-year monolithic FX settlement system into event-driven microservices via Apache Kafka, scaling capacity to $10B–$15B in daily settlement value (250K–300K transactions) and increasing Straight-Through Processing (STP) to 95%.'
+          how: 'Transitioned core workflows to distributed microservices orchestrated through Apache Kafka event streaming; coordinated Product, Engineering, Finance, Risk, Operations, and QA across end-to-end delivery.',
+          metrics: 'Scaled platform capacity to process $10B–$15B in daily settlement value across 250K–300K transactions; elevated Straight-Through Processing (STP) to 95%.',
+          conciseBullet: 'Modernized a 40-year-old platform to address scalability and maintainability challenges, transitioning core workflows to distributed microservices while coordinating Product, Engineering, Finance, Risk, Operations, and QA for a platform processing 250K-300K daily transactions worth $10B-$15B.'
         },
         {
-          title: 'Operational Intelligence Platform & Incident Recovery',
-          issue: 'Operations and engineering teams faced 4–5 hours of Mean-Time-to-Resolution (MTTR) per critical trading incident due to fragmented logs across 20+ disconnected services.',
-          why: 'Trading desk uptime and SLA compliance are paramount; every minute of downtime risks market financial loss and institutional client churn.',
-          how: 'Conceived and led delivery of an internal operational telemetry and log streaming platform; collaborated with operations to design self-service health monitoring dashboards and proactive threshold alerting.',
-          metrics: 'Slashed Mean-Time-to-Resolution (MTTR) by 40%, saving 15+ engineering hours per week and maintaining platform availability at 99.95%.',
-          conciseBullet: 'Conceived and delivered a real-time operational telemetry and log aggregation platform across 20+ microservices, cutting incident MTTR by 40% and saving 15+ engineering hours per week.'
+          title: 'High-Volume Trade Lifecycle API Re-Engineering',
+          issue: 'Legacy trade lifecycle workflows suffered from scalability constraints and batch delays during market volatility peaks.',
+          why: 'Essential to eliminate trade state discrepancies and enable institutional partners to seamlessly amend, net, split, and cancel orders in real time.',
+          how: 'Re-engineered four high-volume trade lifecycle capabilities (amendment, split, cancellation, and netting) into reusable, idempotent REST APIs.',
+          metrics: 'Expanded trade processing capacity by 10x while standardizing trade interfaces across distributed ledgers.',
+          conciseBullet: 'Re-engineered four high-volume trade lifecycle capabilities—amendment, split, cancellation, and netting—to address scalability constraints, converting them into reusable APIs that increased processing capacity 10x.'
         },
         {
-          title: 'Data-Driven Roadmap & Backlog Prioritization',
-          issue: 'Engineering capacity was fragmented across competing stakeholder requests with zero quantitative visibility into which platform bottlenecks caused the highest customer friction.',
-          why: 'Needed to maximize engineering velocity and align engineering sprints with the highest-ROI business and operational priorities.',
-          how: 'Established platform health KPIs; analyzed production telemetry and transaction failure patterns using SQL and Python to build data-backed PRDs and prioritize the quarterly product roadmap.',
-          metrics: 'Accelerated feature delivery velocity by 25% and aligned 4 cross-functional teams (Engineering, Trading Ops, Risk, and Product) around shared platform OKRs.',
-          conciseBullet: 'Leveraged SQL and Python to analyze platform telemetry, defining health KPIs and authoring data-backed PRDs that accelerated feature velocity by 25% and aligned engineering sprints with business OKRs.'
+          title: '"Can I Trade" Automated Validation Engine',
+          issue: 'Trade-approval validation was fragmented across multiple ledgers, causing slow synchronous pre-trade checks and exposing traders to price slippage and settlement default.',
+          why: 'Institutional trading desks required sub-second validation to safely execute high-volume corporate FX orders without latency.',
+          how: 'Built "Can I Trade" validation service, translating complex business rules into an automated workflow using Kafka and asynchronous IBM MQ pipelines.',
+          metrics: 'Improved trade-approval efficiency by 97% (sub-100ms decision latency) while supporting $200M–$2B in daily approvals.',
+          conciseBullet: 'Built "Can I Trade" to solve fragmented and inefficient trade-approval validation, translating complex business rules into an automated workflow that improved approval efficiency by 97% while supporting $200M-$2B in daily approvals.'
+        },
+        {
+          title: 'Real-Time Product & Operational Telemetry Platform',
+          issue: 'Operations and engineering teams faced 4–5 hours of MTTR per critical trading incident due to limited visibility into transaction failure patterns across 20+ disconnected services.',
+          why: 'Trading desk uptime and SLA compliance are paramount; downtime directly risks market financial loss and institutional client churn.',
+          how: 'Built real-time product and operational analytics monitoring across 20+ Kubernetes microservices with self-service health dashboards and proactive alerting.',
+          metrics: 'Reduced incident resolution time by 40%, saving 15+ engineering hours per week and maintaining platform availability at 99.95%+.',
+          conciseBullet: 'Built real-time product and operational analytics to address limited visibility into failures across distributed services, creating monitoring across 20+ Kubernetes microservices that reduced incident resolution time by 40%.'
         }
       ],
-      skills: ['Product Strategy', 'PRD Authoring', 'Roadmap Prioritization', 'Kafka', 'Microservices', 'SQL', 'Python', 'Agile / Scrum']
+      skills: ['Product Requirements', 'PRDs', 'Microservices', 'Kafka', 'Kubernetes', 'APIs', 'STP Optimization', 'Agile / Scrum', 'Cross-Functional Leadership']
     },
     {
       id: 'se1',
       role: 'Software Engineer I',
       company: 'JPMorgan Chase & Co.',
       location: 'Bengaluru, India',
-      period: '2021 – 2023',
-      award: 'J.P. Morgan Impact Award (2022) — Awarded for system modernization & engineering excellence',
-      pmSummary: 'Delivered pre-trade validation automation and standardized API infrastructure for Corporate and Brokerage FX, reducing transaction latency and partner onboarding cycle times.',
+      period: 'January 2021 – December 2023',
+      award: 'J.P. Morgan Impact Award — Awarded for driving platform modernization & engineering excellence',
+      pmSummary: 'Translated ambiguous business needs into user journeys, PRDs, and engineering execution plans while optimizing messaging reliability and delivery predictability across high-volume financial platforms.',
       points: [
         {
-          title: '"Can I Trade" Pre-Trade Validation Engine',
-          issue: 'High-volume institutional trades suffered from slow, synchronous pre-trade validation checks across multiple ledgers, creating latency that exposed traders to market price slippage and potential settlement default.',
-          why: 'Institutional trading desks required sub-second validation to execute high-frequency corporate FX orders safely at enterprise scale.',
-          how: 'Owned the functional requirements, API schema design, and release execution for the "Can I Trade" validation service; utilized Kafka and asynchronous IBM MQ pipelines to decouple risk validation from downstream settlement.',
-          metrics: 'Slashed trade validation decision latency by 97% (from seconds to <100ms) while processing $200M to $2B in daily volume; awarded the 2022 J.P. Morgan Impact Award for engineering excellence.',
-          conciseBullet: 'Designed and launched the "Can I Trade" pre-payment validation engine supporting $200M–$2B daily volume, slashing trade decision latency by 97% (sub-100ms) and earning the 2022 J.P. Morgan Impact Award.'
+          title: 'Stakeholder Alignment & Clearer Product Requirements',
+          issue: 'Ambiguity across business and technology teams led to misaligned delivery expectations and fragmented engineering sprint velocity.',
+          why: 'Needed to establish a predictable delivery process, reduce scope ambiguity, and accelerate time-to-market for enterprise FX capabilities.',
+          how: 'Translated needs from 5+ stakeholder groups (Product, Engineering, QA, Finance, Operations) into clear user journeys, acceptance criteria, technical specifications, and actionable engineering plans.',
+          metrics: 'Eliminated requirement ambiguity, establishing a predictable delivery cadence across quarterly release milestones.',
+          conciseBullet: 'Created clearer product requirements to address ambiguity across business and technology teams, translating needs from 5+ stakeholder groups into user journeys, acceptance criteria, technical specifications, and actionable engineering plans.'
         },
         {
-          title: 'Corporate & Brokerage FX API Standardization',
-          issue: 'Institutional partner apps relied on brittle batch file transfers and non-standard endpoints, resulting in delayed trade confirmations and frequent state divergence.',
-          why: 'Needed to improve client integration experience, accelerate partner onboarding, and enable real-time trade status tracking.',
-          how: 'Defined API product specifications for idempotent REST services and led integration of Brokerage FX data streams; conducted 10x traffic load testing and led a CockroachDB (distributed SQL) POC evaluating consistency and horizontal elasticity.',
-          metrics: 'Standardized 100% of Brokerage FX trade interfaces, eliminating trade state discrepancies and reducing partner onboarding cycle time from weeks to days.',
-          conciseBullet: 'Modernized Brokerage FX interfaces by authoring idempotent REST API specifications and integrating event-driven data streams, eliminating trade state discrepancies and reducing partner onboarding time from weeks to days.'
+          title: 'Messaging Reliability & Failure Pattern Mitigation',
+          issue: 'High-volume financial workflows suffered recurring transaction-processing and dependency failures during market volume spikes.',
+          why: 'Critical to prevent trade state divergence and eliminate lengthy manual exception troubleshooting.',
+          how: 'Analyzed Kafka and IBM MQ messaging workflows supporting 250K+ daily transactions to identify failure patterns; implemented reusable architectural improvements and automated retry policies.',
+          metrics: 'Reduced troubleshooting effort by 4–5 hours per incident and prevented transaction drops across distributed services.',
+          conciseBullet: 'Improved messaging reliability to address recurring transaction-processing failures, analyzing Kafka and IBM MQ workflows to identify failure patterns and implement reusable improvements that reduced troubleshooting effort by 4-5 hours per incident.'
+        },
+        {
+          title: 'Cross-Functional Delivery Governance & Production Readiness',
+          issue: 'Execution gaps across siloed QA, operations, and engineering teams caused unexpected release defects during deployment windows.',
+          why: 'Enterprise banking platforms require continuous verification, zero-downtime releases, and robust deployment governance.',
+          how: 'Established a more predictable delivery process coordinating Product, Engineering, QA, Finance, and Operations through UAT, defect resolution, deployment validation, and production readiness auditing.',
+          metrics: 'Achieved flawless production readiness across release cycles with zero P0 deployment rollbacks.',
+          conciseBullet: 'Established a more predictable delivery process to address cross-team execution gaps, coordinating Product, Engineering, QA, Finance, and Operations through UAT, defect resolution, deployment validation, and production readiness.'
         }
       ],
-      skills: ['API Strategy', 'Functional Requirements', 'Kafka', 'IBM MQ', 'REST APIs', 'CockroachDB POC', 'FitNesse', 'STP Optimization']
+      skills: ['Product Discovery', 'User Journeys', 'Acceptance Criteria', 'Kafka', 'IBM MQ', 'Java', 'Spring Boot', 'UAT Governance', 'Python', 'SQL']
     }
   ];
 
@@ -84,7 +100,7 @@ export default function Experience() {
             </div>
             <h2 className="section-title">Professional Experience</h2>
             <p className="section-subtitle">
-              3+ years driving platform capabilities, high-throughput systems, and operational automation at JPMorgan Chase.
+              4+ years driving platform capabilities, high-throughput systems, and operational automation at J.P. Morgan.
             </p>
           </div>
 
@@ -110,7 +126,7 @@ export default function Experience() {
                 fontWeight: 650,
                 cursor: 'pointer',
                 border: 'none',
-                backgroundColor: viewMode === 'product' ? 'var(--text-primary)' : 'transparent',
+                backgroundColor: viewMode === 'product' ? 'var(--primary)' : 'transparent',
                 color: viewMode === 'product' ? '#ffffff' : 'var(--text-muted)',
                 transition: 'all 0.15s ease'
               }}
@@ -130,7 +146,7 @@ export default function Experience() {
                 fontWeight: 650,
                 cursor: 'pointer',
                 border: 'none',
-                backgroundColor: viewMode === 'concise' ? 'var(--text-primary)' : 'transparent',
+                backgroundColor: viewMode === 'concise' ? 'var(--primary)' : 'transparent',
                 color: viewMode === 'concise' ? '#ffffff' : 'var(--text-muted)',
                 transition: 'all 0.15s ease'
               }}
@@ -159,22 +175,22 @@ export default function Experience() {
               
               {/* Left Column: Organization & Tenure */}
               <div>
-                <div style={{ fontSize: '1.2rem', fontWeight: 750, color: 'var(--text-primary)', marginBottom: '4px' }}>
+                <div style={{ fontSize: '1.25rem', fontWeight: 750, color: 'var(--text-primary)', marginBottom: '4px' }}>
                   {exp.role}
                 </div>
 
-                <div style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px' }}>
-                  <Building2 size={15} style={{ color: 'var(--primary)' }} />
+                <div style={{ fontSize: '0.98rem', fontWeight: 650, color: 'var(--primary)', display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px' }}>
+                  <Building2 size={16} style={{ color: 'var(--primary)' }} />
                   <span>{exp.company}</span>
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: '14px' }}>
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                    <Calendar size={13} />
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', fontSize: '0.84rem', color: 'var(--text-muted)', marginBottom: '14px' }}>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                    <Calendar size={13} style={{ color: 'var(--emerald)' }} />
                     <span>{exp.period}</span>
                   </span>
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                    <MapPin size={13} />
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                    <MapPin size={13} style={{ color: 'var(--emerald)' }} />
                     <span>{exp.location}</span>
                   </span>
                 </div>
@@ -201,7 +217,7 @@ export default function Experience() {
                   >
                     <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '2px' }}>
                       <Award size={15} />
-                      <span style={{ fontWeight: 750 }}>Impact Award (2022)</span>
+                      <span style={{ fontWeight: 750 }}>Impact Award</span>
                     </div>
                     <span style={{ fontWeight: 400, fontSize: '0.78rem' }}>
                       Recognized for system modernization & engineering excellence.
@@ -210,14 +226,14 @@ export default function Experience() {
                 )}
               </div>
 
-              {/* Right Column: Narrative & Bullets */}
+              {/* Right Column: Narrative & Clean Editorial Breakdown */}
               <div>
-                <p style={{ fontSize: '0.98rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '24px', fontWeight: 500 }}>
+                <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', lineHeight: 1.65, marginBottom: '24px', fontWeight: 500 }}>
                   {exp.pmSummary}
                 </p>
 
                 {viewMode === 'product' ? (
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '22px' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                     {exp.points.map((pt, pIdx) => (
                       <div 
                         key={pIdx}
@@ -225,7 +241,7 @@ export default function Experience() {
                           backgroundColor: '#ffffff',
                           borderRadius: '10px',
                           border: '1px solid var(--border-hairline)',
-                          padding: '20px 22px',
+                          padding: '22px 24px',
                           boxShadow: '0 2px 8px rgba(0,0,0,0.02)',
                           display: 'flex',
                           flexDirection: 'column',
@@ -236,21 +252,22 @@ export default function Experience() {
                           {pt.title}
                         </div>
 
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '0.91rem', lineHeight: 1.55 }}>
-                          <div style={{ backgroundColor: '#fff1f2', border: '1px solid #fecdd3', borderRadius: '6px', padding: '10px 14px' }}>
-                            <span style={{ color: '#be123c', fontWeight: 750 }}>Issue: </span>
+                        {/* Clean Editorial Text Rows - No distracting multi-color boxes */}
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '0.92rem', lineHeight: 1.6 }}>
+                          <div>
+                            <span style={{ fontWeight: 750, color: 'var(--text-primary)', fontFamily: 'var(--font-mono)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Issue: </span>
                             <span style={{ color: 'var(--text-secondary)' }}>{pt.issue}</span>
                           </div>
-                          <div style={{ backgroundColor: '#fffbeb', border: '1px solid #fde68a', borderRadius: '6px', padding: '10px 14px' }}>
-                            <span style={{ color: '#b45309', fontWeight: 750 }}>Why: </span>
+                          <div>
+                            <span style={{ fontWeight: 750, color: 'var(--text-primary)', fontFamily: 'var(--font-mono)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Why: </span>
                             <span style={{ color: 'var(--text-secondary)' }}>{pt.why}</span>
                           </div>
-                          <div style={{ backgroundColor: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: '6px', padding: '10px 14px' }}>
-                            <span style={{ color: '#1d4ed8', fontWeight: 750 }}>How: </span>
+                          <div>
+                            <span style={{ fontWeight: 750, color: 'var(--text-primary)', fontFamily: 'var(--font-mono)', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.04em' }}>How: </span>
                             <span style={{ color: 'var(--text-secondary)' }}>{pt.how}</span>
                           </div>
-                          <div style={{ backgroundColor: '#ecfdf5', border: '1px solid #a7f3d0', borderRadius: '6px', padding: '10px 14px' }}>
-                            <span style={{ color: '#047857', fontWeight: 750 }}>Metrics: </span>
+                          <div style={{ borderTop: '1px solid var(--border-hairline)', paddingTop: '8px', marginTop: '4px' }}>
+                            <span style={{ fontWeight: 750, color: 'var(--primary)', fontFamily: 'var(--font-mono)', fontSize: '0.82rem', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Impact & Metrics: </span>
                             <span style={{ color: 'var(--text-primary)', fontWeight: 650 }}>{pt.metrics}</span>
                           </div>
                         </div>
@@ -260,8 +277,8 @@ export default function Experience() {
                 ) : (
                   <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '14px', padding: 0 }}>
                     {exp.points.map((pt, pIdx) => (
-                      <li key={pIdx} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', fontSize: '0.95rem', lineHeight: 1.6, backgroundColor: '#ffffff', padding: '16px 20px', borderRadius: '8px', border: '1px solid var(--border-hairline)' }}>
-                        <span style={{ color: 'var(--primary)', fontWeight: 800 }}>•</span>
+                      <li key={pIdx} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start', fontSize: '0.95rem', lineHeight: 1.65, backgroundColor: '#ffffff', padding: '18px 22px', borderRadius: '8px', border: '1px solid var(--border-hairline)', boxShadow: '0 1px 4px rgba(0,0,0,0.02)' }}>
+                        <span style={{ color: 'var(--primary)', fontWeight: 800, fontSize: '1.2rem', lineHeight: 1 }}>•</span>
                         <span>
                           <strong style={{ color: 'var(--text-primary)' }}>{pt.title}: </strong>
                           <span style={{ color: 'var(--text-secondary)' }}>{pt.conciseBullet}</span>
