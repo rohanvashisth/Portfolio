@@ -6,152 +6,126 @@ export default function Hero() {
     <section 
       id="hero" 
       style={{
-        paddingTop: '130px',
+        paddingTop: '135px',
         paddingBottom: '80px',
         position: 'relative'
       }}
     >
-      <div className="container grid-2" style={{ alignItems: 'center', gap: '48px' }}>
+      <div className="container">
         
-        {/* Left column: Authentic Narrative */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '22px', textAlign: 'left' }}>
+        {/* Top 2-Column Intro: Narrative + Portrait */}
+        <div 
+          style={{ 
+            display: 'grid', 
+            gridTemplateColumns: '1.25fr 0.85fr', 
+            gap: '56px', 
+            alignItems: 'center',
+            marginBottom: '56px'
+          }}
+          className="hero-grid"
+        >
           
-          {/* Status Badge */}
-          <div>
-            <span className="status-pill">
-              <span className="status-dot"></span>
-              Open to Technical Product & Platform Roles
-            </span>
-          </div>
-
-          <h1 
-            style={{ 
-              fontSize: 'clamp(2.4rem, 4.5vw, 3.4rem)', 
-              lineHeight: 1.15, 
-              letterSpacing: '-0.03em',
-              fontWeight: 800,
-              color: 'var(--text-primary)'
-            }}
-          >
-            Technical Product Manager with an engineering foundation.
-          </h1>
-
-          <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.65, maxWidth: '560px' }}>
-            Hi, I'm <strong style={{ color: 'var(--text-primary)' }}>Rohan Vashisth</strong>. I bridge distributed systems architecture with product strategy and roadmap execution. Previously spent 3+ years at <strong style={{ color: 'var(--text-primary)' }}>JPMorgan Chase</strong> modernizing mission-critical FX settlement and low-latency trading engines processing $10B–$15B in daily transactions. MBA in Finance & Supply Chain from <strong style={{ color: 'var(--text-primary)' }}>Rutgers Business School</strong>.
-          </p>
-
-          {/* Action Buttons */}
-          <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', alignItems: 'center', marginTop: '6px' }}>
-            <a 
-              id="hero-btn-work"
-              href="#projects" 
-              className="btn btn-primary"
-            >
-              Explore Case Studies
-              <ArrowRight size={16} />
-            </a>
-            <a 
-              id="hero-btn-resume"
-              href={`${import.meta.env.BASE_URL}RohanVashisth_Resume.pdf`}
-              download="RohanVashisth_Resume.pdf"
-              className="btn btn-secondary"
-            >
-              <FileText size={16} />
-              Resume (PDF)
-            </a>
-            <a 
-              id="hero-btn-contact"
-              href="#contact" 
-              className="btn btn-outline"
-            >
-              Get In Touch
-            </a>
-          </div>
-
-          {/* Social Quick Links */}
-          <div style={{ display: 'flex', gap: '16px', alignItems: 'center', marginTop: '4px' }}>
-            <a 
-              href="https://www.linkedin.com/in/rohanvashisth/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              style={{ color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.9rem' }}
-              className="social-link"
-            >
-              <Linkedin size={18} />
-              <span>LinkedIn</span>
-            </a>
-            <span style={{ color: 'var(--border-subtle)' }}>•</span>
-            <a 
-              href="https://github.com/rohanvashisth" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              style={{ color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.9rem' }}
-              className="social-link"
-            >
-              <Github size={18} />
-              <span>GitHub</span>
-            </a>
-            <span style={{ color: 'var(--border-subtle)' }}>•</span>
-            <a 
-              href="mailto:rohan9vashisth@gmail.com"
-              style={{ color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.9rem' }}
-              className="social-link"
-            >
-              <Mail size={18} />
-              <span>Email</span>
-            </a>
-          </div>
-
-          {/* Grounded Career Highlights */}
-          <div 
-            style={{ 
-              display: 'grid', 
-              gridTemplateColumns: 'repeat(3, 1fr)', 
-              gap: '20px',
-              borderTop: '1px solid var(--border-subtle)',
-              paddingTop: '24px',
-              marginTop: '12px'
-            }}
-          >
+          {/* Left Column: Narrative */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', textAlign: 'left' }}>
+            
+            {/* Status Pill */}
             <div>
-              <div style={{ fontSize: '1.45rem', fontWeight: 800, color: 'var(--text-primary)' }}>3+ Years</div>
-              <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginTop: '2px' }}>Software Engineer II @ J.P. Morgan</div>
+              <span className="status-pill">
+                <span className="status-dot"></span>
+                Open to Technical Product & Platform Roles
+              </span>
             </div>
-            <div>
-              <div style={{ fontSize: '1.45rem', fontWeight: 800, color: 'var(--text-primary)' }}>$10B–$15B</div>
-              <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginTop: '2px' }}>Daily FX Volume Modernized</div>
+
+            <h1 
+              style={{ 
+                fontSize: 'clamp(2.3rem, 4vw, 3.2rem)', 
+                lineHeight: 1.15, 
+                letterSpacing: '-0.03em',
+                fontWeight: 800,
+                color: 'var(--text-primary)'
+              }}
+            >
+              Technical Product Manager with an engineering foundation.
+            </h1>
+
+            <p style={{ fontSize: '1.08rem', color: 'var(--text-secondary)', lineHeight: 1.65, maxWidth: '560px' }}>
+              Hi, I'm <strong style={{ color: 'var(--text-primary)' }}>Rohan Vashisth</strong>. I bridge complex distributed systems architecture with product strategy and roadmap execution. Previously spent 3+ years at <strong style={{ color: 'var(--text-primary)' }}>JPMorgan Chase</strong> modernizing mission-critical FX settlement and low-latency trading engines processing $10B–$15B in daily transactions. MBA in Finance & Supply Chain from <strong style={{ color: 'var(--text-primary)' }}>Rutgers Business School</strong>.
+            </p>
+
+            {/* Action Buttons */}
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center', marginTop: '4px' }}>
+              <a 
+                id="hero-btn-work"
+                href="#projects" 
+                className="btn btn-primary"
+              >
+                <span>Explore Case Studies</span>
+                <ArrowRight size={15} />
+              </a>
+              <a 
+                id="hero-btn-resume"
+                href={`${import.meta.env.BASE_URL}RohanVashisth_Resume.pdf`}
+                download="RohanVashisth_Resume.pdf"
+                className="btn btn-secondary"
+              >
+                <FileText size={15} />
+                <span>Resume (PDF)</span>
+              </a>
+              <a 
+                id="hero-btn-contact"
+                href="#contact" 
+                className="btn btn-outline"
+              >
+                Get In Touch
+              </a>
             </div>
-            <div>
-              <div style={{ fontSize: '1.45rem', fontWeight: 800, color: 'var(--text-primary)' }}>MBA '26</div>
-              <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginTop: '2px' }}>Finance & Supply Chain @ Rutgers</div>
+
+            {/* Social Links */}
+            <div style={{ display: 'flex', gap: '18px', alignItems: 'center', marginTop: '4px' }}>
+              <a 
+                href="https://www.linkedin.com/in/rohanvashisth/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.88rem' }}
+                className="hero-link"
+              >
+                <Linkedin size={16} />
+                <span>LinkedIn</span>
+              </a>
+              <span style={{ color: 'var(--border-hairline)' }}>•</span>
+              <a 
+                href="https://github.com/rohanvashisth" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.88rem' }}
+                className="hero-link"
+              >
+                <Github size={16} />
+                <span>GitHub</span>
+              </a>
+              <span style={{ color: 'var(--border-hairline)' }}>•</span>
+              <a 
+                href="mailto:rohan9vashisth@gmail.com"
+                style={{ color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.88rem' }}
+                className="hero-link"
+              >
+                <Mail size={16} />
+                <span>rohan9vashisth@gmail.com</span>
+              </a>
             </div>
+
           </div>
 
-        </div>
-
-        {/* Right column: Real Photo Frame */}
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <div 
-            style={{
-              position: 'relative',
-              width: '100%',
-              maxWidth: '380px',
-              background: '#ffffff',
-              borderRadius: '20px',
-              padding: '12px',
-              border: '1px solid var(--border-subtle)',
-              boxShadow: '0 10px 30px -10px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.02)'
-            }}
-          >
-            {/* Real Photo */}
+          {/* Right Column: Integrated Portrait */}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
             <div 
               style={{
                 width: '100%',
-                height: '440px',
-                borderRadius: '14px',
+                maxHeight: '430px',
+                borderRadius: '12px',
                 overflow: 'hidden',
-                position: 'relative',
-                backgroundColor: '#f3f4f6'
+                border: '1px solid var(--border-hairline)',
+                backgroundColor: 'var(--bg-subtle)'
               }}
             >
               <img 
@@ -160,58 +134,71 @@ export default function Hero() {
                 alt="Rohan Vashisth" 
                 style={{
                   width: '100%',
-                  height: '100%',
+                  height: '400px',
                   objectFit: 'cover',
                   objectPosition: 'center 15%',
                   display: 'block'
                 }}
               />
             </div>
-
-            {/* Editorial Caption Bar */}
+            
+            {/* Understated Location Caption */}
             <div 
               style={{
-                padding: '14px 10px 6px',
                 display: 'flex',
                 justifyContent: 'space-between',
-                alignItems: 'center'
+                width: '100%',
+                marginTop: '10px',
+                fontSize: '0.8rem',
+                color: 'var(--text-muted)'
               }}
             >
-              <div>
-                <div style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text-primary)' }}>
-                  Rohan Vashisth
-                </div>
-                <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
-                  Technical Product Manager • Ex-JPMC SDE
-                </div>
-              </div>
-
-              <div 
-                style={{ 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  gap: '4px',
-                  fontSize: '0.75rem',
-                  color: 'var(--text-muted)',
-                  backgroundColor: 'var(--bg-base)',
-                  padding: '4px 8px',
-                  borderRadius: '6px',
-                  border: '1px solid var(--border-subtle)'
-                }}
-              >
+              <span>Rohan Vashisth • TPM</span>
+              <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
                 <MapPin size={12} style={{ color: 'var(--emerald)' }} />
                 <span>Central Park, NY</span>
-              </div>
+              </span>
             </div>
+          </div>
 
+        </div>
+
+        {/* Integrated Metrics Rail */}
+        <div 
+          style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(3, 1fr)', 
+            gap: '32px',
+            borderTop: '1px solid var(--border-hairline)',
+            paddingTop: '28px',
+            textAlign: 'left'
+          }}
+        >
+          <div>
+            <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--text-primary)' }}>3+ Years</div>
+            <div style={{ fontSize: '0.84rem', color: 'var(--text-muted)', marginTop: '2px' }}>Software Engineer II @ J.P. Morgan</div>
+          </div>
+          <div>
+            <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--text-primary)' }}>$10B–$15B</div>
+            <div style={{ fontSize: '0.84rem', color: 'var(--text-muted)', marginTop: '2px' }}>Daily FX Volume Modernized</div>
+          </div>
+          <div>
+            <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--text-primary)' }}>MBA '26</div>
+            <div style={{ fontSize: '0.84rem', color: 'var(--text-muted)', marginTop: '2px' }}>Finance & Supply Chain @ Rutgers</div>
           </div>
         </div>
 
       </div>
 
       <style>{`
-        .social-link:hover {
+        .hero-link:hover {
           color: var(--text-primary) !important;
+        }
+        @media (max-width: 860px) {
+          .hero-grid {
+            grid-template-columns: 1fr !important;
+            gap: 40px !important;
+          }
         }
       `}</style>
     </section>
