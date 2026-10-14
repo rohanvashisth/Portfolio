@@ -180,7 +180,7 @@ export default function Experience() {
                 </div>
 
                 {exp.badge && (
-                  <span className="badge badge-primary" style={{ marginBottom: '10px' }}>
+                  <span className="badge badge-green" style={{ marginBottom: '10px', display: 'inline-block' }}>
                     {exp.badge}
                   </span>
                 )}
@@ -189,21 +189,21 @@ export default function Experience() {
                   <div 
                     style={{
                       marginTop: '8px',
-                      padding: '8px 10px',
+                      padding: '10px 12px',
                       backgroundColor: 'var(--amber-subtle)',
-                      border: '1px solid #fde68a',
-                      borderRadius: '6px',
-                      fontSize: '0.8rem',
+                      border: '1px solid var(--amber-border)',
+                      borderRadius: '8px',
+                      fontSize: '0.82rem',
                       fontWeight: 600,
-                      color: '#92400e',
-                      lineHeight: 1.4
+                      color: 'var(--amber-text)',
+                      lineHeight: 1.45
                     }}
                   >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '5px', marginBottom: '2px' }}>
-                      <Award size={14} />
-                      <span>Impact Award (2022)</span>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '2px' }}>
+                      <Award size={15} />
+                      <span style={{ fontWeight: 750 }}>Impact Award (2022)</span>
                     </div>
-                    <span style={{ fontWeight: 400, fontSize: '0.76rem', color: '#78350f' }}>
+                    <span style={{ fontWeight: 400, fontSize: '0.78rem' }}>
                       Recognized for system modernization & engineering excellence.
                     </span>
                   </div>
@@ -222,32 +222,35 @@ export default function Experience() {
                       <div 
                         key={pIdx}
                         style={{
-                          borderLeft: '2px solid var(--border-hairline)',
-                          paddingLeft: '18px',
+                          backgroundColor: '#ffffff',
+                          borderRadius: '10px',
+                          border: '1px solid var(--border-hairline)',
+                          padding: '20px 22px',
+                          boxShadow: '0 2px 8px rgba(0,0,0,0.02)',
                           display: 'flex',
                           flexDirection: 'column',
-                          gap: '6px'
+                          gap: '12px'
                         }}
                       >
-                        <div style={{ fontSize: '1.02rem', fontWeight: 700, color: 'var(--text-primary)' }}>
+                        <div style={{ fontSize: '1.05rem', fontWeight: 750, color: 'var(--text-primary)' }}>
                           {pt.title}
                         </div>
 
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', fontSize: '0.91rem', lineHeight: 1.55 }}>
-                          <div>
-                            <span style={{ color: '#b91c1c', fontWeight: 700 }}>Issue: </span>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '0.91rem', lineHeight: 1.55 }}>
+                          <div style={{ backgroundColor: '#fff1f2', border: '1px solid #fecdd3', borderRadius: '6px', padding: '10px 14px' }}>
+                            <span style={{ color: '#be123c', fontWeight: 750 }}>Issue: </span>
                             <span style={{ color: 'var(--text-secondary)' }}>{pt.issue}</span>
                           </div>
-                          <div>
-                            <span style={{ color: '#92400e', fontWeight: 700 }}>Why: </span>
+                          <div style={{ backgroundColor: '#fffbeb', border: '1px solid #fde68a', borderRadius: '6px', padding: '10px 14px' }}>
+                            <span style={{ color: '#b45309', fontWeight: 750 }}>Why: </span>
                             <span style={{ color: 'var(--text-secondary)' }}>{pt.why}</span>
                           </div>
-                          <div>
-                            <span style={{ color: '#1e40af', fontWeight: 700 }}>How: </span>
+                          <div style={{ backgroundColor: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: '6px', padding: '10px 14px' }}>
+                            <span style={{ color: '#1d4ed8', fontWeight: 750 }}>How: </span>
                             <span style={{ color: 'var(--text-secondary)' }}>{pt.how}</span>
                           </div>
-                          <div>
-                            <span style={{ color: '#065f46', fontWeight: 700 }}>Metrics: </span>
+                          <div style={{ backgroundColor: '#ecfdf5', border: '1px solid #a7f3d0', borderRadius: '6px', padding: '10px 14px' }}>
+                            <span style={{ color: '#047857', fontWeight: 750 }}>Metrics: </span>
                             <span style={{ color: 'var(--text-primary)', fontWeight: 650 }}>{pt.metrics}</span>
                           </div>
                         </div>
@@ -257,7 +260,7 @@ export default function Experience() {
                 ) : (
                   <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '14px', padding: 0 }}>
                     {exp.points.map((pt, pIdx) => (
-                      <li key={pIdx} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', fontSize: '0.95rem', lineHeight: 1.6 }}>
+                      <li key={pIdx} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', fontSize: '0.95rem', lineHeight: 1.6, backgroundColor: '#ffffff', padding: '16px 20px', borderRadius: '8px', border: '1px solid var(--border-hairline)' }}>
                         <span style={{ color: 'var(--primary)', fontWeight: 800 }}>•</span>
                         <span>
                           <strong style={{ color: 'var(--text-primary)' }}>{pt.title}: </strong>
@@ -269,9 +272,9 @@ export default function Experience() {
                 )}
 
                 {/* Tags */}
-                <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', marginTop: '24px' }}>
-                  {exp.skills.map((skill) => (
-                    <span key={skill} className="badge badge-neutral">
+                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginTop: '24px' }}>
+                  {exp.skills.map((skill, sIdx) => (
+                    <span key={skill} className={sIdx % 2 === 0 ? "badge badge-blue" : "badge badge-green"}>
                       {skill}
                     </span>
                   ))}
