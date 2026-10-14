@@ -177,13 +177,13 @@ export default function Projects() {
     : caseStudies.filter(c => c.type === filter);
 
   return (
-    <section id="projects" className="section section-white">
+    <section id="projects" className="section section-pastel-blue">
       <div className="container">
         
         {/* Section Header */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '20px', marginBottom: '48px' }}>
           <div style={{ textAlign: 'left' }}>
-            <div className="section-tag">
+            <div className="section-tag section-tag-blue">
               <span className="section-tag-num">02</span>
               <span>Case Studies & Initiatives</span>
             </div>
@@ -197,24 +197,23 @@ export default function Projects() {
           <div 
             style={{
               display: 'flex',
-              backgroundColor: 'var(--bg-subtle)',
+              backgroundColor: '#ffffff',
               padding: '4px',
               borderRadius: '8px',
-              border: '1px solid var(--border-hairline)'
+              border: '1px solid var(--pastel-blue-border)'
             }}
           >
             <button
               onClick={() => setFilter('all')}
               style={{
-                padding: '6px 12px',
-                borderRadius: '4px',
-                fontSize: '0.82rem',
-                fontWeight: 600,
+                padding: '6px 14px',
+                borderRadius: '6px',
+                fontSize: '0.84rem',
+                fontWeight: 650,
                 cursor: 'pointer',
                 border: 'none',
-                backgroundColor: filter === 'all' ? '#ffffff' : 'transparent',
-                color: filter === 'all' ? 'var(--text-primary)' : 'var(--text-muted)',
-                boxShadow: filter === 'all' ? '0 1px 2px rgba(0,0,0,0.05)' : 'none',
+                backgroundColor: filter === 'all' ? 'var(--primary)' : 'transparent',
+                color: filter === 'all' ? '#ffffff' : 'var(--text-muted)',
                 transition: 'all 0.15s ease'
               }}
             >
@@ -223,15 +222,14 @@ export default function Projects() {
             <button
               onClick={() => setFilter('product')}
               style={{
-                padding: '6px 12px',
-                borderRadius: '4px',
-                fontSize: '0.82rem',
-                fontWeight: 600,
+                padding: '6px 14px',
+                borderRadius: '6px',
+                fontSize: '0.84rem',
+                fontWeight: 650,
                 cursor: 'pointer',
                 border: 'none',
-                backgroundColor: filter === 'product' ? '#ffffff' : 'transparent',
-                color: filter === 'product' ? 'var(--text-primary)' : 'var(--text-muted)',
-                boxShadow: filter === 'product' ? '0 1px 2px rgba(0,0,0,0.05)' : 'none',
+                backgroundColor: filter === 'product' ? 'var(--primary)' : 'transparent',
+                color: filter === 'product' ? '#ffffff' : 'var(--text-muted)',
                 transition: 'all 0.15s ease'
               }}
             >
@@ -240,15 +238,14 @@ export default function Projects() {
             <button
               onClick={() => setFilter('platform')}
               style={{
-                padding: '6px 12px',
-                borderRadius: '4px',
-                fontSize: '0.82rem',
-                fontWeight: 600,
+                padding: '6px 14px',
+                borderRadius: '6px',
+                fontSize: '0.84rem',
+                fontWeight: 650,
                 cursor: 'pointer',
                 border: 'none',
-                backgroundColor: filter === 'platform' ? '#ffffff' : 'transparent',
-                color: filter === 'platform' ? 'var(--text-primary)' : 'var(--text-muted)',
-                boxShadow: filter === 'platform' ? '0 1px 2px rgba(0,0,0,0.05)' : 'none',
+                backgroundColor: filter === 'platform' ? 'var(--primary)' : 'transparent',
+                color: filter === 'platform' ? '#ffffff' : 'var(--text-muted)',
                 transition: 'all 0.15s ease'
               }}
             >
