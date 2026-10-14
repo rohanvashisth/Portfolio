@@ -72,14 +72,14 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="section section-alt">
+    <section id="experience" className="section section-pastel-green">
       <div className="container">
         
         {/* Section Header with View Toggle */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '20px', marginBottom: '48px' }}>
           <div style={{ textAlign: 'left' }}>
-            <div className="section-tag">
-              <span className="section-tag-num">01</span>
+            <div className="section-tag section-tag-green">
+              <span className="section-tag-num section-tag-num-green">01</span>
               <span>Career Journey</span>
             </div>
             <h2 className="section-title">Professional Experience</h2>
@@ -95,7 +95,7 @@ export default function Experience() {
               backgroundColor: '#ffffff',
               padding: '4px',
               borderRadius: '8px',
-              border: '1px solid var(--border-hairline)'
+              border: '1px solid var(--pastel-green-border)'
             }}
           >
             <button
