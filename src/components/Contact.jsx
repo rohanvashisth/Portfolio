@@ -38,12 +38,20 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="section section-alt" style={{ paddingBottom: '100px' }}>
+    <section 
+      id="contact" 
+      className="section" 
+      style={{ 
+        background: 'linear-gradient(180deg, #f2faf6 0%, #f0f7ff 100%)', 
+        borderTop: '1px solid #c7e5d8', 
+        paddingBottom: '100px' 
+      }}
+    >
       <div className="container">
         
         {/* Section Header */}
         <div className="section-header" style={{ textAlign: 'left' }}>
-          <div className="section-tag">
+          <div className="section-tag section-tag-blue">
             <span className="section-tag-num">05</span>
             <span>Get in Touch</span>
           </div>
@@ -59,7 +67,7 @@ export default function Contact() {
           {/* Left Column: Direct Communication Channels */}
           <div style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '24px' }}>
             
-            <div style={{ paddingBottom: '16px', borderBottom: '1px solid var(--border-hairline)' }}>
+            <div style={{ paddingBottom: '16px', borderBottom: '1px solid var(--pastel-blue-border)' }}>
               <div style={{ fontSize: '0.82rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '8px' }}>
                 Availability
               </div>
@@ -69,7 +77,7 @@ export default function Contact() {
                   Actively interviewing for TPM / PM roles
                 </span>
               </div>
-              <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', lineHeight: 1.55 }}>
+              <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', lineHeight: 1.55 }}>
                 Graduating with an MBA in May 2026. Open to full-time roles globally (US, India, Remote) in Technical Product Management, Core Platforms, and FinTech.
               </p>
             </div>
@@ -86,33 +94,34 @@ export default function Contact() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
-                  padding: '14px 16px',
-                  borderRadius: '8px',
-                  backgroundColor: 'var(--bg-subtle)',
-                  border: '1px solid var(--border-hairline)',
+                  padding: '14px 18px',
+                  borderRadius: '10px',
+                  backgroundColor: '#ffffff',
+                  border: '1px solid var(--pastel-blue-border)',
                   textDecoration: 'none',
-                  transition: 'border-color var(--transition-fast), background-color var(--transition-fast)'
+                  boxShadow: '0 2px 6px rgba(37, 99, 235, 0.03)',
+                  transition: 'all 0.15s ease'
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
                   <div style={{ 
-                    width: '32px', 
-                    height: '32px', 
-                    borderRadius: '6px', 
-                    backgroundColor: '#ffffff', 
+                    width: '36px', 
+                    height: '36px', 
+                    borderRadius: '8px', 
+                    backgroundColor: 'var(--pastel-blue-bg)', 
                     display: 'flex', 
                     alignItems: 'center', 
                     justifyContent: 'center',
-                    border: '1px solid var(--border-hairline)'
+                    border: '1px solid var(--pastel-blue-border)'
                   }}>
-                    <Mail size={16} style={{ color: 'var(--primary)' }} />
+                    <Mail size={18} style={{ color: 'var(--primary)' }} />
                   </div>
                   <div>
                     <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', textTransform: 'uppercase' }}>Email</div>
-                    <div style={{ fontSize: '0.92rem', fontWeight: 600, color: 'var(--text-primary)' }}>rohan9vashisth@gmail.com</div>
+                    <div style={{ fontSize: '0.94rem', fontWeight: 650, color: 'var(--text-primary)' }}>rohan9vashisth@gmail.com</div>
                   </div>
                 </div>
-                <ArrowUpRight size={16} style={{ color: 'var(--text-muted)' }} />
+                <ArrowUpRight size={16} style={{ color: 'var(--primary)' }} />
               </a>
 
               {/* LinkedIn */}
@@ -126,33 +135,34 @@ export default function Contact() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
-                  padding: '14px 16px',
-                  borderRadius: '8px',
-                  backgroundColor: 'var(--bg-subtle)',
-                  border: '1px solid var(--border-hairline)',
+                  padding: '14px 18px',
+                  borderRadius: '10px',
+                  backgroundColor: '#ffffff',
+                  border: '1px solid var(--pastel-blue-border)',
                   textDecoration: 'none',
-                  transition: 'border-color var(--transition-fast), background-color var(--transition-fast)'
+                  boxShadow: '0 2px 6px rgba(37, 99, 235, 0.03)',
+                  transition: 'all 0.15s ease'
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
                   <div style={{ 
-                    width: '32px', 
-                    height: '32px', 
-                    borderRadius: '6px', 
-                    backgroundColor: '#ffffff', 
+                    width: '36px', 
+                    height: '36px', 
+                    borderRadius: '8px', 
+                    backgroundColor: 'var(--pastel-blue-bg)', 
                     display: 'flex', 
                     alignItems: 'center', 
                     justifyContent: 'center',
-                    border: '1px solid var(--border-hairline)'
+                    border: '1px solid var(--pastel-blue-border)'
                   }}>
-                    <Linkedin size={16} style={{ color: 'var(--primary)' }} />
+                    <Linkedin size={18} style={{ color: 'var(--primary)' }} />
                   </div>
                   <div>
                     <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', textTransform: 'uppercase' }}>LinkedIn</div>
-                    <div style={{ fontSize: '0.92rem', fontWeight: 600, color: 'var(--text-primary)' }}>linkedin.com/in/rohanvashisth</div>
+                    <div style={{ fontSize: '0.94rem', fontWeight: 650, color: 'var(--text-primary)' }}>linkedin.com/in/rohanvashisth</div>
                   </div>
                 </div>
-                <ArrowUpRight size={16} style={{ color: 'var(--text-muted)' }} />
+                <ArrowUpRight size={16} style={{ color: 'var(--primary)' }} />
               </a>
 
               {/* Phone */}
