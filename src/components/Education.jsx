@@ -34,12 +34,12 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="section section-white">
+    <section id="education" className="section section-pastel-blue">
       <div className="container">
         
         {/* Section Header */}
         <div className="section-header" style={{ textAlign: 'left' }}>
-          <div className="section-tag">
+          <div className="section-tag section-tag-blue">
             <span className="section-tag-num">04</span>
             <span>Academic Foundations</span>
           </div>
@@ -65,32 +65,32 @@ export default function Education() {
               {/* Left Column: School, Degree & Timeline */}
               <div>
                 <div style={{ display: 'inline-block', marginBottom: '12px' }}>
-                  <span className="badge badge-primary">
+                  <span className={idx === 0 ? "badge badge-blue" : "badge badge-green"}>
                     {edu.graduation}
                   </span>
                 </div>
 
-                <h3 style={{ fontSize: '1.2rem', fontWeight: 750, color: 'var(--text-primary)', lineHeight: 1.3, marginBottom: '6px' }}>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 750, color: 'var(--text-primary)', lineHeight: 1.3, marginBottom: '6px' }}>
                   {edu.degree}
                 </h3>
 
-                <div style={{ fontSize: '0.94rem', fontWeight: 650, color: 'var(--primary)', marginBottom: '4px' }}>
+                <div style={{ fontSize: '0.96rem', fontWeight: 650, color: idx === 0 ? 'var(--primary)' : 'var(--emerald)', marginBottom: '4px' }}>
                   {edu.specialization}
                 </div>
 
-                <div style={{ fontSize: '0.92rem', color: 'var(--text-primary)', fontWeight: 550, marginTop: '4px' }}>
+                <div style={{ fontSize: '0.94rem', color: 'var(--text-primary)', fontWeight: 600, marginTop: '4px' }}>
                   {edu.institution}
                 </div>
 
-                <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '4px', marginTop: '6px' }}>
-                  <MapPin size={13} />
+                <div style={{ fontSize: '0.84rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '5px', marginTop: '6px' }}>
+                  <MapPin size={14} style={{ color: 'var(--emerald)' }} />
                   <span>{edu.location}</span>
                 </div>
               </div>
 
               {/* Right Column: Narrative & Honors */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                <p style={{ fontSize: '0.94rem', color: 'var(--text-secondary)', lineHeight: 1.65, margin: 0 }}>
+                <p style={{ fontSize: '0.96rem', color: 'var(--text-secondary)', lineHeight: 1.65, margin: 0 }}>
                   {edu.description}
                 </p>
 
@@ -102,17 +102,18 @@ export default function Education() {
                       style={{ 
                         display: 'inline-flex', 
                         alignItems: 'center', 
-                        gap: '6px', 
-                        padding: '4px 10px',
-                        background: 'var(--bg-subtle)',
-                        borderRadius: '4px',
-                        border: '1px solid var(--border-hairline)',
-                        fontSize: '0.82rem', 
+                        gap: '8px', 
+                        padding: '6px 12px',
+                        background: '#ffffff',
+                        borderRadius: '6px',
+                        border: '1px solid var(--pastel-blue-border)',
+                        fontSize: '0.84rem', 
                         color: 'var(--text-primary)',
-                        fontWeight: 550 
+                        fontWeight: 600,
+                        boxShadow: '0 1px 3px rgba(0,0,0,0.02)'
                       }}
                     >
-                      <Award size={14} style={{ color: 'var(--emerald)' }} />
+                      <Award size={15} style={{ color: 'var(--emerald)' }} />
                       <span>{honor}</span>
                     </div>
                   ))}
