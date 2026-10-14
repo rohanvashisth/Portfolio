@@ -23,7 +23,12 @@
 
   /* Hairlines and Borders */
   --border-hairline: #e2e8f0;
+  --border-subtle: #e2e8f0;
   --border-strong: #cbd5e1;
+  --bg-surface: #ffffff;
+  --bg-surface-subtle: #f8fafc;
+  --primary-light: #eff6ff;
+  --emerald-light: #ecfdf5;
 
   /* Font Stacks */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
