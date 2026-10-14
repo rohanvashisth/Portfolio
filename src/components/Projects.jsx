@@ -500,9 +500,9 @@ export default function Projects() {
                     marginTop: '20px'
                   }}
                 >
-                  <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
-                    {proj.tags.map((tag) => (
-                      <span key={tag} className="badge badge-neutral">
+                  <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                    {proj.tags.map((tag, tIdx) => (
+                      <span key={tag} className={tIdx % 2 === 0 ? "badge badge-blue" : "badge badge-green"}>
                         {tag}
                       </span>
                     ))}
