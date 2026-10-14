@@ -72,13 +72,16 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="section">
+    <section id="experience" className="section section-alt">
       <div className="container">
         
         {/* Section Header with View Toggle */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '20px', marginBottom: '40px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '20px', marginBottom: '48px' }}>
           <div style={{ textAlign: 'left' }}>
-            <span className="section-label">Career Journey</span>
+            <div className="section-tag">
+              <span className="section-tag-num">01</span>
+              <span>Career Journey</span>
+            </div>
             <h2 className="section-title">Professional Experience</h2>
             <p className="section-subtitle">
               3+ years driving platform capabilities, high-throughput systems, and operational automation at JPMorgan Chase.
@@ -89,9 +92,9 @@ export default function Experience() {
           <div 
             style={{
               display: 'flex',
-              backgroundColor: 'var(--bg-subtle)',
-              padding: '3px',
-              borderRadius: '6px',
+              backgroundColor: '#ffffff',
+              padding: '4px',
+              borderRadius: '8px',
               border: '1px solid var(--border-hairline)'
             }}
           >
@@ -101,20 +104,19 @@ export default function Experience() {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '6px',
-                padding: '6px 12px',
-                borderRadius: '4px',
-                fontSize: '0.82rem',
-                fontWeight: 600,
+                padding: '6px 14px',
+                borderRadius: '6px',
+                fontSize: '0.84rem',
+                fontWeight: 650,
                 cursor: 'pointer',
                 border: 'none',
-                backgroundColor: viewMode === 'product' ? '#ffffff' : 'transparent',
-                color: viewMode === 'product' ? 'var(--text-primary)' : 'var(--text-muted)',
-                boxShadow: viewMode === 'product' ? '0 1px 2px rgba(0,0,0,0.05)' : 'none',
+                backgroundColor: viewMode === 'product' ? 'var(--text-primary)' : 'transparent',
+                color: viewMode === 'product' ? '#ffffff' : 'var(--text-muted)',
                 transition: 'all 0.15s ease'
               }}
             >
-              <SlidersHorizontal size={13} />
-              <span>Product Framework (Issue / Why / How / Impact)</span>
+              <SlidersHorizontal size={14} />
+              <span>Product Framework</span>
             </button>
             <button
               onClick={() => setViewMode('concise')}
@@ -122,19 +124,18 @@ export default function Experience() {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '6px',
-                padding: '6px 12px',
-                borderRadius: '4px',
-                fontSize: '0.82rem',
-                fontWeight: 600,
+                padding: '6px 14px',
+                borderRadius: '6px',
+                fontSize: '0.84rem',
+                fontWeight: 650,
                 cursor: 'pointer',
                 border: 'none',
-                backgroundColor: viewMode === 'concise' ? '#ffffff' : 'transparent',
-                color: viewMode === 'concise' ? 'var(--text-primary)' : 'var(--text-muted)',
-                boxShadow: viewMode === 'concise' ? '0 1px 2px rgba(0,0,0,0.05)' : 'none',
+                backgroundColor: viewMode === 'concise' ? 'var(--text-primary)' : 'transparent',
+                color: viewMode === 'concise' ? '#ffffff' : 'var(--text-muted)',
                 transition: 'all 0.15s ease'
               }}
             >
-              <FileText size={13} />
+              <FileText size={14} />
               <span>Resume Bullets</span>
             </button>
           </div>
@@ -147,9 +148,9 @@ export default function Experience() {
               key={exp.id}
               style={{
                 display: 'grid',
-                gridTemplateColumns: '260px 1fr',
-                gap: '40px',
-                padding: '40px 0',
+                gridTemplateColumns: '320px 1fr',
+                gap: '48px',
+                padding: '48px 0',
                 borderTop: idx > 0 ? '1px solid var(--border-hairline)' : 'none',
                 textAlign: 'left'
               }}
