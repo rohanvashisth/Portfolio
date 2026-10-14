@@ -177,13 +177,16 @@ export default function Projects() {
     : caseStudies.filter(c => c.type === filter);
 
   return (
-    <section id="projects" className="section">
+    <section id="projects" className="section section-white">
       <div className="container">
         
         {/* Section Header */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '20px', marginBottom: '40px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '20px', marginBottom: '48px' }}>
           <div style={{ textAlign: 'left' }}>
-            <span className="section-label">Case Studies & Initiatives</span>
+            <div className="section-tag">
+              <span className="section-tag-num">02</span>
+              <span>Case Studies & Initiatives</span>
+            </div>
             <h2 className="section-title">Product & Platform Case Studies</h2>
             <p className="section-subtitle">
               Structured product teardowns, distributed platform modernizations, and quantitative risk engines.
@@ -195,8 +198,8 @@ export default function Projects() {
             style={{
               display: 'flex',
               backgroundColor: 'var(--bg-subtle)',
-              padding: '3px',
-              borderRadius: '6px',
+              padding: '4px',
+              borderRadius: '8px',
               border: '1px solid var(--border-hairline)'
             }}
           >
