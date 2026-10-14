@@ -75,10 +75,19 @@ export default function Skills() {
     },
     {
       id: 'analytics',
-      title: 'Data Analytics & Business Strategy',
+      title: 'AI, Data & Business Strategy',
       icon: <LineChart size={20} style={{ color: 'var(--emerald)' }} />,
-      tagline: 'Quantitative analytical rigor derived from engineering foundations and MBA training.',
+      tagline: '0➔1 Generative AI product delivery, quantitative analytics, and MBA business strategy.',
       groups: [
+        {
+          category: 'Generative AI & LLM Systems',
+          items: [
+            'Generative AI Products (Gemini, LangChain)',
+            'Prompt Engineering & Evaluation Workflows',
+            'Financial Table Extraction & NLP Pipelines',
+            'Model Grounding & Citation Verification'
+          ]
+        },
         {
           category: 'Data & Telemetry',
           items: [
@@ -89,21 +98,12 @@ export default function Skills() {
           ]
         },
         {
-          category: 'Finance & Strategy',
+          category: 'Finance & Supply Chain Strategy',
           items: [
-            'Corporate Financial Valuation (DCF)',
-            'Capital Budgeting & ROI Modeling',
-            'Cost-Benefit Tradeoff Analysis',
-            'Operations Scheduling & Modeling'
-          ]
-        },
-        {
-          category: 'Supply Chain Operations',
-          items: [
-            'Multi-Criteria Sourcing Scoring',
-            'Critical-Path Delay Simulations',
-            'Logistics Bottleneck Modeling',
-            'Power BI & Advanced Excel'
+            'Corporate Financial Valuation & ROI Modeling',
+            'Cost-Benefit & Operational Tradeoff Analysis',
+            'Multi-Criteria Sourcing & Delay Simulation',
+            'Power BI & Advanced Financial Modeling'
           ]
         }
       ]
