@@ -5,6 +5,7 @@ export default function Hero() {
   return (
     <section 
       id="hero" 
+      className="section-hero"
       style={{
         paddingTop: '135px',
         paddingBottom: '80px',
