@@ -379,12 +379,29 @@ export default function Projects() {
                   <div style={{ fontSize: '0.82rem', fontWeight: 750, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-muted)', marginBottom: '14px' }}>
                     How We Solved It (Product Requirements & Execution)
                   </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  <div 
+                    style={{ 
+                      display: 'grid', 
+                      gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
+                      gap: '16px' 
+                    }}
+                  >
                     {proj.howWeSolve.map((sol, i) => (
-                      <div key={i} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                        <CheckCircle size={15} style={{ color: 'var(--emerald)', marginTop: '4px', flexShrink: 0 }} />
-                        <div style={{ fontSize: '0.93rem', lineHeight: 1.6, color: 'var(--text-secondary)' }}>
-                          <strong style={{ color: 'var(--text-primary)' }}>{sol.name}: </strong>
+                      <div 
+                        key={i} 
+                        style={{ 
+                          display: 'flex', 
+                          gap: '12px', 
+                          alignItems: 'flex-start',
+                          padding: '16px',
+                          backgroundColor: 'var(--bg-subtle)',
+                          borderRadius: '8px',
+                          border: '1px solid var(--border-hairline)'
+                        }}
+                      >
+                        <CheckCircle size={16} style={{ color: 'var(--emerald)', marginTop: '2px', flexShrink: 0 }} />
+                        <div style={{ fontSize: '0.91rem', lineHeight: 1.55, color: 'var(--text-secondary)' }}>
+                          <strong style={{ color: 'var(--text-primary)', display: 'block', marginBottom: '4px' }}>{sol.name}</strong>
                           <span>{sol.desc}</span>
                         </div>
                       </div>
@@ -397,12 +414,13 @@ export default function Projects() {
                   <div 
                     style={{
                       marginTop: '24px',
-                      padding: '24px',
+                      padding: '28px',
                       backgroundColor: 'var(--bg-subtle)',
                       borderRadius: '8px',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: '18px'
+                      border: '1px solid var(--border-hairline)',
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                      gap: '24px'
                     }}
                   >
                     {proj.deepDive.targetPersonas && (
@@ -410,9 +428,9 @@ export default function Projects() {
                         <span style={{ fontSize: '0.82rem', fontWeight: 750, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                           Target Users & Pain Points
                         </span>
-                        <ul style={{ listStyle: 'disc', paddingLeft: '20px', marginTop: '8px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                        <ul style={{ listStyle: 'disc', paddingLeft: '20px', marginTop: '10px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
                           {proj.deepDive.targetPersonas.map((persona, pIdx) => (
-                            <li key={pIdx} style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+                            <li key={pIdx} style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
                               {persona}
                             </li>
                           ))}
@@ -421,24 +439,24 @@ export default function Projects() {
                     )}
 
                     {proj.deepDive.successMetrics && (
-                      <div style={{ borderTop: '1px solid var(--border-hairline)', paddingTop: '14px' }}>
+                      <div>
                         <span style={{ fontSize: '0.82rem', fontWeight: 750, color: 'var(--emerald)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                           Success Metrics & Guardrails
                         </span>
-                        <div style={{ marginTop: '8px', display: 'flex', flexDirection: 'column', gap: '6px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-                          <div><strong>North Star Metric: </strong>{proj.deepDive.successMetrics.northStar}</div>
-                          <div><strong>Guardrail Metric: </strong>{proj.deepDive.successMetrics.guardrailMetric}</div>
-                          <div><strong>Secondary Metrics: </strong>{proj.deepDive.successMetrics.secondaryMetrics}</div>
+                        <div style={{ marginTop: '10px', display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '0.88rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
+                          <div><strong style={{ color: 'var(--text-primary)' }}>North Star: </strong>{proj.deepDive.successMetrics.northStar}</div>
+                          <div><strong style={{ color: 'var(--text-primary)' }}>Guardrail: </strong>{proj.deepDive.successMetrics.guardrailMetric}</div>
+                          <div><strong style={{ color: 'var(--text-primary)' }}>Secondary: </strong>{proj.deepDive.successMetrics.secondaryMetrics}</div>
                         </div>
                       </div>
                     )}
 
                     {proj.deepDive.rolloutStrategy && (
-                      <div style={{ borderTop: '1px solid var(--border-hairline)', paddingTop: '14px' }}>
+                      <div>
                         <span style={{ fontSize: '0.82rem', fontWeight: 750, color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                           Product Phasing & Rollout Strategy
                         </span>
-                        <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '6px', lineHeight: 1.55 }}>
+                        <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', marginTop: '10px', lineHeight: 1.55 }}>
                           {proj.deepDive.rolloutStrategy}
                         </p>
                       </div>
@@ -449,7 +467,7 @@ export default function Projects() {
                         <span style={{ fontSize: '0.82rem', fontWeight: 750, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                           Architectural Pattern & Trade-offs
                         </span>
-                        <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '6px', lineHeight: 1.55 }}>
+                        <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', marginTop: '10px', lineHeight: 1.55 }}>
                           <strong>Pattern:</strong> {proj.deepDive.pattern}<br />
                           <strong>Components:</strong> {proj.deepDive.coreComponents}<br />
                           <strong>Key Trade-off:</strong> {proj.deepDive.tradeoffs}
