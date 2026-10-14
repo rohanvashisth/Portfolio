@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Layers, ChevronDown, ChevronUp, CheckCircle, ExternalLink, ArrowRight, ShieldCheck, Zap, Globe, AlertTriangle, Sparkles, Smartphone, Clock, RefreshCw } from 'lucide-react';
+import { ChevronDown, ChevronUp, CheckCircle, Sparkles } from 'lucide-react';
 
 export default function Projects() {
-  const [expandedProject, setExpandedProject] = useState('gpay-upi'); // Default open Google Pay teardown
-  const [filter, setFilter] = useState('all'); // 'all', 'product', 'platform'
+  const [expandedProject, setExpandedProject] = useState('gpay-upi');
+  const [filter, setFilter] = useState('all');
 
   const toggleExpand = (id) => {
     setExpandedProject(expandedProject === id ? null : id);
@@ -17,7 +17,7 @@ export default function Projects() {
       title: 'Google Pay: Transforming Failed & Pending UPI Payment Recovery',
       hmwPrompt: 'How might we improve user confidence, eliminate point-of-sale anxiety, and prevent double-debits when a UPI payment doesn’t complete successfully?',
       org: 'Product Strategy & Teardown Case Study',
-      category: 'Consumer FinTech • Product Management • UPI Payments',
+      category: 'Consumer FinTech • Product Teardown • UPI Payments',
       summary: 'A comprehensive product teardown addressing the #1 customer pain point in digital payments: transactions where money is debited but the payment is left in an ambiguous "Pending" or "Failed" state at checkout counters.',
       metrics: [
         { label: 'Primary Target', value: '-35% Support Escalations' },
@@ -66,7 +66,7 @@ export default function Projects() {
       title: 'Global FX Settlement Platform Modernization',
       hmwPrompt: 'How might we scale a 40-year legacy settlement engine to support $10B–$15B in daily transactions while cutting manual exceptions?',
       org: 'JPMorgan Chase & Co.',
-      category: 'Enterprise FinTech • Platform Architecture & Product Delivery',
+      category: 'Enterprise FinTech • Platform Architecture & Delivery',
       summary: 'Re-architected a legacy monolithic FX settlement engine into resilient, event-driven microservices processing $10B–$15B in daily transactional value with 95% Straight-Through Processing.',
       metrics: [
         { label: 'Daily Settlement Value', value: '$10B–$15B' },
@@ -177,14 +177,14 @@ export default function Projects() {
     : caseStudies.filter(c => c.type === filter);
 
   return (
-    <section id="projects" className="section" style={{ borderTop: '1px solid var(--border-subtle)' }}>
+    <section id="projects" className="section">
       <div className="container">
         
         {/* Section Header */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '20px', marginBottom: '36px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '20px', marginBottom: '40px' }}>
           <div style={{ textAlign: 'left' }}>
-            <span className="section-label">Product Case Studies & Initiatives</span>
-            <h2 className="section-title">Selected Product & Platform Case Studies</h2>
+            <span className="section-label">Case Studies & Initiatives</span>
+            <h2 className="section-title">Product & Platform Case Studies</h2>
             <p className="section-subtitle">
               Structured product teardowns, distributed platform modernizations, and quantitative risk engines.
             </p>
@@ -194,24 +194,24 @@ export default function Projects() {
           <div 
             style={{
               display: 'flex',
-              backgroundColor: 'var(--bg-surface-subtle)',
-              padding: '4px',
-              borderRadius: '8px',
-              border: '1px solid var(--border-subtle)'
+              backgroundColor: 'var(--bg-subtle)',
+              padding: '3px',
+              borderRadius: '6px',
+              border: '1px solid var(--border-hairline)'
             }}
           >
             <button
               onClick={() => setFilter('all')}
               style={{
-                padding: '6px 14px',
-                borderRadius: '6px',
-                fontSize: '0.84rem',
+                padding: '6px 12px',
+                borderRadius: '4px',
+                fontSize: '0.82rem',
                 fontWeight: 600,
                 cursor: 'pointer',
                 border: 'none',
                 backgroundColor: filter === 'all' ? '#ffffff' : 'transparent',
                 color: filter === 'all' ? 'var(--text-primary)' : 'var(--text-muted)',
-                boxShadow: filter === 'all' ? '0 1px 3px rgba(0,0,0,0.06)' : 'none',
+                boxShadow: filter === 'all' ? '0 1px 2px rgba(0,0,0,0.05)' : 'none',
                 transition: 'all 0.15s ease'
               }}
             >
@@ -220,15 +220,15 @@ export default function Projects() {
             <button
               onClick={() => setFilter('product')}
               style={{
-                padding: '6px 14px',
-                borderRadius: '6px',
-                fontSize: '0.84rem',
+                padding: '6px 12px',
+                borderRadius: '4px',
+                fontSize: '0.82rem',
                 fontWeight: 600,
                 cursor: 'pointer',
                 border: 'none',
                 backgroundColor: filter === 'product' ? '#ffffff' : 'transparent',
                 color: filter === 'product' ? 'var(--text-primary)' : 'var(--text-muted)',
-                boxShadow: filter === 'product' ? '0 1px 3px rgba(0,0,0,0.06)' : 'none',
+                boxShadow: filter === 'product' ? '0 1px 2px rgba(0,0,0,0.05)' : 'none',
                 transition: 'all 0.15s ease'
               }}
             >
@@ -237,15 +237,15 @@ export default function Projects() {
             <button
               onClick={() => setFilter('platform')}
               style={{
-                padding: '6px 14px',
-                borderRadius: '6px',
-                fontSize: '0.84rem',
+                padding: '6px 12px',
+                borderRadius: '4px',
+                fontSize: '0.82rem',
                 fontWeight: 600,
                 cursor: 'pointer',
                 border: 'none',
                 backgroundColor: filter === 'platform' ? '#ffffff' : 'transparent',
                 color: filter === 'platform' ? 'var(--text-primary)' : 'var(--text-muted)',
-                boxShadow: filter === 'platform' ? '0 1px 3px rgba(0,0,0,0.06)' : 'none',
+                boxShadow: filter === 'platform' ? '0 1px 2px rgba(0,0,0,0.05)' : 'none',
                 transition: 'all 0.15s ease'
               }}
             >
@@ -254,27 +254,24 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Project Cards List */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', maxWidth: '960px' }}>
-          {filteredStudies.map((proj) => {
+        {/* Integrated Case Studies List (Seamless Canvas) */}
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          {filteredStudies.map((proj, idx) => {
             const isExpanded = expandedProject === proj.id;
             return (
               <div 
                 key={proj.id}
-                className="glass-card"
                 style={{
-                  textAlign: 'left',
-                  padding: '34px',
-                  position: 'relative',
-                  border: proj.featured ? '1.5px solid var(--primary-border)' : '1px solid var(--border-subtle)',
-                  boxShadow: proj.featured ? '0 8px 24px -4px rgba(37, 99, 235, 0.08)' : '0 1px 3px rgba(0,0,0,0.03)'
+                  padding: '44px 0',
+                  borderTop: idx > 0 ? '1px solid var(--border-hairline)' : 'none',
+                  textAlign: 'left'
                 }}
               >
-                {/* Featured Badge if applicable */}
+                {/* Featured Indicator */}
                 {proj.featured && (
-                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '4px 10px', backgroundColor: 'var(--primary-light)', color: 'var(--primary-dark)', borderRadius: '6px', fontSize: '0.78rem', fontWeight: 650, marginBottom: '14px' }}>
+                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: 'var(--primary)', fontSize: '0.8rem', fontWeight: 650, marginBottom: '10px' }}>
                     <Sparkles size={13} />
-                    <span>Featured Product Strategy Case Study</span>
+                    <span>Featured Product Teardown</span>
                   </div>
                 )}
 
@@ -283,32 +280,28 @@ export default function Projects() {
                   <span style={{ 
                     fontFamily: 'var(--font-mono)', 
                     fontSize: '0.78rem', 
-                    color: 'var(--primary)', 
-                    fontWeight: 600,
+                    color: 'var(--text-muted)', 
                     display: 'block',
-                    marginBottom: '6px'
+                    marginBottom: '4px'
                   }}>
                     {proj.category}
                   </span>
-                  <h3 style={{ fontSize: '1.45rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '4px' }}>
+                  <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '4px' }}>
                     {proj.title}
                   </h3>
-                  <div style={{ fontSize: '0.88rem', color: 'var(--text-muted)' }}>
+                  <div style={{ fontSize: '0.86rem', color: 'var(--text-muted)' }}>
                     {proj.org}
                   </div>
                 </div>
 
-                {/* HMW Prompt Box */}
+                {/* HMW Box (Clean Integrated Callout) */}
                 {proj.hmwPrompt && (
                   <div 
                     style={{
-                      padding: '12px 16px',
-                      backgroundColor: 'var(--bg-base)',
-                      borderRadius: '8px',
-                      borderLeft: '4px solid var(--primary)',
-                      borderTop: '1px solid var(--border-subtle)',
-                      borderRight: '1px solid var(--border-subtle)',
-                      borderBottom: '1px solid var(--border-subtle)',
+                      padding: '12px 18px',
+                      backgroundColor: 'var(--bg-subtle)',
+                      borderLeft: '3px solid var(--primary)',
+                      borderRadius: '0 6px 6px 0',
                       marginBottom: '20px',
                       fontSize: '0.94rem',
                       color: 'var(--text-primary)',
@@ -321,21 +314,20 @@ export default function Projects() {
                 )}
 
                 {/* Summary */}
-                <p style={{ fontSize: '1.02rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '24px' }}>
+                <p style={{ fontSize: '1.02rem', color: 'var(--text-secondary)', lineHeight: 1.65, marginBottom: '24px' }}>
                   {proj.summary}
                 </p>
 
-                {/* Metrics Grid */}
+                {/* Metrics Rail */}
                 <div 
                   style={{ 
                     display: 'grid', 
                     gridTemplateColumns: 'repeat(3, 1fr)', 
-                    gap: '16px',
-                    backgroundColor: 'var(--bg-base)',
-                    padding: '16px 20px',
-                    borderRadius: '10px',
-                    border: '1px solid var(--border-subtle)',
-                    marginBottom: '26px'
+                    gap: '24px',
+                    padding: '16px 0',
+                    borderTop: '1px solid var(--border-hairline)',
+                    borderBottom: '1px solid var(--border-hairline)',
+                    marginBottom: '28px'
                   }}
                 >
                   {proj.metrics.map((m, i) => (
@@ -350,33 +342,30 @@ export default function Projects() {
                   ))}
                 </div>
 
-                {/* Core Issue & Why Solve Section */}
+                {/* Core Issue & Why Solve (2-Column Integrated) */}
                 <div 
                   style={{
                     display: 'grid',
                     gridTemplateColumns: '1fr 1fr',
-                    gap: '20px',
-                    padding: '18px 20px',
-                    backgroundColor: 'var(--bg-surface-subtle)',
-                    borderRadius: '10px',
-                    border: '1px solid var(--border-subtle)',
-                    marginBottom: '26px'
+                    gap: '32px',
+                    marginBottom: '28px'
                   }}
+                  className="projects-two-col"
                 >
                   <div>
-                    <div style={{ fontSize: '0.8rem', fontWeight: 750, textTransform: 'uppercase', letterSpacing: '0.04em', color: '#b91c1c', marginBottom: '6px' }}>
-                      The Issue (Customer & Operational Pain Point)
+                    <div style={{ fontSize: '0.8rem', fontWeight: 750, textTransform: 'uppercase', letterSpacing: '0.04em', color: '#b91c1c', marginBottom: '8px' }}>
+                      The Problem Space (Customer & Operational Pain Point)
                     </div>
-                    <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.55 }}>
+                    <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
                       {proj.theIssue}
                     </p>
                   </div>
 
                   <div>
-                    <div style={{ fontSize: '0.8rem', fontWeight: 750, textTransform: 'uppercase', letterSpacing: '0.04em', color: '#065f46', marginBottom: '6px' }}>
+                    <div style={{ fontSize: '0.8rem', fontWeight: 750, textTransform: 'uppercase', letterSpacing: '0.04em', color: '#065f46', marginBottom: '8px' }}>
                       Why We Solved It (Business Impact & Strategy)
                     </div>
-                    <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.55 }}>
+                    <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
                       {proj.whySolve}
                     </p>
                   </div>
@@ -384,14 +373,14 @@ export default function Projects() {
 
                 {/* Proposed Solutions / Engineering Deliverables */}
                 <div style={{ marginBottom: '24px' }}>
-                  <div style={{ fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-muted)', marginBottom: '14px' }}>
+                  <div style={{ fontSize: '0.82rem', fontWeight: 750, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-muted)', marginBottom: '14px' }}>
                     How We Solved It (Product Requirements & Execution)
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                     {proj.howWeSolve.map((sol, i) => (
                       <div key={i} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                        <CheckCircle size={16} style={{ color: 'var(--emerald)', marginTop: '4px', flexShrink: 0 }} />
-                        <div style={{ fontSize: '0.93rem', lineHeight: 1.55, color: 'var(--text-secondary)' }}>
+                        <CheckCircle size={15} style={{ color: 'var(--emerald)', marginTop: '4px', flexShrink: 0 }} />
+                        <div style={{ fontSize: '0.93rem', lineHeight: 1.6, color: 'var(--text-secondary)' }}>
                           <strong style={{ color: 'var(--text-primary)' }}>{sol.name}: </strong>
                           <span>{sol.desc}</span>
                         </div>
@@ -404,15 +393,13 @@ export default function Projects() {
                 {isExpanded && (
                   <div 
                     style={{
-                      marginTop: '22px',
-                      padding: '22px',
-                      backgroundColor: 'var(--bg-base)',
-                      borderRadius: '10px',
-                      border: '1px solid var(--border-subtle)',
+                      marginTop: '24px',
+                      padding: '24px',
+                      backgroundColor: 'var(--bg-subtle)',
+                      borderRadius: '8px',
                       display: 'flex',
                       flexDirection: 'column',
-                      gap: '16px',
-                      animation: 'fadeInUp 0.25s ease'
+                      gap: '18px'
                     }}
                   >
                     {proj.deepDive.targetPersonas && (
@@ -431,7 +418,7 @@ export default function Projects() {
                     )}
 
                     {proj.deepDive.successMetrics && (
-                      <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '14px' }}>
+                      <div style={{ borderTop: '1px solid var(--border-hairline)', paddingTop: '14px' }}>
                         <span style={{ fontSize: '0.82rem', fontWeight: 750, color: 'var(--emerald)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                           Success Metrics & Guardrails
                         </span>
@@ -444,11 +431,11 @@ export default function Projects() {
                     )}
 
                     {proj.deepDive.rolloutStrategy && (
-                      <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '14px' }}>
+                      <div style={{ borderTop: '1px solid var(--border-hairline)', paddingTop: '14px' }}>
                         <span style={{ fontSize: '0.82rem', fontWeight: 750, color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-                          Product Phasing & Rollout
+                          Product Phasing & Rollout Strategy
                         </span>
-                        <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '6px', lineHeight: 1.5 }}>
+                        <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '6px', lineHeight: 1.55 }}>
                           {proj.deepDive.rolloutStrategy}
                         </p>
                       </div>
@@ -459,7 +446,7 @@ export default function Projects() {
                         <span style={{ fontSize: '0.82rem', fontWeight: 750, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                           Architectural Pattern & Trade-offs
                         </span>
-                        <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '6px', lineHeight: 1.5 }}>
+                        <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '6px', lineHeight: 1.55 }}>
                           <strong>Pattern:</strong> {proj.deepDive.pattern}<br />
                           <strong>Components:</strong> {proj.deepDive.coreComponents}<br />
                           <strong>Key Trade-off:</strong> {proj.deepDive.tradeoffs}
@@ -477,11 +464,10 @@ export default function Projects() {
                     alignItems: 'center', 
                     flexWrap: 'wrap', 
                     gap: '14px',
-                    paddingTop: '20px',
-                    borderTop: '1px solid var(--border-subtle)'
+                    marginTop: '20px'
                   }}
                 >
-                  <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                  <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
                     {proj.tags.map((tag) => (
                       <span key={tag} className="badge badge-neutral">
                         {tag}
@@ -499,13 +485,13 @@ export default function Projects() {
                       fontSize: '0.88rem',
                       display: 'flex',
                       alignItems: 'center',
-                      gap: '6px',
+                      gap: '5px',
                       cursor: 'pointer',
                       padding: '4px 0'
                     }}
                   >
-                    <span>{isExpanded ? 'Hide Product Teardown' : 'View Full Case Study'}</span>
-                    {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                    <span>{isExpanded ? 'Hide Teardown Details' : 'View Full Case Study'}</span>
+                    {isExpanded ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
                   </button>
                 </div>
 
@@ -515,6 +501,15 @@ export default function Projects() {
         </div>
 
       </div>
+
+      <style>{`
+        @media (max-width: 820px) {
+          .projects-two-col {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
