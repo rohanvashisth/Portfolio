@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Award, Calendar, MapPin, Building2, CheckCircle2, SlidersHorizontal, FileText, ArrowRight } from 'lucide-react';
+import { Award, Calendar, MapPin, Building2, SlidersHorizontal, FileText } from 'lucide-react';
 
 export default function Experience() {
-  const [viewMode, setViewMode] = useState('product'); // 'product' (Issue/Why/How/Impact) or 'concise' (Standard Resume)
+  const [viewMode, setViewMode] = useState('product'); // 'product' or 'concise'
 
   const experiences = [
     {
@@ -72,7 +72,7 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="section" style={{ borderTop: '1px solid var(--border-subtle)' }}>
+    <section id="experience" className="section">
       <div className="container">
         
         {/* Section Header with View Toggle */}
@@ -85,14 +85,14 @@ export default function Experience() {
             </p>
           </div>
 
-          {/* Toggle Button */}
+          {/* Toggle */}
           <div 
             style={{
               display: 'flex',
-              backgroundColor: 'var(--bg-surface-subtle)',
-              padding: '4px',
-              borderRadius: '8px',
-              border: '1px solid var(--border-subtle)'
+              backgroundColor: 'var(--bg-subtle)',
+              padding: '3px',
+              borderRadius: '6px',
+              border: '1px solid var(--border-hairline)'
             }}
           >
             <button
@@ -101,20 +101,20 @@ export default function Experience() {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '6px',
-                padding: '6px 14px',
-                borderRadius: '6px',
-                fontSize: '0.84rem',
+                padding: '6px 12px',
+                borderRadius: '4px',
+                fontSize: '0.82rem',
                 fontWeight: 600,
                 cursor: 'pointer',
                 border: 'none',
                 backgroundColor: viewMode === 'product' ? '#ffffff' : 'transparent',
                 color: viewMode === 'product' ? 'var(--text-primary)' : 'var(--text-muted)',
-                boxShadow: viewMode === 'product' ? '0 1px 3px rgba(0,0,0,0.06)' : 'none',
+                boxShadow: viewMode === 'product' ? '0 1px 2px rgba(0,0,0,0.05)' : 'none',
                 transition: 'all 0.15s ease'
               }}
             >
-              <SlidersHorizontal size={14} />
-              <span>Product Framework (Issue ➔ Why ➔ How ➔ Impact)</span>
+              <SlidersHorizontal size={13} />
+              <span>Product Framework (Issue / Why / How / Impact)</span>
             </button>
             <button
               onClick={() => setViewMode('concise')}
@@ -122,191 +122,159 @@ export default function Experience() {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '6px',
-                padding: '6px 14px',
-                borderRadius: '6px',
-                fontSize: '0.84rem',
+                padding: '6px 12px',
+                borderRadius: '4px',
+                fontSize: '0.82rem',
                 fontWeight: 600,
                 cursor: 'pointer',
                 border: 'none',
                 backgroundColor: viewMode === 'concise' ? '#ffffff' : 'transparent',
                 color: viewMode === 'concise' ? 'var(--text-primary)' : 'var(--text-muted)',
-                boxShadow: viewMode === 'concise' ? '0 1px 3px rgba(0,0,0,0.06)' : 'none',
+                boxShadow: viewMode === 'concise' ? '0 1px 2px rgba(0,0,0,0.05)' : 'none',
                 transition: 'all 0.15s ease'
               }}
             >
-              <FileText size={14} />
+              <FileText size={13} />
               <span>Resume Bullets</span>
             </button>
           </div>
         </div>
 
-        {/* Experience Cards */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', maxWidth: '960px' }}>
-          {experiences.map((exp) => (
+        {/* Integrated Timeline (Split Rail) */}
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          {experiences.map((exp, idx) => (
             <div 
               key={exp.id}
-              className="glass-card"
               style={{
-                textAlign: 'left',
-                padding: '32px',
-                position: 'relative'
+                display: 'grid',
+                gridTemplateColumns: '260px 1fr',
+                gap: '40px',
+                padding: '40px 0',
+                borderTop: idx > 0 ? '1px solid var(--border-hairline)' : 'none',
+                textAlign: 'left'
               }}
+              className="experience-split-row"
             >
-              {/* Card Header */}
-              <div 
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'flex-start',
-                  flexWrap: 'wrap',
-                  gap: '12px',
-                  marginBottom: '16px',
-                  paddingBottom: '16px',
-                  borderBottom: '1px solid var(--border-subtle)'
-                }}
-              >
-                <div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap', marginBottom: '4px' }}>
-                    <h3 style={{ fontSize: '1.35rem', fontWeight: 750, color: 'var(--text-primary)' }}>
-                      {exp.role}
-                    </h3>
-                    {exp.badge && (
-                      <span className="badge badge-primary">
-                        {exp.badge}
-                      </span>
-                    )}
-                  </div>
-
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-                    <span style={{ fontWeight: 600, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '5px' }}>
-                      <Building2 size={15} style={{ color: 'var(--primary)' }} />
-                      {exp.company}
-                    </span>
-                    <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                      <MapPin size={14} />
-                      {exp.location}
-                    </span>
-                  </div>
+              
+              {/* Left Column: Organization & Tenure */}
+              <div>
+                <div style={{ fontSize: '1.2rem', fontWeight: 750, color: 'var(--text-primary)', marginBottom: '4px' }}>
+                  {exp.role}
                 </div>
 
-                <div 
-                  style={{
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: '0.85rem',
-                    fontWeight: 600,
-                    color: 'var(--text-secondary)',
-                    backgroundColor: 'var(--bg-base)',
-                    padding: '6px 12px',
-                    borderRadius: '6px',
-                    border: '1px solid var(--border-subtle)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '6px'
-                  }}
-                >
-                  <Calendar size={13} />
-                  <span>{exp.period}</span>
+                <div style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px' }}>
+                  <Building2 size={15} style={{ color: 'var(--primary)' }} />
+                  <span>{exp.company}</span>
                 </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: '14px' }}>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    <Calendar size={13} />
+                    <span>{exp.period}</span>
+                  </span>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    <MapPin size={13} />
+                    <span>{exp.location}</span>
+                  </span>
+                </div>
+
+                {exp.badge && (
+                  <span className="badge badge-primary" style={{ marginBottom: '10px' }}>
+                    {exp.badge}
+                  </span>
+                )}
+
+                {exp.award && (
+                  <div 
+                    style={{
+                      marginTop: '8px',
+                      padding: '8px 10px',
+                      backgroundColor: 'var(--amber-subtle)',
+                      border: '1px solid #fde68a',
+                      borderRadius: '6px',
+                      fontSize: '0.8rem',
+                      fontWeight: 600,
+                      color: '#92400e',
+                      lineHeight: 1.4
+                    }}
+                  >
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '5px', marginBottom: '2px' }}>
+                      <Award size={14} />
+                      <span>Impact Award (2022)</span>
+                    </div>
+                    <span style={{ fontWeight: 400, fontSize: '0.76rem', color: '#78350f' }}>
+                      Recognized for system modernization & engineering excellence.
+                    </span>
+                  </div>
+                )}
               </div>
 
-              {/* Award Banner if applicable */}
-              {exp.award && (
-                <div 
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '10px',
-                    padding: '10px 14px',
-                    backgroundColor: 'var(--amber-light)',
-                    border: '1px solid var(--amber-border)',
-                    borderRadius: '8px',
-                    marginBottom: '20px',
-                    fontSize: '0.88rem',
-                    fontWeight: 600,
-                    color: '#92400e'
-                  }}
-                >
-                  <Award size={18} style={{ flexShrink: 0 }} />
-                  <span>{exp.award}</span>
-                </div>
-              )}
+              {/* Right Column: Narrative & Bullets */}
+              <div>
+                <p style={{ fontSize: '0.98rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '24px', fontWeight: 500 }}>
+                  {exp.pmSummary}
+                </p>
 
-              {/* Summary */}
-              <p style={{ fontSize: '0.98rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '24px' }}>
-                {exp.pmSummary}
-              </p>
-
-              {/* Points: Either Product Framework or Concise Bullets */}
-              {viewMode === 'product' ? (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '22px', marginBottom: '24px' }}>
-                  {exp.points.map((pt, idx) => (
-                    <div 
-                      key={idx}
-                      style={{
-                        padding: '18px 20px',
-                        backgroundColor: 'var(--bg-base)',
-                        borderRadius: '10px',
-                        border: '1px solid var(--border-subtle)',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: '10px'
-                      }}
-                    >
-                      <div style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-primary)' }}>
-                        {pt.title}
-                      </div>
-
-                      <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '8px', fontSize: '0.92rem', lineHeight: 1.55 }}>
-                        <div>
-                          <strong style={{ color: '#b91c1c', fontWeight: 700 }}>• What was the issue: </strong>
-                          <span style={{ color: 'var(--text-secondary)' }}>{pt.issue}</span>
-                        </div>
-                        <div>
-                          <strong style={{ color: '#92400e', fontWeight: 700 }}>• Why we solved it: </strong>
-                          <span style={{ color: 'var(--text-secondary)' }}>{pt.why}</span>
-                        </div>
-                        <div>
-                          <strong style={{ color: '#1e40af', fontWeight: 700 }}>• How we solved it: </strong>
-                          <span style={{ color: 'var(--text-secondary)' }}>{pt.how}</span>
-                        </div>
-                        <div>
-                          <strong style={{ color: '#065f46', fontWeight: 700 }}>• Quantified Metrics: </strong>
-                          <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>{pt.metrics}</span>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', marginBottom: '24px' }}>
-                  {exp.points.map((pt, idx) => (
-                    <div key={idx} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
+                {viewMode === 'product' ? (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '22px' }}>
+                    {exp.points.map((pt, pIdx) => (
                       <div 
-                        style={{ 
-                          width: '6px', 
-                          height: '6px', 
-                          borderRadius: '50%', 
-                          backgroundColor: 'var(--primary)', 
-                          marginTop: '8px', 
-                          flexShrink: 0 
-                        }} 
-                      />
-                      <div style={{ fontSize: '0.96rem', lineHeight: 1.6, color: 'var(--text-secondary)' }}>
-                        <strong style={{ color: 'var(--text-primary)', fontWeight: 650 }}>{pt.title}: </strong>
-                        <span>{pt.conciseBullet}</span>
+                        key={pIdx}
+                        style={{
+                          borderLeft: '2px solid var(--border-hairline)',
+                          paddingLeft: '18px',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          gap: '6px'
+                        }}
+                      >
+                        <div style={{ fontSize: '1.02rem', fontWeight: 700, color: 'var(--text-primary)' }}>
+                          {pt.title}
+                        </div>
+
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', fontSize: '0.91rem', lineHeight: 1.55 }}>
+                          <div>
+                            <span style={{ color: '#b91c1c', fontWeight: 700 }}>Issue: </span>
+                            <span style={{ color: 'var(--text-secondary)' }}>{pt.issue}</span>
+                          </div>
+                          <div>
+                            <span style={{ color: '#92400e', fontWeight: 700 }}>Why: </span>
+                            <span style={{ color: 'var(--text-secondary)' }}>{pt.why}</span>
+                          </div>
+                          <div>
+                            <span style={{ color: '#1e40af', fontWeight: 700 }}>How: </span>
+                            <span style={{ color: 'var(--text-secondary)' }}>{pt.how}</span>
+                          </div>
+                          <div>
+                            <span style={{ color: '#065f46', fontWeight: 700 }}>Metrics: </span>
+                            <span style={{ color: 'var(--text-primary)', fontWeight: 650 }}>{pt.metrics}</span>
+                          </div>
+                        </div>
                       </div>
-                    </div>
+                    ))}
+                  </div>
+                ) : (
+                  <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '14px', padding: 0 }}>
+                    {exp.points.map((pt, pIdx) => (
+                      <li key={pIdx} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', fontSize: '0.95rem', lineHeight: 1.6 }}>
+                        <span style={{ color: 'var(--primary)', fontWeight: 800 }}>•</span>
+                        <span>
+                          <strong style={{ color: 'var(--text-primary)' }}>{pt.title}: </strong>
+                          <span style={{ color: 'var(--text-secondary)' }}>{pt.conciseBullet}</span>
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {/* Tags */}
+                <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', marginTop: '24px' }}>
+                  {exp.skills.map((skill) => (
+                    <span key={skill} className="badge badge-neutral">
+                      {skill}
+                    </span>
                   ))}
                 </div>
-              )}
-
-              {/* Technology & Tooling Tags */}
-              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', paddingTop: '16px', borderTop: '1px solid var(--border-subtle)' }}>
-                {exp.skills.map((skill) => (
-                  <span key={skill} className="badge badge-neutral">
-                    {skill}
-                  </span>
-                ))}
               </div>
 
             </div>
@@ -314,6 +282,15 @@ export default function Experience() {
         </div>
 
       </div>
+
+      <style>{`
+        @media (max-width: 820px) {
+          .experience-split-row {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
