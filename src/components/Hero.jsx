@@ -123,10 +123,11 @@ export default function Hero() {
               style={{
                 width: '100%',
                 maxHeight: '430px',
-                borderRadius: '12px',
+                borderRadius: '14px',
                 overflow: 'hidden',
-                border: '1px solid var(--border-hairline)',
-                backgroundColor: 'var(--bg-subtle)'
+                border: '2px solid var(--pastel-blue-border)',
+                backgroundColor: 'var(--pastel-blue-bg)',
+                boxShadow: '0 16px 36px -10px rgba(37, 99, 235, 0.12)'
               }}
             >
               <img 
@@ -150,13 +151,13 @@ export default function Hero() {
                 justifyContent: 'space-between',
                 width: '100%',
                 marginTop: '10px',
-                fontSize: '0.8rem',
+                fontSize: '0.82rem',
                 color: 'var(--text-muted)'
               }}
             >
-              <span>Rohan Vashisth • TPM</span>
-              <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                <MapPin size={12} style={{ color: 'var(--emerald)' }} />
+              <span style={{ fontWeight: 600, color: 'var(--text-secondary)' }}>Rohan Vashisth • TPM</span>
+              <span style={{ display: 'flex', alignItems: 'center', gap: '4px', color: 'var(--emerald)' }}>
+                <MapPin size={13} style={{ color: 'var(--emerald)' }} />
                 <span>Central Park, NY</span>
               </span>
             </div>
@@ -164,28 +165,46 @@ export default function Hero() {
 
         </div>
 
-        {/* Integrated Metrics Rail */}
+        {/* Integrated Pastel Metrics Rail */}
         <div 
           style={{ 
             display: 'grid', 
             gridTemplateColumns: 'repeat(3, 1fr)', 
-            gap: '32px',
-            borderTop: '1px solid var(--border-hairline)',
-            paddingTop: '28px',
+            gap: '24px',
+            paddingTop: '8px',
             textAlign: 'left'
           }}
+          className="hero-metrics-grid"
         >
-          <div>
-            <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--text-primary)' }}>3+ Years</div>
-            <div style={{ fontSize: '0.84rem', color: 'var(--text-muted)', marginTop: '2px' }}>Software Engineer II @ J.P. Morgan</div>
+          <div style={{ 
+            backgroundColor: 'var(--pastel-blue-bg)', 
+            border: '1px solid var(--pastel-blue-border)', 
+            borderRadius: '10px', 
+            padding: '20px 24px',
+            boxShadow: '0 2px 8px rgba(37, 99, 235, 0.04)'
+          }}>
+            <div style={{ fontSize: '1.65rem', fontWeight: 800, color: 'var(--pastel-blue-text)' }}>3+ Years</div>
+            <div style={{ fontSize: '0.86rem', color: 'var(--text-secondary)', marginTop: '2px', fontWeight: 500 }}>Software Engineer II @ J.P. Morgan</div>
           </div>
-          <div>
-            <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--text-primary)' }}>$10B–$15B</div>
-            <div style={{ fontSize: '0.84rem', color: 'var(--text-muted)', marginTop: '2px' }}>Daily FX Volume Modernized</div>
+          <div style={{ 
+            backgroundColor: 'var(--pastel-green-bg)', 
+            border: '1px solid var(--pastel-green-border)', 
+            borderRadius: '10px', 
+            padding: '20px 24px',
+            boxShadow: '0 2px 8px rgba(5, 150, 105, 0.04)'
+          }}>
+            <div style={{ fontSize: '1.65rem', fontWeight: 800, color: 'var(--pastel-green-text)' }}>$10B–$15B</div>
+            <div style={{ fontSize: '0.86rem', color: 'var(--text-secondary)', marginTop: '2px', fontWeight: 500 }}>Daily FX Settlement Scaled</div>
           </div>
-          <div>
-            <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--text-primary)' }}>MBA '26</div>
-            <div style={{ fontSize: '0.84rem', color: 'var(--text-muted)', marginTop: '2px' }}>Finance & Supply Chain @ Rutgers</div>
+          <div style={{ 
+            backgroundColor: 'var(--pastel-teal-bg)', 
+            border: '1px solid var(--pastel-teal-border)', 
+            borderRadius: '10px', 
+            padding: '20px 24px',
+            boxShadow: '0 2px 8px rgba(15, 118, 110, 0.04)'
+          }}>
+            <div style={{ fontSize: '1.65rem', fontWeight: 800, color: 'var(--pastel-teal-text)' }}>MBA '26</div>
+            <div style={{ fontSize: '0.86rem', color: 'var(--text-secondary)', marginTop: '2px', fontWeight: 500 }}>Finance & Supply Chain @ Rutgers</div>
           </div>
         </div>
 
