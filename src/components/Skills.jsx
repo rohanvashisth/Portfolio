@@ -1,166 +1,234 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Briefcase, Code2, LineChart, CheckCircle2 } from 'lucide-react';
 
 export default function Skills() {
-  const [activeTab, setActiveTab] = useState('product');
-
-  const categories = [
+  const pillars = [
     {
       id: 'product',
       title: 'Product Strategy & Execution',
-      icon: <Briefcase size={18} />,
-      description: 'Bridging strategic customer and operational requirements with disciplined agile execution.',
+      icon: <Briefcase size={20} style={{ color: 'var(--primary)' }} />,
+      tagline: 'Bridging strategic customer & operational requirements with disciplined agile execution.',
       groups: [
         {
           category: 'Product Lifecycle',
-          items: ['PRD & Technical Specifications', 'Roadmap & Release Planning', 'RICE / MoSCoW Prioritization', 'Feature Scoping & MVP Definition']
+          items: [
+            'PRD & Technical Specifications',
+            'Roadmap & Release Planning',
+            'RICE / MoSCoW Prioritization',
+            'Feature Scoping & MVP Definition'
+          ]
         },
         {
-          category: 'Leadership & Methodology',
-          items: ['Cross-Functional Team Alignment', 'Agile / Scrum Sprint Leadership', 'Executive & Trading Desk Stakeholders', 'Backlog Grooming (Jira / Confluence)']
+          category: 'Cross-Functional Leadership',
+          items: [
+            'Agile / Scrum Sprint Leadership',
+            'Engineering & Trading Desk Stakeholders',
+            'Backlog Grooming & Decomposition',
+            'Jira / Confluence Workflows'
+          ]
         },
         {
-          category: 'Product Quality & Delivery',
-          items: ['Release Governance', 'User Acceptance Testing (UAT)', 'A/B Testing & Insights', 'Production Readiness Auditing']
+          category: 'Governance & Quality',
+          items: [
+            'User Acceptance Testing (UAT)',
+            'Production Release Auditing',
+            'A/B Experimentation & Insights',
+            'Post-Launch Telemetry & SLOs'
+          ]
         }
       ]
     },
     {
       id: 'platform',
       title: 'Platform & Distributed Systems',
-      icon: <Code2 size={18} />,
-      description: 'Deep technical foundation in high-concurrency architecture, messaging, and API design.',
+      icon: <Code2 size={20} style={{ color: 'var(--primary)' }} />,
+      tagline: 'Deep technical foundation in high-concurrency architecture, messaging, and API design.',
       groups: [
         {
           category: 'Distributed Architecture',
-          items: ['Event-Driven Systems (Apache Kafka)', 'Microservices Decomposition', 'Asynchronous Message Queues (IBM MQ)', 'Idempotent REST API Design']
+          items: [
+            'Event-Driven Systems (Apache Kafka)',
+            'Microservices Decomposition',
+            'IBM MQ Asynchronous Queuing',
+            'Idempotent REST API Design'
+          ]
         },
         {
-          category: 'Backend & Data Layers',
-          items: ['Java & Spring Boot Framework', 'Distributed SQL (CockroachDB POC)', 'Relational Database Schema Tuning', 'Service Orchestration']
+          category: 'Backend & Data Scale',
+          items: [
+            'Java & Spring Boot Framework',
+            'Distributed SQL (CockroachDB POC)',
+            'Relational Schema Tuning & Indexing',
+            'Service Orchestration & Transactions'
+          ]
         },
         {
           category: 'Reliability & Observability',
-          items: ['Telemetry & Log Streaming', 'Regression Automation (FitNesse)', 'Incident Post-Mortems & SLAs', 'High-Volume Fault Isolation']
+          items: [
+            'FitNesse Automated Regression Suites',
+            'Incident Post-Mortems & SLAs',
+            'High-Volume Fault Isolation',
+            'Telemetry Log Parsing & Alerts'
+          ]
         }
       ]
     },
     {
       id: 'analytics',
       title: 'Data Analytics & Business Strategy',
-      icon: <LineChart size={18} />,
-      description: 'Quantitative analytical rigor derived from engineering foundations and MBA training.',
+      icon: <LineChart size={20} style={{ color: 'var(--emerald)' }} />,
+      tagline: 'Quantitative analytical rigor derived from engineering foundations and MBA training.',
       groups: [
         {
           category: 'Data & Telemetry',
-          items: ['Advanced SQL Querying', 'Python Data Processing & Automation', 'Operational Health KPI Dashboards', 'Telemetry Log Parsing']
+          items: [
+            'Advanced SQL (Aggregations, Windows)',
+            'Python Data Processing & Automation',
+            'Operational Health KPI Dashboards',
+            'Root-Cause Telemetry Analytics'
+          ]
         },
         {
-          category: 'Business & Finance',
-          items: ['Corporate Financial Valuation', 'Capital Budgeting & Forecasting', 'Operations Scheduling & Modeling', 'Power BI & Advanced Excel']
+          category: 'Finance & Strategy',
+          items: [
+            'Corporate Financial Valuation (DCF)',
+            'Capital Budgeting & ROI Modeling',
+            'Cost-Benefit Tradeoff Analysis',
+            'Operations Scheduling & Modeling'
+          ]
         },
         {
           category: 'Supply Chain Operations',
-          items: ['Multi-Criteria Sourcing Scoring', 'Critical-Path Delay Simulations', 'Logistics Bottleneck Modeling', 'Contingency Sourcing Strategy']
+          items: [
+            'Multi-Criteria Sourcing Scoring',
+            'Critical-Path Delay Simulations',
+            'Logistics Bottleneck Modeling',
+            'Power BI & Advanced Excel'
+          ]
         }
       ]
     }
   ];
 
-  const currentCategory = categories.find(c => c.id === activeTab);
-
   return (
-    <section id="skills" className="section" style={{ borderTop: '1px solid var(--border-subtle)' }}>
+    <section id="skills" className="section">
       <div className="container">
         
-        {/* Header */}
+        {/* Section Header */}
         <div className="section-header" style={{ textAlign: 'left' }}>
           <span className="section-label">Core Capabilities</span>
-          <h2 className="section-title">Domain Expertise & Skills</h2>
+          <h2 className="section-title">Domain Expertise & Technical Depth</h2>
           <p className="section-subtitle">
             An intersection of distributed platform engineering, product management disciplines, and quantitative business strategy.
           </p>
         </div>
 
-        {/* Tab Pills */}
-        <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '32px' }}>
-          {categories.map((cat) => {
-            const isActive = activeTab === cat.id;
-            return (
-              <button
-                key={cat.id}
-                onClick={() => setActiveTab(cat.id)}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  padding: '10px 18px',
-                  borderRadius: '8px',
-                  fontSize: '0.92rem',
-                  fontWeight: 600,
-                  cursor: 'pointer',
-                  border: isActive ? '1px solid var(--primary)' : '1px solid var(--border-subtle)',
-                  backgroundColor: isActive ? 'var(--primary)' : 'var(--bg-surface)',
-                  color: isActive ? '#ffffff' : 'var(--text-secondary)',
-                  transition: 'all 0.15s ease'
-                }}
-              >
-                {cat.icon}
-                <span>{cat.title}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Active Tab Content Card */}
+        {/* Integrated 3-Column Domain Matrix */}
         <div 
-          className="glass-card"
+          className="skills-matrix"
           style={{
-            textAlign: 'left',
-            padding: '36px'
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            borderTop: '1px solid var(--border-hairline)',
+            borderBottom: '1px solid var(--border-hairline)'
           }}
         >
-          <div style={{ marginBottom: '28px', paddingBottom: '16px', borderBottom: '1px solid var(--border-subtle)' }}>
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 750, color: 'var(--text-primary)', marginBottom: '6px' }}>
-              {currentCategory.title}
-            </h3>
-            <p style={{ fontSize: '0.96rem', color: 'var(--text-muted)' }}>
-              {currentCategory.description}
-            </p>
-          </div>
-
-          <div className="grid-3" style={{ gap: '28px' }}>
-            {currentCategory.groups.map((group, idx) => (
-              <div 
-                key={idx}
-                style={{
-                  backgroundColor: 'var(--bg-base)',
-                  padding: '20px',
-                  borderRadius: '10px',
-                  border: '1px solid var(--border-subtle)'
-                }}
-              >
-                <div style={{ fontSize: '0.86rem', fontWeight: 700, color: 'var(--text-primary)', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '14px' }}>
-                  {group.category}
+          {pillars.map((pillar, colIdx) => (
+            <div 
+              key={pillar.id}
+              className="skills-pillar-col"
+              style={{
+                padding: '36px 28px',
+                borderRight: colIdx < 2 ? '1px solid var(--border-hairline)' : 'none',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '28px'
+              }}
+            >
+              {/* Pillar Header */}
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
+                  <div style={{ 
+                    width: '36px', 
+                    height: '36px', 
+                    borderRadius: '8px', 
+                    backgroundColor: 'var(--bg-subtle)', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center',
+                    border: '1px solid var(--border-hairline)'
+                  }}>
+                    {pillar.icon}
+                  </div>
+                  <h3 style={{ fontSize: '1.15rem', fontWeight: 750, color: 'var(--text-primary)', lineHeight: 1.3 }}>
+                    {pillar.title}
+                  </h3>
                 </div>
-
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  {group.items.map((item, itemIdx) => (
-                    <div key={itemIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                      <CheckCircle2 size={15} style={{ color: 'var(--primary)', marginTop: '3px', flexShrink: 0 }} />
-                      <span style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.45 }}>
-                        {item}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+                <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', lineHeight: 1.55 }}>
+                  {pillar.tagline}
+                </p>
               </div>
-            ))}
-          </div>
 
+              {/* Sub-groups */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                {pillar.groups.map((group, gIdx) => (
+                  <div key={gIdx} style={{ textAlign: 'left' }}>
+                    <div style={{ 
+                      fontSize: '0.74rem', 
+                      fontFamily: 'var(--font-mono)', 
+                      fontWeight: 650, 
+                      color: 'var(--text-primary)', 
+                      textTransform: 'uppercase', 
+                      letterSpacing: '0.08em',
+                      marginBottom: '10px',
+                      paddingBottom: '4px',
+                      borderBottom: '1px solid var(--bg-subtle)'
+                    }}>
+                      {group.category}
+                    </div>
+
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {group.items.map((item, iIdx) => (
+                        <div key={iIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                          <CheckCircle2 
+                            size={14} 
+                            style={{ 
+                              color: pillar.id === 'analytics' ? 'var(--emerald)' : 'var(--primary)', 
+                              marginTop: '4px', 
+                              flexShrink: 0 
+                            }} 
+                          />
+                          <span style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', lineHeight: 1.45 }}>
+                            {item}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          ))}
         </div>
 
       </div>
+
+      <style>{`
+        @media (max-width: 900px) {
+          .skills-matrix {
+            grid-template-columns: 1fr !important;
+          }
+          .skills-pillar-col {
+            border-right: none !important;
+            border-bottom: 1px solid var(--border-hairline) !important;
+            padding: 32px 16px !important;
+          }
+          .skills-pillar-col:last-child {
+            border-bottom: none !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
