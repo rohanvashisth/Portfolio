@@ -34,12 +34,15 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="section">
+    <section id="education" className="section section-white">
       <div className="container">
         
         {/* Section Header */}
         <div className="section-header" style={{ textAlign: 'left' }}>
-          <span className="section-label">Academic Foundations</span>
+          <div className="section-tag">
+            <span className="section-tag-num">04</span>
+            <span>Academic Foundations</span>
+          </div>
           <h2 className="section-title">Education & Credentials</h2>
           <p className="section-subtitle">
             Complementing deep computer science foundations with business acumen in corporate finance and supply chain.
@@ -54,8 +57,8 @@ export default function Education() {
               className="integrated-item"
               style={{
                 display: 'grid',
-                gridTemplateColumns: '280px 1fr',
-                gap: '40px',
+                gridTemplateColumns: '320px 1fr',
+                gap: '48px',
                 textAlign: 'left'
               }}
             >
