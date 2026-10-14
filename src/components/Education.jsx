@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, GraduationCap, MapPin, Calendar } from 'lucide-react';
+import { Award, GraduationCap, MapPin, Calendar, CheckCircle2 } from 'lucide-react';
 
 export default function Education() {
   const educationList = [
@@ -15,7 +15,7 @@ export default function Education() {
         'Dean\'s Excellence Award Recipient',
         'Secretary, RBS MBA Finance Club'
       ],
-      description: 'Coursework and applied capstone research focused on corporate valuation, operations scheduling, logistics modeling, capital budgeting, and translating quantitative data into strategic decisions.'
+      description: 'Coursework and applied research focused on corporate valuation, operations scheduling, logistics modeling, capital budgeting, and translating quantitative data into strategic decisions.'
     },
     {
       id: 'vit',
@@ -34,10 +34,10 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="section" style={{ borderTop: '1px solid var(--border-subtle)' }}>
+    <section id="education" className="section">
       <div className="container">
         
-        {/* Header */}
+        {/* Section Header */}
         <div className="section-header" style={{ textAlign: 'left' }}>
           <span className="section-label">Academic Foundations</span>
           <h2 className="section-title">Education & Credentials</h2>
@@ -46,58 +46,74 @@ export default function Education() {
           </p>
         </div>
 
-        {/* Education Grid */}
-        <div className="grid-2" style={{ maxWidth: '960px', gap: '32px' }}>
-          {educationList.map((edu) => (
+        {/* Integrated Education Stream */}
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          {educationList.map((edu, idx) => (
             <div 
-              key={edu.id} 
-              className="glass-card"
+              key={edu.id}
+              className="integrated-item"
               style={{
-                textAlign: 'left',
-                padding: '32px',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between'
+                display: 'grid',
+                gridTemplateColumns: '280px 1fr',
+                gap: '40px',
+                textAlign: 'left'
               }}
             >
+              {/* Left Column: School, Degree & Timeline */}
               <div>
-                {/* Degree & Year */}
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '8px', marginBottom: '8px' }}>
+                <div style={{ display: 'inline-block', marginBottom: '12px' }}>
                   <span className="badge badge-primary">
                     {edu.graduation}
                   </span>
                 </div>
 
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 750, color: 'var(--text-primary)', marginBottom: '4px' }}>
+                <h3 style={{ fontSize: '1.2rem', fontWeight: 750, color: 'var(--text-primary)', lineHeight: 1.3, marginBottom: '6px' }}>
                   {edu.degree}
                 </h3>
 
-                <div style={{ fontSize: '0.96rem', fontWeight: 600, color: 'var(--primary)', marginBottom: '12px' }}>
+                <div style={{ fontSize: '0.94rem', fontWeight: 650, color: 'var(--primary)', marginBottom: '4px' }}>
                   {edu.specialization}
                 </div>
 
-                <div style={{ fontSize: '0.95rem', fontWeight: 650, color: 'var(--text-primary)' }}>
+                <div style={{ fontSize: '0.92rem', color: 'var(--text-primary)', fontWeight: 550, marginTop: '4px' }}>
                   {edu.institution}
                 </div>
 
-                <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '4px', marginTop: '2px', marginBottom: '18px' }}>
+                <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '4px', marginTop: '6px' }}>
                   <MapPin size={13} />
                   <span>{edu.location}</span>
                 </div>
-
-                <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '20px' }}>
-                  {edu.description}
-                </p>
               </div>
 
-              {/* Honors / Badges */}
-              <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '16px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                {edu.honors.map((honor, i) => (
-                  <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-                    <Award size={15} style={{ color: 'var(--emerald)', flexShrink: 0 }} />
-                    <span style={{ fontWeight: 550 }}>{honor}</span>
-                  </div>
-                ))}
+              {/* Right Column: Narrative & Honors */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                <p style={{ fontSize: '0.94rem', color: 'var(--text-secondary)', lineHeight: 1.65, margin: 0 }}>
+                  {edu.description}
+                </p>
+
+                {/* Honors & Activities */}
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', paddingTop: '8px' }}>
+                  {edu.honors.map((honor, hIdx) => (
+                    <div 
+                      key={hIdx} 
+                      style={{ 
+                        display: 'inline-flex', 
+                        alignItems: 'center', 
+                        gap: '6px', 
+                        padding: '4px 10px',
+                        background: 'var(--bg-subtle)',
+                        borderRadius: '4px',
+                        border: '1px solid var(--border-hairline)',
+                        fontSize: '0.82rem', 
+                        color: 'var(--text-primary)',
+                        fontWeight: 550 
+                      }}
+                    >
+                      <Award size={14} style={{ color: 'var(--emerald)' }} />
+                      <span>{honor}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
             </div>
@@ -105,6 +121,15 @@ export default function Education() {
         </div>
 
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .integrated-item {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
