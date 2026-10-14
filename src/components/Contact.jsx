@@ -38,12 +38,15 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="section" style={{ paddingBottom: '90px' }}>
+    <section id="contact" className="section section-alt" style={{ paddingBottom: '100px' }}>
       <div className="container">
         
         {/* Section Header */}
         <div className="section-header" style={{ textAlign: 'left' }}>
-          <span className="section-label">Get in Touch</span>
+          <div className="section-tag">
+            <span className="section-tag-num">05</span>
+            <span>Get in Touch</span>
+          </div>
           <h2 className="section-title">Let's Connect</h2>
           <p className="section-subtitle">
             Whether you have an open Technical Product Manager or engineering leadership role, a collaboration idea, or want to discuss FinTech systems—I'd love to hear from you.
@@ -51,7 +54,7 @@ export default function Contact() {
         </div>
 
         {/* 2-Column Integrated Layout */}
-        <div className="grid-2" style={{ gap: '48px', alignItems: 'start' }}>
+        <div className="grid-2" style={{ gap: '56px', alignItems: 'start' }}>
           
           {/* Left Column: Direct Communication Channels */}
           <div style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '24px' }}>
