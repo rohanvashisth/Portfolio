@@ -37,9 +37,9 @@ export default function Navbar() {
         zIndex: 100,
         transition: 'all 0.2s ease',
         padding: scrolled ? '12px 0' : '18px 0',
-        background: scrolled ? 'rgba(255, 255, 255, 0.92)' : 'rgba(249, 250, 251, 0.85)',
+        background: scrolled ? 'rgba(255, 255, 255, 0.94)' : 'rgba(244, 248, 253, 0.88)',
         backdropFilter: 'blur(10px)',
-        borderBottom: scrolled ? '1px solid var(--border-subtle)' : '1px solid transparent',
+        borderBottom: scrolled ? '1px solid var(--pastel-blue-border)' : '1px solid rgba(191, 219, 254, 0.5)',
       }}
     >
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -63,7 +63,7 @@ export default function Navbar() {
               height: '32px',
               borderRadius: '50%',
               objectFit: 'cover',
-              border: '1px solid var(--border-subtle)'
+              border: '2px solid var(--pastel-blue-border)'
             }}
           />
           <div>
