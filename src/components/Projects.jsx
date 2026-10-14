@@ -298,14 +298,16 @@ export default function Projects() {
                 {proj.hmwPrompt && (
                   <div 
                     style={{
-                      padding: '12px 18px',
-                      backgroundColor: 'var(--bg-subtle)',
-                      borderLeft: '3px solid var(--primary)',
-                      borderRadius: '0 6px 6px 0',
+                      padding: '14px 20px',
+                      backgroundColor: '#ffffff',
+                      border: '1px solid var(--pastel-blue-border)',
+                      borderLeft: '4px solid var(--primary)',
+                      borderRadius: '0 8px 8px 0',
                       marginBottom: '20px',
                       fontSize: '0.94rem',
                       color: 'var(--text-primary)',
-                      lineHeight: 1.5
+                      lineHeight: 1.55,
+                      boxShadow: '0 2px 8px rgba(37, 99, 235, 0.04)'
                     }}
                   >
                     <span style={{ fontWeight: 700, color: 'var(--primary)' }}>How Might We: </span>
@@ -323,23 +325,35 @@ export default function Projects() {
                   style={{ 
                     display: 'grid', 
                     gridTemplateColumns: 'repeat(3, 1fr)', 
-                    gap: '24px',
-                    padding: '16px 0',
-                    borderTop: '1px solid var(--border-hairline)',
-                    borderBottom: '1px solid var(--border-hairline)',
+                    gap: '20px',
                     marginBottom: '28px'
                   }}
+                  className="projects-metrics-grid"
                 >
-                  {proj.metrics.map((m, i) => (
-                    <div key={i}>
-                      <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-primary)' }}>
-                        {m.value}
+                  {proj.metrics.map((m, i) => {
+                    const bgs = ['var(--pastel-blue-bg)', 'var(--pastel-green-bg)', 'var(--pastel-teal-bg)'];
+                    const borders = ['var(--pastel-blue-border)', 'var(--pastel-green-border)', 'var(--pastel-teal-border)'];
+                    const textColors = ['var(--pastel-blue-text)', 'var(--pastel-green-text)', 'var(--pastel-teal-text)'];
+                    return (
+                      <div 
+                        key={i}
+                        style={{
+                          backgroundColor: bgs[i % 3],
+                          border: `1px solid ${borders[i % 3]}`,
+                          borderRadius: '8px',
+                          padding: '16px 20px',
+                          boxShadow: '0 2px 6px rgba(0,0,0,0.02)'
+                        }}
+                      >
+                        <div style={{ fontSize: '1.3rem', fontWeight: 800, color: textColors[i % 3] }}>
+                          {m.value}
+                        </div>
+                        <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '2px', fontWeight: 550 }}>
+                          {m.label}
+                        </div>
                       </div>
-                      <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '2px' }}>
-                        {m.label}
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
 
                 {/* Core Issue & Why Solve (2-Column Integrated) */}
@@ -347,13 +361,13 @@ export default function Projects() {
                   style={{
                     display: 'grid',
                     gridTemplateColumns: '1fr 1fr',
-                    gap: '32px',
+                    gap: '24px',
                     marginBottom: '28px'
                   }}
                   className="projects-two-col"
                 >
-                  <div>
-                    <div style={{ fontSize: '0.8rem', fontWeight: 750, textTransform: 'uppercase', letterSpacing: '0.04em', color: '#b91c1c', marginBottom: '8px' }}>
+                  <div style={{ backgroundColor: '#ffffff', border: '1px solid #fecdd3', borderTop: '3px solid #f43f5e', padding: '20px 22px', borderRadius: '10px', boxShadow: '0 2px 6px rgba(0,0,0,0.02)' }}>
+                    <div style={{ fontSize: '0.8rem', fontWeight: 750, textTransform: 'uppercase', letterSpacing: '0.04em', color: '#be123c', marginBottom: '8px' }}>
                       The Problem Space (Customer & Operational Pain Point)
                     </div>
                     <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
@@ -361,8 +375,8 @@ export default function Projects() {
                     </p>
                   </div>
 
-                  <div>
-                    <div style={{ fontSize: '0.8rem', fontWeight: 750, textTransform: 'uppercase', letterSpacing: '0.04em', color: '#065f46', marginBottom: '8px' }}>
+                  <div style={{ backgroundColor: '#ffffff', border: '1px solid #a7f3d0', borderTop: '3px solid #10b981', padding: '20px 22px', borderRadius: '10px', boxShadow: '0 2px 6px rgba(0,0,0,0.02)' }}>
+                    <div style={{ fontSize: '0.8rem', fontWeight: 750, textTransform: 'uppercase', letterSpacing: '0.04em', color: '#047857', marginBottom: '8px' }}>
                       Why We Solved It (Business Impact & Strategy)
                     </div>
                     <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
@@ -391,9 +405,10 @@ export default function Projects() {
                           gap: '12px', 
                           alignItems: 'flex-start',
                           padding: '16px',
-                          backgroundColor: 'var(--bg-subtle)',
+                          backgroundColor: '#ffffff',
                           borderRadius: '8px',
-                          border: '1px solid var(--border-hairline)'
+                          border: '1px solid var(--pastel-blue-border)',
+                          boxShadow: '0 2px 6px rgba(37, 99, 235, 0.03)'
                         }}
                       >
                         <CheckCircle size={16} style={{ color: 'var(--emerald)', marginTop: '2px', flexShrink: 0 }} />
