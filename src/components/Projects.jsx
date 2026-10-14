@@ -169,6 +169,49 @@ export default function Projects() {
         tradeoffs: 'Balanced cost minimization against risk tolerance by applying weighted multi-objective scoring models for sourcing alternatives.'
       },
       tags: ['Python', 'SQL', 'Predictive Modeling', 'Supply Chain Analytics', 'Operations Research', 'Executive Dashboards']
+    },
+    {
+      id: 'ai-financial-research',
+      type: 'product',
+      featured: false,
+      title: 'AI Financial Research & Analysis Platform',
+      hmwPrompt: 'How might we accelerate fundamental financial research across complex SEC filings while ensuring verifiable data grounding and zero-hallucination metric extraction?',
+      org: '0➔1 Generative AI Product',
+      category: 'Generative AI • Financial NLP • Multi-Document Synthesis',
+      summary: 'Architected an end-to-end AI product leveraging LLMs, LangChain, and Gemini to automate fundamental equity research across 10-K/10-Q SEC filings, financial earnings calls, and fragmented market datasets with deterministic metric verification.',
+      metrics: [
+        { label: 'Research Acceleration', value: '10x Faster Analysis' },
+        { label: 'Extraction Fidelity', value: '100% Sourced Citations' },
+        { label: 'Core Tech', value: 'Python • LangChain • Gemini' }
+      ],
+      theIssue: 'Financial analysts and researchers spend hours manually combing through 100+ page SEC filings (10-K, 10-Q), earnings call transcripts, and tables to extract, cross-reference, and compare historical metrics. Traditional keyword search misses semantic context, while generic LLMs hallucinate figures and fail on complex nested financial tables.',
+      whySolve: 'High-quality investment analysis requires rigorous speed, zero tolerance for hallucinations, and verifiable source traceability. Automating cross-document synthesis frees analysts to focus on high-conviction decision-making.',
+      howWeSolve: [
+        {
+          name: '1. Structured Financial Table Parsing & Ingestion',
+          desc: 'Engineered specialized table extraction pipelines preserving row-column relational structures across SEC 10-K/10-Q balance sheets, income statements, and cash flow disclosures.'
+        },
+        {
+          name: '2. Multi-Stage Validation & Grounding Workflows',
+          desc: 'Designed deterministic verification workflows with LangChain and Gemini, enforcing strict citation linking to exact filing sections and page numbers to eliminate hallucinations.'
+        },
+        {
+          name: '3. Comparative Metric Synthesis & Sentiment Analysis',
+          desc: 'Built comparative financial query engines and NLP sentiment analysis on management discussion & analysis (MD&A) sections to contextualize guidance and risk factors.'
+        }
+      ],
+      deepDive: {
+        targetPersonas: [
+          'Equity Research Analysts: Needing instant peer-group comparison and historical trend extraction without manual spreadsheet transcription.',
+          'Portfolio Managers: Seeking quick verification of management commentary sentiment and sudden risk-factor changes across quarters.'
+        ],
+        successMetrics: {
+          northStar: '% of extracted financial datapoints with verifiable audit trail and zero hallucination.',
+          secondaryMetrics: '90%+ reduction in manual filing lookup time; multi-quarter comparison speed <5 seconds.'
+        },
+        rolloutStrategy: 'Phase 1: Table parsing and verified 10-K Q&A engine. Phase 2: Cross-company comparative dashboard with sentiment scoring on earnings transcripts.'
+      },
+      tags: ['Generative AI', 'Python', 'LangChain', 'Google Gemini', 'NLP', 'Prompt Engineering', 'Financial Modeling', 'Table Parsing']
     }
   ];
 
