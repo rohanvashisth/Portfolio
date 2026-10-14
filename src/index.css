@@ -1,32 +1,52 @@
 :root {
-  /* Integrated Editorial Design System */
-  --bg-base: #fcfcfd;
-  --bg-subtle: #f4f5f7;
-  --bg-muted: #e5e7eb;
+  /* Pastel Blue & Green Palette */
+  --bg-base: #f9fbfd;
+  --bg-subtle: #f2f8f6;
+  --bg-muted: #e4edf4;
 
   /* Typography Colors */
-  --text-primary: #0f172a;
-  --text-secondary: #334155;
-  --text-muted: #64748b;
-  --text-light: #94a3b8;
+  --text-primary: #0e2135;
+  --text-secondary: #274059;
+  --text-muted: #5b758e;
+  --text-light: #94aabf;
 
-  /* Brand Accents */
+  /* Primary Blue Accents */
   --primary: #2563eb;
   --primary-hover: #1d4ed8;
   --primary-subtle: #eff6ff;
 
+  /* Emerald & Mint Green Accents */
   --emerald: #059669;
+  --emerald-hover: #047857;
   --emerald-subtle: #ecfdf5;
 
+  /* Amber / Coral Accent */
   --amber: #d97706;
   --amber-subtle: #fffbeb;
 
+  /* Pastel Blue Tokens */
+  --pastel-blue-bg: #eff6ff;
+  --pastel-blue-surface: #f5f9ff;
+  --pastel-blue-border: #bfdbfe;
+  --pastel-blue-text: #1d4ed8;
+
+  /* Pastel Green / Mint Tokens */
+  --pastel-green-bg: #edfcf4;
+  --pastel-green-surface: #f3fbf6;
+  --pastel-green-border: #a7f3d0;
+  --pastel-green-text: #047857;
+
+  /* Soft Pastel Teal / Cyan */
+  --pastel-teal-bg: #f0fdfa;
+  --pastel-teal-border: #99f6e4;
+  --pastel-teal-text: #0f766e;
+
   /* Hairlines and Borders */
-  --border-hairline: #e2e8f0;
-  --border-subtle: #e2e8f0;
-  --border-strong: #cbd5e1;
+  --border-hairline: #e0eaf2;
+  --border-subtle: #e0eaf2;
+  --border-strong: #cbdde9;
   --bg-surface: #ffffff;
-  --bg-surface-subtle: #f8fafc;
+  --bg-surface-subtle: #f4f8fb;
   --primary-light: #eff6ff;
   --emerald-light: #ecfdf5;
 
