@@ -32,18 +32,18 @@ function App() {
       {/* Clean Modern Footer */}
       <footer 
         style={{ 
-          borderTop: '1px solid var(--border-subtle)', 
-          padding: '44px 0 36px', 
-          backgroundColor: '#ffffff'
+          borderTop: '1px solid var(--pastel-blue-border)', 
+          padding: '48px 0 36px', 
+          backgroundColor: '#f8fbfe'
         }}
       >
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
           
           <div>
-            <div style={{ fontSize: '0.96rem', fontWeight: 700, color: 'var(--text-primary)' }}>
+            <div style={{ fontSize: '1rem', fontWeight: 800, color: 'var(--text-primary)' }}>
               Rohan Vashisth
             </div>
-            <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginTop: '2px' }}>
+            <div style={{ fontSize: '0.84rem', color: 'var(--text-secondary)', marginTop: '2px' }}>
               Technical Product Manager • Ex-JPMorgan Chase SDE • Rutgers MBA '26
             </div>
           </div>
@@ -53,7 +53,7 @@ function App() {
               href="https://www.linkedin.com/in/rohanvashisth/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              style={{ color: 'var(--text-muted)' }}
+              style={{ color: 'var(--primary)' }}
               aria-label="LinkedIn"
             >
               <Linkedin size={18} />
@@ -62,14 +62,14 @@ function App() {
               href="https://github.com/rohanvashisth" 
               target="_blank" 
               rel="noopener noreferrer" 
-              style={{ color: 'var(--text-muted)' }}
+              style={{ color: 'var(--emerald)' }}
               aria-label="GitHub"
             >
               <Github size={18} />
             </a>
             <a 
               href="mailto:rohan9vashisth@gmail.com" 
-              style={{ color: 'var(--text-muted)' }}
+              style={{ color: 'var(--primary)' }}
               aria-label="Email"
             >
               <Mail size={18} />
@@ -78,17 +78,18 @@ function App() {
             <button
               onClick={scrollToTop}
               style={{
-                background: 'var(--bg-base)',
-                border: '1px solid var(--border-subtle)',
+                background: '#ffffff',
+                border: '1px solid var(--pastel-blue-border)',
                 borderRadius: '6px',
-                padding: '6px 10px',
+                padding: '6px 12px',
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '4px',
-                fontSize: '0.8rem',
-                color: 'var(--text-secondary)',
-                fontWeight: 600
+                fontSize: '0.82rem',
+                color: 'var(--pastel-blue-text)',
+                fontWeight: 650,
+                boxShadow: '0 1px 3px rgba(0,0,0,0.02)'
               }}
               title="Back to top"
             >
@@ -99,7 +100,7 @@ function App() {
 
         </div>
 
-        <div className="container" style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid var(--border-subtle)', textAlign: 'center', fontSize: '0.78rem', color: 'var(--text-muted)' }}>
+        <div className="container" style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid var(--pastel-blue-border)', textAlign: 'center', fontSize: '0.78rem', color: 'var(--text-muted)' }}>
           © {new Date().getFullYear()} Rohan Vashisth. Built with React and designed for clarity and performance.
         </div>
       </footer>
