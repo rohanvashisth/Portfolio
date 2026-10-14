@@ -2,85 +2,109 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Experience from './components/Experience';
-import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Skills from './components/Skills';
 import Education from './components/Education';
 import Contact from './components/Contact';
+import { ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
 
 function App() {
-  return (
-    <>
-      {/* Decorative Interactive Background Layers */}
-      <div className="bg-grid"></div>
-      <div className="bg-radial"></div>
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
+  return (
+    <div style={{ backgroundColor: 'var(--bg-base)', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      
       {/* Header / Nav */}
       <Navbar />
 
       {/* Main sections */}
-      <main style={{ minHeight: '100vh' }}>
-        
-        {/* Hero Banner */}
+      <main style={{ flex: 1 }}>
         <Hero />
-        
-        {/* Horizontal Dividers */}
-        <div className="container">
-          <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(15, 23, 42, 0.06), transparent)' }}></div>
-        </div>
-
-        {/* Experience Timeline */}
         <Experience />
-
-        <div className="container">
-          <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(15, 23, 42, 0.06), transparent)' }}></div>
-        </div>
-
-        {/* Skills Hub */}
-        <Skills />
-
-        <div className="container">
-          <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(15, 23, 42, 0.06), transparent)' }}></div>
-        </div>
-
-        {/* Projects Dashboard */}
         <Projects />
-
-        <div className="container">
-          <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(15, 23, 42, 0.06), transparent)' }}></div>
-        </div>
-
-        {/* Education Credentials */}
+        <Skills />
         <Education />
-
-        <div className="container">
-          <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(15, 23, 42, 0.06), transparent)' }}></div>
-        </div>
-
-        {/* Contact form */}
         <Contact />
-
       </main>
 
-      {/* Footer */}
+      {/* Clean Modern Footer */}
       <footer 
         style={{ 
-          borderTop: '1px solid rgba(15, 23, 42, 0.06)', 
-          padding: '40px 0', 
-          textAlign: 'center', 
-          fontSize: '0.85rem', 
-          color: 'hsl(var(--text-muted))',
-          background: 'rgba(248, 250, 252, 0.8)',
-          backdropFilter: 'blur(12px)'
+          borderTop: '1px solid var(--border-subtle)', 
+          padding: '44px 0 36px', 
+          backgroundColor: '#ffffff'
         }}
       >
-        <div className="container" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          <p>© {new Date().getFullYear()} Rohan Vashisth. All rights reserved.</p>
-          <p style={{ fontSize: '0.8rem', opacity: 0.8 }}>
-            Engineered with React, Lucide Icons, and Vanilla CSS. Built for performance and responsiveness.
-          </p>
+        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
+          
+          <div>
+            <div style={{ fontSize: '0.96rem', fontWeight: 700, color: 'var(--text-primary)' }}>
+              Rohan Vashisth
+            </div>
+            <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginTop: '2px' }}>
+              Technical Product Manager • Ex-JPMorgan Chase SDE • Rutgers MBA '26
+            </div>
+          </div>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+            <a 
+              href="https://www.linkedin.com/in/rohanvashisth/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              style={{ color: 'var(--text-muted)' }}
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={18} />
+            </a>
+            <a 
+              href="https://github.com/rohanvashisth" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              style={{ color: 'var(--text-muted)' }}
+              aria-label="GitHub"
+            >
+              <Github size={18} />
+            </a>
+            <a 
+              href="mailto:rohan9vashisth@gmail.com" 
+              style={{ color: 'var(--text-muted)' }}
+              aria-label="Email"
+            >
+              <Mail size={18} />
+            </a>
+
+            <button
+              onClick={scrollToTop}
+              style={{
+                background: 'var(--bg-base)',
+                border: '1px solid var(--border-subtle)',
+                borderRadius: '6px',
+                padding: '6px 10px',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '4px',
+                fontSize: '0.8rem',
+                color: 'var(--text-secondary)',
+                fontWeight: 600
+              }}
+              title="Back to top"
+            >
+              <ArrowUp size={14} />
+              <span>Top</span>
+            </button>
+          </div>
+
+        </div>
+
+        <div className="container" style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid var(--border-subtle)', textAlign: 'center', fontSize: '0.78rem', color: 'var(--text-muted)' }}>
+          © {new Date().getFullYear()} Rohan Vashisth. Built with React and designed for clarity and performance.
         </div>
       </footer>
-    </>
+
+    </div>
   );
 }
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, FileText, Briefcase, Code, Award, GraduationCap, Mail } from 'lucide-react';
+import { Menu, X, FileText, ArrowUpRight } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,84 +20,107 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
-    { name: 'Experience', href: '#experience', icon: <Briefcase size={16} /> },
-    { name: 'Skills', href: '#skills', icon: <Code size={16} /> },
-    { name: 'Projects', href: '#projects', icon: <Award size={16} /> },
-    { name: 'Education', href: '#education', icon: <GraduationCap size={16} /> },
-    { name: 'Contact', href: '#contact', icon: <Mail size={16} /> },
+    { name: 'Experience', href: '#experience' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Education', href: '#education' },
+    { name: 'Contact', href: '#contact' },
   ];
 
   return (
     <nav 
-      className={`navbar-container ${scrolled ? 'scrolled' : ''}`}
       style={{
         position: 'fixed',
         top: 0,
         left: 0,
         right: 0,
         zIndex: 100,
-        transition: 'var(--transition-normal)',
-        padding: scrolled ? '12px 0' : '20px 0',
-        background: scrolled ? 'rgba(248, 250, 252, 0.85)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(12px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(15, 23, 42, 0.05)' : 'none',
+        transition: 'all 0.2s ease',
+        padding: scrolled ? '12px 0' : '18px 0',
+        background: scrolled ? 'rgba(255, 255, 255, 0.92)' : 'rgba(249, 250, 251, 0.85)',
+        backdropFilter: 'blur(10px)',
+        borderBottom: scrolled ? '1px solid var(--border-subtle)' : '1px solid transparent',
       }}
     >
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        {/* Logo */}
+        
+        {/* Logo / Brand */}
         <a 
           id="nav-logo" 
           href="#" 
           style={{ 
-            fontFamily: 'var(--font-display)', 
-            fontWeight: 800, 
-            fontSize: '1.75rem', 
-            color: 'hsl(var(--text-primary))',
             display: 'flex',
-            alignItems: 'baseline',
-            gap: '2px'
+            alignItems: 'center',
+            gap: '10px',
+            textDecoration: 'none'
           }}
         >
-          <span>
-            <span style={{ color: 'hsl(var(--primary))' }}>R</span>ohan Vashisth
-          </span>
-          <span style={{ color: 'hsl(var(--secondary))', fontSize: '2rem', lineHeight: 0 }}>.</span>
+          <img 
+            src={`${import.meta.env.BASE_URL}rohan-headshot.jpg`} 
+            alt="Rohan" 
+            style={{
+              width: '32px',
+              height: '32px',
+              borderRadius: '50%',
+              objectFit: 'cover',
+              border: '1px solid var(--border-subtle)'
+            }}
+          />
+          <div>
+            <span style={{ 
+              fontFamily: 'var(--font-display)', 
+              fontWeight: 750, 
+              fontSize: '1.05rem', 
+              color: 'var(--text-primary)',
+              letterSpacing: '-0.02em'
+            }}>
+              Rohan Vashisth
+            </span>
+            <span style={{ 
+              display: 'block', 
+              fontSize: '0.72rem', 
+              color: 'var(--text-muted)', 
+              fontFamily: 'var(--font-mono)',
+              lineHeight: 1
+            }}>
+              Product • Engineering
+            </span>
+          </div>
         </a>
 
         {/* Desktop Navigation */}
-        <div className="desktop-nav" style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
-          <ul style={{ display: 'flex', listStyle: 'none', gap: '24px', alignItems: 'center' }}>
+        <div className="desktop-nav" style={{ display: 'flex', alignItems: 'center', gap: '28px' }}>
+          <ul style={{ display: 'flex', listStyle: 'none', gap: '24px', alignItems: 'center', margin: 0, padding: 0 }}>
             {navLinks.map((link) => (
               <li key={link.name}>
                 <a 
                   id={`nav-link-${link.name.toLowerCase()}`}
                   href={link.href}
-                  className="nav-hover-link"
+                  className="nav-link-item"
                   style={{
-                    fontSize: '0.95rem',
+                    fontSize: '0.9rem',
                     fontWeight: 500,
-                    color: 'hsl(var(--text-secondary))',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '6px'
+                    color: 'var(--text-secondary)',
+                    transition: 'color 0.15s ease'
                   }}
                 >
-                  {link.icon}
                   {link.name}
                 </a>
               </li>
             ))}
           </ul>
 
+          <div style={{ width: '1px', height: '20px', background: 'var(--border-subtle)' }}></div>
+
           <a 
             id="nav-btn-resume"
             href={`${import.meta.env.BASE_URL}RohanVashisth_Resume.pdf`}
             download="RohanVashisth_Resume.pdf"
-            className="btn btn-outline"
-            style={{ padding: '8px 16px', fontSize: '0.85rem' }}
+            className="btn btn-secondary"
+            style={{ padding: '7px 14px', fontSize: '0.84rem' }}
           >
             <FileText size={14} />
-            Resume
+            <span>Resume</span>
           </a>
         </div>
 
@@ -110,12 +133,13 @@ export default function Navbar() {
             display: 'none',
             background: 'none',
             border: 'none',
-            color: 'hsl(var(--text-primary))',
-            cursor: 'pointer'
+            color: 'var(--text-primary)',
+            cursor: 'pointer',
+            padding: '4px'
           }}
           className="mobile-toggle-btn"
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
@@ -128,17 +152,16 @@ export default function Navbar() {
             top: '100%',
             left: 0,
             right: 0,
-            background: 'rgba(248, 250, 252, 0.95)',
-            backdropFilter: 'blur(16px)',
-            borderBottom: '1px solid rgba(15, 23, 42, 0.08)',
-            padding: '24px',
+            background: '#ffffff',
+            borderBottom: '1px solid var(--border-subtle)',
+            padding: '20px 24px',
             display: 'flex',
             flexDirection: 'column',
-            gap: '20px',
-            zIndex: 99
+            gap: '16px',
+            boxShadow: '0 10px 25px -5px rgba(0,0,0,0.06)'
           }}
         >
-          <ul style={{ display: 'flex', flexDirection: 'column', listStyle: 'none', gap: '16px' }}>
+          <ul style={{ display: 'flex', flexDirection: 'column', listStyle: 'none', gap: '14px', padding: 0, margin: 0 }}>
             {navLinks.map((link) => (
               <li key={link.name}>
                 <a 
@@ -146,15 +169,12 @@ export default function Navbar() {
                   href={link.href}
                   onClick={() => setIsOpen(false)}
                   style={{
-                    fontSize: '1.1rem',
+                    fontSize: '1rem',
                     fontWeight: 500,
-                    color: 'hsl(var(--text-secondary))',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '10px'
+                    color: 'var(--text-primary)',
+                    display: 'block'
                   }}
                 >
-                  {link.icon}
                   {link.name}
                 </a>
               </li>
@@ -166,16 +186,18 @@ export default function Navbar() {
             download="RohanVashisth_Resume.pdf"
             onClick={() => setIsOpen(false)}
             className="btn btn-primary"
-            style={{ width: '100%', padding: '12px' }}
+            style={{ width: '100%', padding: '10px' }}
           >
-            <FileText size={16} />
-            Download Resume
+            <FileText size={15} />
+            Download Resume (PDF)
           </a>
         </div>
       )}
 
-      {/* Inject custom CSS styles for hover animations on nav menu */}
       <style>{`
+        .nav-link-item:hover {
+          color: var(--text-primary) !important;
+        }
         @media (max-width: 768px) {
           .desktop-nav {
             display: none !important;
@@ -183,25 +205,6 @@ export default function Navbar() {
           .mobile-toggle-btn {
             display: block !important;
           }
-        }
-        .nav-hover-link {
-          position: relative;
-        }
-        .nav-hover-link::after {
-          content: '';
-          position: absolute;
-          width: 0;
-          height: 2px;
-          bottom: -4px;
-          left: 0;
-          background-color: hsl(var(--primary));
-          transition: var(--transition-fast);
-        }
-        .nav-hover-link:hover {
-          color: hsl(var(--text-primary)) !important;
-        }
-        .nav-hover-link:hover::after {
-          width: 100%;
         }
       `}</style>
     </nav>
