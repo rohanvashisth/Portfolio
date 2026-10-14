@@ -174,33 +174,34 @@ export default function Contact() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
-                  padding: '14px 16px',
-                  borderRadius: '8px',
-                  backgroundColor: 'var(--bg-subtle)',
-                  border: '1px solid var(--border-hairline)',
+                  padding: '14px 18px',
+                  borderRadius: '10px',
+                  backgroundColor: '#ffffff',
+                  border: '1px solid var(--pastel-green-border)',
                   textDecoration: 'none',
-                  transition: 'border-color var(--transition-fast), background-color var(--transition-fast)'
+                  boxShadow: '0 2px 6px rgba(5, 150, 105, 0.03)',
+                  transition: 'all 0.15s ease'
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
                   <div style={{ 
-                    width: '32px', 
-                    height: '32px', 
-                    borderRadius: '6px', 
-                    backgroundColor: '#ffffff', 
+                    width: '36px', 
+                    height: '36px', 
+                    borderRadius: '8px', 
+                    backgroundColor: 'var(--pastel-green-bg)', 
                     display: 'flex', 
                     alignItems: 'center', 
                     justifyContent: 'center',
-                    border: '1px solid var(--border-hairline)'
+                    border: '1px solid var(--pastel-green-border)'
                   }}>
-                    <Phone size={16} style={{ color: 'var(--emerald)' }} />
+                    <Phone size={18} style={{ color: 'var(--emerald)' }} />
                   </div>
                   <div>
                     <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', textTransform: 'uppercase' }}>Phone</div>
-                    <div style={{ fontSize: '0.92rem', fontWeight: 600, color: 'var(--text-primary)' }}>+91 7397430237</div>
+                    <div style={{ fontSize: '0.94rem', fontWeight: 650, color: 'var(--text-primary)' }}>+91 7397430237</div>
                   </div>
                 </div>
-                <ArrowUpRight size={16} style={{ color: 'var(--text-muted)' }} />
+                <ArrowUpRight size={16} style={{ color: 'var(--emerald)' }} />
               </a>
 
               {/* Location */}
@@ -209,28 +210,29 @@ export default function Contact() {
                 style={{
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '12px',
-                  padding: '14px 16px',
-                  borderRadius: '8px',
-                  backgroundColor: 'var(--bg-subtle)',
-                  border: '1px solid var(--border-hairline)'
+                  gap: '14px',
+                  padding: '14px 18px',
+                  borderRadius: '10px',
+                  backgroundColor: '#ffffff',
+                  border: '1px solid var(--pastel-teal-border)',
+                  boxShadow: '0 2px 6px rgba(15, 118, 110, 0.03)'
                 }}
               >
                 <div style={{ 
-                  width: '32px', 
-                  height: '32px', 
-                  borderRadius: '6px', 
-                  backgroundColor: '#ffffff', 
+                  width: '36px', 
+                  height: '36px', 
+                  borderRadius: '8px', 
+                  backgroundColor: 'var(--pastel-teal-bg)', 
                   display: 'flex', 
                   alignItems: 'center', 
                   justifyContent: 'center',
-                  border: '1px solid var(--border-hairline)'
+                  border: '1px solid var(--pastel-teal-border)'
                 }}>
-                  <MapPin size={16} style={{ color: 'var(--text-muted)' }} />
+                  <MapPin size={18} style={{ color: 'var(--pastel-teal-text)' }} />
                 </div>
                 <div>
                   <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', textTransform: 'uppercase' }}>Location</div>
-                  <div style={{ fontSize: '0.92rem', fontWeight: 600, color: 'var(--text-primary)' }}>Gurugram, India • Open to Global Relocation</div>
+                  <div style={{ fontSize: '0.94rem', fontWeight: 650, color: 'var(--text-primary)' }}>Gurugram, India • Open to Global Relocation</div>
                 </div>
               </div>
 
@@ -238,10 +240,19 @@ export default function Contact() {
 
           </div>
 
-          {/* Right Column: Integrated Inquiry Form */}
-          <div style={{ textAlign: 'left' }}>
-            <div style={{ marginBottom: '20px' }}>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 750, color: 'var(--text-primary)', marginBottom: '6px' }}>
+          {/* Right Column: Integrated Inquiry Form in Elevated Pastel Card */}
+          <div 
+            style={{ 
+              textAlign: 'left',
+              backgroundColor: '#ffffff',
+              border: '1px solid var(--pastel-blue-border)',
+              borderRadius: '14px',
+              padding: '36px',
+              boxShadow: '0 8px 30px rgba(37, 99, 235, 0.06)'
+            }}
+          >
+            <div style={{ marginBottom: '22px' }}>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '6px' }}>
                 Send a Direct Message
               </h3>
               <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)' }}>
