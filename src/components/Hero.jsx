@@ -50,7 +50,7 @@ export default function Hero() {
             </h1>
 
             <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.7, maxWidth: '820px' }}>
-              Hi, I'm <strong style={{ color: 'var(--text-primary)' }}>Rohan Vashisth</strong>. I bridge complex distributed systems architecture with product strategy and roadmap execution. Previously spent 3+ years at <strong style={{ color: 'var(--text-primary)' }}>JPMorgan Chase</strong> modernizing mission-critical FX settlement and low-latency trading engines processing $10B–$15B in daily transactions. MBA in Finance & Supply Chain from <strong style={{ color: 'var(--text-primary)' }}>Rutgers Business School</strong>.
+              Hi, I'm <strong style={{ color: 'var(--text-primary)' }}>Rohan Vashisth</strong>. Technical Product professional with 4+ years of experience building and scaling enterprise technology products at <strong style={{ color: 'var(--text-primary)' }}>J.P. Morgan</strong>, modernizing mission-critical financial platforms processing 250K–300K daily transactions worth $10B–$15B. Hands-on 0➔1 AI product experience with LLMs, Python, and LangChain. MBA in Finance & Supply Chain from <strong style={{ color: 'var(--text-primary)' }}>Rutgers Business School</strong>.
             </p>
 
             {/* Action Buttons */}
@@ -183,8 +183,8 @@ export default function Hero() {
             padding: '20px 24px',
             boxShadow: '0 2px 8px rgba(37, 99, 235, 0.04)'
           }}>
-            <div style={{ fontSize: '1.65rem', fontWeight: 800, color: 'var(--pastel-blue-text)' }}>3+ Years</div>
-            <div style={{ fontSize: '0.86rem', color: 'var(--text-secondary)', marginTop: '2px', fontWeight: 500 }}>Software Engineer II @ J.P. Morgan</div>
+            <div style={{ fontSize: '1.65rem', fontWeight: 800, color: 'var(--pastel-blue-text)' }}>4+ Years</div>
+            <div style={{ fontSize: '0.86rem', color: 'var(--text-secondary)', marginTop: '2px', fontWeight: 500 }}>Enterprise Products @ J.P. Morgan</div>
           </div>
           <div style={{ 
             backgroundColor: 'var(--pastel-green-bg)', 
