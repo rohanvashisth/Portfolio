@@ -129,6 +129,23 @@ a {
   position: relative;
 }
 
+.section-hero {
+  background: radial-gradient(circle at 15% 20%, #eef5ff 0%, #ffffff 50%, #effbf5 100%);
+  position: relative;
+}
+
+.section-pastel-blue {
+  background-color: #f3f8fe;
+  border-top: 1px solid #dbeafe;
+  border-bottom: 1px solid #dbeafe;
+}
+
+.section-pastel-green {
+  background-color: #f2faf6;
+  border-top: 1px solid #d1fae5;
+  border-bottom: 1px solid #d1fae5;
+}
+
 .section-alt {
   background-color: var(--bg-subtle);
   border-top: 1px solid var(--border-hairline);
@@ -164,18 +181,32 @@ a {
   margin-bottom: 12px;
 }
 
+.section-tag-green {
+  color: var(--emerald-hover);
+}
+
+.section-tag-blue {
+  color: var(--primary);
+}
+
 .section-tag-num {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--primary-subtle);
-  color: var(--primary);
+  background: var(--pastel-blue-bg);
+  color: var(--pastel-blue-text);
   padding: 2px 8px;
   border-radius: 4px;
   font-size: 0.74rem;
   font-weight: 750;
-  border: 1px solid #bfdbfe;
+  border: 1px solid var(--pastel-blue-border);
   letter-spacing: 0;
+}
+
+.section-tag-num-green {
+  background: var(--pastel-green-bg);
+  color: var(--pastel-green-text);
+  border: 1px solid var(--pastel-green-border);
 }
 
 .section-label {
